@@ -1,0 +1,3 @@
+- RETA: Régimen especial de trabajadores autónomos
+- Persona jurídica: Sociedades (SL, SA, comunidad de bienes...)
+- 
