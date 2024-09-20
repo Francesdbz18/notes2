@@ -1,1 +1,1 @@
-Ejercicio: Realizar un programa Java que lea un fichero de texto y compruebe que no sobrepase 10000 caracteres. Mandar un mensaje en caso tal.
+Ejercicio: Realizar un programa Java que lea un fichero de texto y compruebe que no sobrepase 1000 caracteres ni 150 palabras (cadenas de 2 o más caracteres). Mandar un mensaje en caso tal.
