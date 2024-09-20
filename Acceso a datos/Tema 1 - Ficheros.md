@@ -1,1 +1,1 @@
-Ejercicio: 
+Ejercicio: Realizar un programa Java que lea un fichero de texto y compruebe que no sobrepase 10000 caracteres. Mandar un mensaje en caso tal.
