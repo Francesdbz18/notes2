@@ -12,6 +12,7 @@ a. Busca al menos tres y explica sus procesos, los datos que almacenan y estudia
 
 3. Estudia en qué caso un software vertical puede ser la mejor solución de gestión para una empresa. 
 
-4. Averigua qué significado tienen las siglas JIT. Estudia donde se creó y las consecuencias de su utilización en las cadenas de producción. 
 
-5. De los CRM citados en la unidad de trabajo, escoge tres y realiza una comparativa entre ellos
+5. Averigua qué significado tienen las siglas JIT. Estudia donde se creó y las consecuencias de su utilización en las cadenas de producción. 
+
+6. De los CRM citados en la unidad de trabajo, escoge tres y realiza una comparativa entre ellos
