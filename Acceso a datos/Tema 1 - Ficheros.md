@@ -14,4 +14,6 @@ Getters y Setters de todos los atributos y el método void MostrarDatosCancion()
 
 Programa que almacene una lista de canciones en un fichero binario (secuencial)
 
-Encontrar canciones de un artista
+Encontrar canciones de un artista deseado por teclado
+
+-- Código que abra el fichero para añadir y a continuación añadirá una canción.
