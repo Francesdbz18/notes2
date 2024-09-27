@@ -11,3 +11,5 @@ Clase canción Serializable con atributos:
 - española?: boolean
 Constructor que inicialice la canción con id a 0, año a 0, strings en blanco y boolean en false.
 Getters y Setters de todos los atributos y el método void MostrarDatosCancion()
+
+Programa que almacene una lista de canciones en un fichero binario (secuencial)
