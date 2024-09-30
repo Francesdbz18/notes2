@@ -11,8 +11,15 @@ a. Busca al menos tres y explica sus procesos, los datos que almacenan y estudia
 - Sistema de procesamiento de transacciones (TPS): Controla las transacciones dentro de una empresa, obteniendo de entrada información relevante para cada transacción, almacenando la misma y dando salida a documentos que dan registro de cada una de estas transacciones. Se usa, por ejemplo, en tiendas online para llevar registro de todas las ventas y el inventario de los artículos ofrecidos
 
 3. Estudia en qué caso un software vertical puede ser la mejor solución de gestión para una empresa. 
-
+Un software vertical es la mejor solución de gestión para una empresa cuando esta necesita funcionalidades o personalización específicas de su sector o de las operaciones que hace. Además, este mayor nivel de personalización ayuda a optimizar procesos cuando se requiere que se hagan en el mínimo tiempo posible o con el menor gasto de recursos.
 
 5. Averigua qué significado tienen las siglas JIT. Estudia donde se creó y las consecuencias de su utilización en las cadenas de producción. 
+Las siglas JIT significan Just-in-Time, y se refiere a un método de organización que se origina en Japón y busca optimizar los procesos de fabricación y reducir los desperdicios. Consiste en producir los bienes justo en el momento que son necesarios. Ni antes, ni después. De ahí su nombre, que significa justo a tiempo.
 
-6. De los CRM citados en la unidad de trabajo, escoge tres y realiza una comparativa entre ellos
+Esto implica un aumento de la productividad, reducción de costos y mejora de la calidad del producto, pero también pone en mayor riesgo, ya que cualquier imprevisto ya sea en la fabricación, la entrega de materiales o cualquier proceso previo puede traer problemas a la producción.
+
+7. De los CRM citados en la unidad de trabajo, escoge tres y realiza una comparativa entre ellos
+- Salesforce Sales Cloud
+- Suite CRM
+- Oracle Sales Cloud
+Las tres soluciones están basadas en la nube, y SuiteCRM también incorpora un entorno local.
