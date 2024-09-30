@@ -21,5 +21,10 @@ Esto implica un aumento de la productividad, reducción de costos y mejora de la
 7. De los CRM citados en la unidad de trabajo, escoge tres y realiza una comparativa entre ellos
 - Salesforce Sales Cloud
 - Suite CRM
-- Oracle Sales Cloud
+- SAP Sales Cloud
 Las tres soluciones están basadas en la nube, y SuiteCRM también incorpora un entorno local.
+En términos de precios, SuiteCRM es gratuito y de código abierto, mientras que Salesforce tiene varias ediciones, que van desde $25 hasta $500 al mes, con distintas funcionalidades. SAP no publica sus precios, pero en distintos sitios web figuran desde $58 al mes. Ambos ofrecen demos gratuitas. 
+Respecto al soporte, sólo SuiteCRM ofrece asistencia 24/7, mientras que SAP Sales Cloud no ofrece esta ni asistencia por chat.
+En funcionalidades, SAP Sales Cloud no ofrece Generación de clientes potenciales, y de los tres es SuiteCRM el único que no incorpora Gestión de transacciones.
+
+Las tres soluciones CRM fueron comparadas usando el comparador de Capterra: https://www.capterra.es/compare/61368/136373/salesforce/vs/suitecrm?vs[]=70513
