@@ -17,3 +17,4 @@ SA puede ser:
 - Laboral anónima
 
 https://ayudatpymes.com/gestron/ventajas-desventajas-sociedad-laboral/
+https://www.infoautonomos.com/tipos-de-sociedades/sociedad-limitada-caracteristicas-ventajas/
