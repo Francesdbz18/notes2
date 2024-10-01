@@ -57,3 +57,10 @@ d. 167
 	6. web designer
 	7. data entry operator
 
+9. 
+	1. helpdesk technician
+	2. giving support
+	3. troubleshoot
+	4. repairing
+	5. installing
+	6. assemble
