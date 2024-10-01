@@ -15,3 +15,5 @@ SA puede ser:
 - Normal
 - Unipersonal
 - Laboral anónima
+
+https://ayudatpymes.com/gestron/ventajas-desventajas-sociedad-laboral/
