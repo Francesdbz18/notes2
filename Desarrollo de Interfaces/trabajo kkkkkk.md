@@ -12,3 +12,7 @@ preguntas:
 - gartis?
 - se debe ver el aforo en tiempo real? deben verse los precios?
 - sólo se pueden consultar datos propios o de otros jugadores/equipos?
+
+respuestas grupo marcos:
+- fútbol
+- nivel una única organización
