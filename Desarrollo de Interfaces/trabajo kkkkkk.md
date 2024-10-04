@@ -16,3 +16,4 @@ preguntas:
 respuestas grupo marcos:
 - fútbol
 - nivel una única organización
+- ayuda
