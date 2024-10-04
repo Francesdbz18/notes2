@@ -2,6 +2,8 @@ aplicación para ver resultados, calendario de partidos y entrenamientos y reser
 
 preguntas:
 - objetivo? 
+- plataforma?
+- especificaciones de diseño?
 - deporte?
 - qué datos quiere recolectar?
 - login? en caso afirmativo -> qué datos se requieren
