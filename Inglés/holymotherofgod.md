@@ -109,3 +109,25 @@ d. 167
 	3. light
 	4. advanced
 	5. useless
+- Your turn: 
+	1. fast processor
+	2. 2
+	3. 4
+	4. 490
+	5. mouse
+pg. 10
+1. 
+	1. 2
+	2. inside the motherboard/CPU socket???
+	3. clips
+	4. the motherboard
+	5. insert it into its slot and screw it in
+2. 
+	1. hardware
+	2. computer
+	3. panel
+	4. screw
+	5. music
+4. 
+	1. f
+	2. 
