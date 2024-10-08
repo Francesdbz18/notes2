@@ -128,3 +128,33 @@ pg. 10
 	3. panel
 	4. screw
 	5. music
+5. 
+	1. first
+	2. second
+	3. third
+	4. fourth
+	5. fifth
+	6. sixth
+	7. seventh
+	8. eighth
+	9. ninth
+	10. tenth
+6. 
+	1. side panel
+	2. socket
+	3. switch
+	4. front panel
+	5. cable
+	6. case
+	7. power supply
+	8. slot
+	9. clip
+7. 
+	1. c
+	2. a
+	3. e
+	4. b
+	5. d
+	6. f
+8. 
+	1. 
