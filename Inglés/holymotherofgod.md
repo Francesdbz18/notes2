@@ -128,6 +128,3 @@ pg. 10
 	3. panel
 	4. screw
 	5. music
-4. 
-	1. f
-	2. 
