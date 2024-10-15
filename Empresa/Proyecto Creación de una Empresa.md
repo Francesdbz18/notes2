@@ -10,6 +10,10 @@ Proyectos personales de código
 
 
 Parte 2: Automono
+- Idea
+- Beneficios esperados
+- Problema o necesidad que aborda
+
 Parte 3: Automono
 Parte 4: Automono
 Parte 5: Automono
