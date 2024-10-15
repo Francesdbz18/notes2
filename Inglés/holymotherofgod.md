@@ -1,15 +1,15 @@
-alejandra.ortega@educa.madrid.org <- miss's email
+	 alejandra.ortega@educa.madrid.org <- miss's email
 1. false -> hw & sw
 2. true
 3. false -> education, retail
 4. true
 5. true
 
-1. morning
-2. 218
-3. red
-4. education
-5. exhibition
+6. morning
+7. 218
+8. red
+9. education
+10. exhibition
 
 a. 3
 b. 2
@@ -157,4 +157,16 @@ pg. 10
 	5. d
 	6. f
 8. 
-	1. 
+	1. a
+	2. b
+	3. b
+	4. a
+	5. b
+	6. b
+9. a
+	1. power supply
+	2. cable
+	3. turn it off
+	4. unscrew
+	5. plug in
+	6. switch
