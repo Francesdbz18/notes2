@@ -170,3 +170,14 @@ pg. 10
 	4. unscrew
 	5. plug in
 	6. switch
+2. 
+	1. 3rd
+	2. standard
+	3. hit
+	4. enter
+	5. cleaning
+4. 
+	1. IT
+	2. her delete key was stuck
+	3. her kb is dirty
+	4. nope
