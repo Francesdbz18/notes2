@@ -1,4 +1,4 @@
-UT1:INTRODUCCIÓN A LOS SISTEMAS DE GESTIÓN EMPRESARIAL
+ UT1:INTRODUCCIÓN A LOS SISTEMAS DE GESTIÓN EMPRESARIAL
 1.INTRODUCCIÓN
 A lo largo de la vida profesional de un programador, es altamente probable que este participe en proyectos relacionados con los sistemas de información-gestión empresarial, ya sea como desarrollador, como soporte técnico o como usuario.
 Por eso, es necesario entender la función de la empresa en la sociedad actual, la problemática asociada a su gestión, así como familiarizarse con los sistemas de información y las distintas herramientas informáticas que ayudan a la gestión empresarial aplicando las tecnologías de la información y las comunicaciones (TIC) para el tratamiento y manipulación de la ingente información que se maneja, así como la evolución que han experimentado desde los años sesenta del siglo pasado.
