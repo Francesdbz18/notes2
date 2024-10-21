@@ -1,0 +1,1 @@
+dios nos ha abandonado
