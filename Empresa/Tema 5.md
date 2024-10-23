@@ -4,3 +4,7 @@ beneficios = ingresos - costes totales
 ingresos = precio de venta x cantidad de producto
 costes totales = costes fijos + costes variables totales
 costes variables totales = costes variables unitarios x cantidad
+
+punto muerto o umbral de rentabilidad:
+
+cantidad = costes fijos totales / precio de venta - costes variables unitarios
