@@ -181,3 +181,23 @@ pg. 10
 	2. her delete key was stuck
 	3. her kb is dirty
 	4. nope
+1. 
+	1. 3
+	2. headsets
+	3. 5 standard monitors r broken lol
+	4. microphones
+	5. because they are obsolete lol why would u use a wired mouse in big 2024
+2. 
+	1. c, 4
+	2. a, 50
+	3. d, 10
+	4. e, 17
+	5. b, 5
+3. 
+	1. 4
+	2. 0
+	3. return 50
+	4. 2
+	5. order 10
+	6. order 17
+	7. 5
