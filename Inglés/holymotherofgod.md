@@ -201,3 +201,25 @@ pg. 10
 	5. order 10
 	6. order 17
 	7. 5
+6. 
+	1. touch screen
+	2. remote control
+	3. USB charger
+	4. barcode scanner
+	5. flash drive
+7. 
+	1. c
+	2. a
+	3. e
+	4. b
+	5. g
+	6. d
+	7. f
+8. 
+	1. obsolete
+	2. touch screen
+	3. headsets
+	4. microphones
+	5. printer
+	6. broken
+	7. reorder
