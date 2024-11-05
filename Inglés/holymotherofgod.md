@@ -229,7 +229,7 @@ pg. 10
 	2. ????
 	3. false, next-day delivery
 	4. true
-	5. false, up to 5 payments for over 500p
+	5. false, up to 5 payments for over £500
 	6. false, all motherboards
 2. 
 	1. b
@@ -240,7 +240,7 @@ pg. 10
 	6. a
 4. 
 	1. 20
-	2. 10p
+	2. £10
 	3. headsets
 	4. 40
 	5. tomorrow
@@ -269,3 +269,10 @@ pg. 10
 	2. cheque
 	3. cash
 	4. credit card
+8. 
+	1. sound cards
+	2. £35
+	3. £350
+	4. £22
+	5. £1140
+	6. £1231.20
