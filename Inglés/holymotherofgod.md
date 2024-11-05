@@ -223,3 +223,31 @@ pg. 10
 	5. printer
 	6. broken
 	7. reorder
+###### UNIT 4
+1. 
+	1. true
+	2. ????
+	3. false, next-day delivery
+	4. true
+	5. false, up to 5 payments for over 500p
+	6. false, all motherboards
+2. 
+	1. b
+	2. a
+	3. a
+	4. b
+	5. a
+	6. a
+4. 
+	1. 20
+	2. 10p
+	3. headsets
+	4. 40
+	5. tomorrow
+5. 
+	1. f
+	2. e
+	3. a
+	4. d
+	5. c
+	6. b
