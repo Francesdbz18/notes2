@@ -251,3 +251,21 @@ pg. 10
 	4. d
 	5. c
 	6. b
+6. 
+	1. invoice
+	2. quantity
+	3. ppu
+	4. subtotal
+	5. vat
+	6. delivery date
+	7. payment date
+7. 
+	A. 
+	1. postage and handling
+	2. charge it?
+	3. account
+	B.
+	1. shipping
+	2. cheque
+	3. cash
+	4. credit card
