@@ -1,11 +1,11 @@
-box {
+caja {
 	columna {
-		row {
-			box {
-			imagen, play, espaciador, texto
+		fila {
+			columna {
+				imagen, play, espaciador, texto
 			}
-			box {
-			imagen, play, espaciador, texto
+			columna {
+				imagen, play, espaciador, texto
 			}
 		}
 	}
