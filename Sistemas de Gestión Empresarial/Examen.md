@@ -6,4 +6,7 @@ importante:
 - qué es un proceso y qué automatiza
 - qué es un MIS
 - acrónimos
-- 
+
+
+3er examen
+- pdf monopuesto
