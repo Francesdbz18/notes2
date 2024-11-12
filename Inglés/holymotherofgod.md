@@ -294,3 +294,31 @@ pg. 10
 	3. e
 	4. a
 	5. c
+5. 
+	1. c
+	2. e
+	3. d
+	4. b
+	5. a
+6. 
+	1. wide screen
+	2. simple
+	3. secure
+	4. all-in-one
+	5. practical
+7. 
+	1. flexible
+	2. slimline
+	3. built-in
+	4. high-resolution
+	5. top-of-the-range
+8. 
+	1. user-friendly
+	2. complicated
+	3. reliable
+	4. powerful
+	5. ergonomic
+9. 
+	- A laptop: sturdy, portable, powerful, reliable, dependable, practical, slimline, top-of-the-range, superfast, compact, secure
+	- A printer: all-in-one, practical, portable, reliable, dependable
+1. 
