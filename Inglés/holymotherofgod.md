@@ -321,4 +321,16 @@ pg. 10
 9. 
 	- A laptop: sturdy, portable, powerful, reliable, dependable, practical, slimline, top-of-the-range, superfast, compact, secure
 	- A printer: all-in-one, practical, portable, reliable, dependable
+
 1. 
+	1. power
+	2. program
+	3. keys
+	4. screws
+	5. sound/audio
+2. 
+	1. speakers
+	2. video
+	3. online
+	4. 10
+	5. bottom
