@@ -359,5 +359,10 @@ pg. 10
 	3. a
 	4. b
 	5. a
-1. 
-	1. 
+9. Your turn
+	1. no signal message
+	2. connections
+	3. reconnected
+	4. new
+	5. loose connection
+	6. this afternoon at 3 PM / at the ground floor, opposite to cosmethic department
