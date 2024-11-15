@@ -334,5 +334,30 @@ pg. 10
 	3. online
 	4. 10
 	5. bottom
-3. 
-	1. penis
+5. 
+	1. power button
+	2. volume control
+	3. loose connection
+	4. control panel
+	5. mute box
+	6. no signal message
+6. 
+	1. press and hold
+	2. restart
+	3. make sure
+	4. freezes
+	5. replace
+7. 
+	1. log off
+	2. reinstall
+	3. reopen
+	4. reconnect
+	5. shut down
+8. 
+	1. c
+	2. b
+	3. a
+	4. b
+	5. a
+1. 
+	1. 
