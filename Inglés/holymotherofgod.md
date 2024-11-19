@@ -366,3 +366,18 @@ pg. 10
 	4. new
 	5. loose connection
 	6. this afternoon at 3 PM / at the ground floor, opposite to cosmethic department
+1. 
+	1. The Central Library is opposite the post office
+	2. The job at the library is scheduled for Monday morning
+	3. The technician will be working at the sports centre for two days
+	4. Mr. Norris' office is on the left, at the end of the corridor.
+	5. On Wednesday, the job is to install new software
+2. 
+	1. C
+	2. A
+	3. B
+4. 
+	1. Post office
+	2. Virus scan
+	3. Tuesday
+	4. Recover lost data
