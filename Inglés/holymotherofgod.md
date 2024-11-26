@@ -419,3 +419,17 @@ pg. 10
 	6. f
 	7. c
 	8. e
+UNIT 6
+1. 
+	1. c 
+	2. a
+	3. e
+	4. d
+	5. f
+	6. g
+2. B-A-C
+4. 
+	1. Compuset
+	2. CopyShop
+	3. X300 RAM chips
+	4. The latest software Compuset sold them
