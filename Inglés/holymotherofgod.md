@@ -381,3 +381,41 @@ pg. 10
 	2. Virus scan
 	3. Tuesday
 	4. Recover lost data
+5. 
+	1. follow instructions
+	2. back up
+	3. anti-virus software
+	4. password
+	5. lose
+	6. recover
+6. 
+	1. off-site
+	2. lift
+	3. reception
+	4. exit
+7. 
+	1. post office
+	2. train station
+	3. library
+	4. sports centre
+	5. factory
+	6. airport
+	7. department store
+	8. shopping center
+8. 
+	1. g
+	2. a
+	3. d
+	4. b
+	5. e
+	6. f
+	7. c
+9. 
+	1. h
+	2. d
+	3. a
+	4. g
+	5. b
+	6. f
+	7. c
+	8. e
