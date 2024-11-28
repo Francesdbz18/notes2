@@ -20,16 +20,15 @@ El análisis del contexto de ejecución de los hilos es una parte crucial de la 
 5. **Memoria**: Aunque los hilos pueden compartir la memoria, cada hilo tiene una parte de la memoria asignada para su propio uso (por ejemplo, la pila). La memoria compartida puede involucrar el uso de mecanismos de sincronización para evitar condiciones de carrera.
     
 6. **Prioridad**: En sistemas con planificación de hilos basada en prioridad, el contexto también incluye la prioridad asignada al hilo, que puede influir en su tiempo de ejecución.
-    
 
 ### Contexto de ejecución en sistemas multitarea:
 
 En sistemas multitarea, el contexto de un hilo se guarda cuando el sistema operativo realiza un _cambio de contexto_ (context switch) de un hilo a otro. Este proceso implica:
 
 1. **Guardar el contexto del hilo actual**: Antes de que el procesador comience a ejecutar otro hilo, el sistema operativo guarda el contexto del hilo en ejecución (en la memoria o en registros especiales).
-    
+
 2. **Cargar el contexto del nuevo hilo**: El sistema operativo luego recupera el contexto de un hilo diferente desde su última ejecución, permitiéndole reanudar su tarea desde el punto exacto en que fue suspendido.
-    
+
 
 Este proceso de cambio de contexto tiene un coste en términos de tiempo de CPU, lo que significa que el rendimiento de la aplicación puede verse afectado si el sistema realiza demasiados cambios de contexto innecesarios.
 
