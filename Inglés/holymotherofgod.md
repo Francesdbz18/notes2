@@ -433,3 +433,18 @@ UNIT 6
 	2. CopyShop
 	3. X300 RAM chips
 	4. The latest software Compuset sold them
+5. 
+	1. good
+	2. closed
+	3. will
+	4. busy
+	5. on the phone
+	6. hear
+6. 
+	1. repeat
+	2. contact
+	3. put you through
+	4. wrong number
+	5. dial a number
+	6. extension number
+	7. state
