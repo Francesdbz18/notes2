@@ -3,3 +3,4 @@ peewee
 - example app (tweepee): following and followers
 - models and fields
 - querying
+BD: TIENDA PARA RA2, TWEEPEE PARA RA3
