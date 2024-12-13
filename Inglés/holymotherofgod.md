@@ -448,3 +448,16 @@ UNIT 6
 	5. dial a number
 	6. extension number
 	7. state
+7. 
+	1. asap
+	2. ring back
+	3. on the line
+	4. avoid
+	5. remind
+8. 
+	1. a
+	2. e
+	3. f
+	4. c
+	5. d
+	6. b
