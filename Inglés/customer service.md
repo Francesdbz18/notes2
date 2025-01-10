@@ -1,0 +1,1 @@
+I wouldn't like to work as a customer service representative, as this job implies having lots of responsibilities, experiencing heavy workloads and stress and work long hours. it also requires good communication skills
