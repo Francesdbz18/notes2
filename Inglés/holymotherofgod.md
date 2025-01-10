@@ -466,3 +466,18 @@ UNIT 6
 	2. pam, ann
 	3. pam, ann
 	4. ann
+UNIT 7
+1. 
+	1. Accounts
+	2. IT Maintenance
+	3. HR
+	4. Sales
+	5. CR
+school
+sales and marketing
+customer
+XP1289
+sent
+technician
+A number of laptops and tablets
+name and number
