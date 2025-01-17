@@ -481,3 +481,16 @@ sent
 technician
 A number of laptops and tablets
 name and number
+
+1. 
+	1. ~~software~~ hardware
+	2. ~~making a noise~~ missing a part
+	3. ~~not~~
+	4. ~~nicely~~ rudely
+	5.  ~~work~~ stop working
+2. 
+	1. a, b
+	2. a, b
+	3. b, c
+	4. a, b
+	5. b, c
