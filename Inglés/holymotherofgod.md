@@ -494,3 +494,46 @@ name and number
 	3. b, c
 	4. a, b
 	5. b, c
+UNIT 8
+5. 
+	1. tied up
+	2. hold a meeting
+	3. give a presentation
+	4. make arrangements
+	5. check your calendar
+	6. take place
+6. 
+	1. a
+	2. b
+	3. a
+	4. a
+	5. a
+	6. a
+	7. b
+	8. b
+7. 
+	1. video conference
+	2. sharp
+	3. light refreshments
+	4. equipment
+	5. pack
+	6. break
+8. 
+	1. time
+	2. busy
+	3. late
+	4. coffee
+	5. free
+	6. stop
+9. 
+	1. 26 May
+	2. 2
+	3. 5
+	4. Palace
+	5. Train station
+1. 
+	1. IT conference
+	2. meeting with programmers in his office
+	3. meeting with programmers at op tech
+	4. meeting with helpline workers
+	5. meeting with mrs marks
