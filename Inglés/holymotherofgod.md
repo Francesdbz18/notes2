@@ -562,3 +562,11 @@ UNIT 8
 	4. a
 	5. b
 	6. e
+9. 
+	1. postpone
+	2. running late
+	3. held up in a traffic jam
+	4. reorganise
+	5. appointment
+	6. feels ill
+	7. arrange
