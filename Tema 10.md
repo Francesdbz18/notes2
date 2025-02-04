@@ -1,0 +1,1 @@
+Sociedades exentas IAE durante 2 primeros años
