@@ -570,3 +570,29 @@ UNIT 8
 	5. appointment
 	6. feels ill
 	7. arrange
+UNIT 9
+1. 
+	1. C
+	2. B
+	3. A, C
+	4. D
+	5. B, C
+2. 
+	1. B
+	2. D
+	3. A
+	4. C
+3.  a
+4. 
+	1. true
+	2. false
+	3. false
+	4. true
+	5. false
+5. 
+	1. b
+	2. d
+	3. f
+	4. c
+	5. a
+	6. e
