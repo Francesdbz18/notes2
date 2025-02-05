@@ -1,5 +1,4 @@
-obj dir, obj persona
-tabla personas
+```
 CREATE OR REPLACE TYPE DIRECCION AS OBJECT
 (
   CALLE  VARCHAR2(25),
@@ -181,3 +180,100 @@ BEGIN
     END LOOP; 
 END; 
 /
+```
+
+### Neodatis
+```
+    public static void main(String[] args) {  
+        //creo la conexion  
+        ODB odb = ODBFactory.open("Equipos.db");  
+//  
+//        // Creo los paises  
+//        E01_Paises pais1 = new E01_Paises(1, "Espana");  
+//        E01_Paises pais2 = new E01_Paises(2, "Mexico");  
+//        // Creo los equipos  
+//        Jugadores j1= new Jugadores ("Mar�a", "voleibol", "Madrid", 14, pais1);  
+//        Jugadores j2= new Jugadores ("Miguel", "tenis", "Madrid", 15, pais1);  
+//        Jugadores j3= new Jugadores ("Mario", "baloncesto", "Guadalajara", 15, pais2);  
+//        Jugadores j4= new Jugadores ("Alicia", "tenis", "Madrid", 14, pais1);  
+//  
+        // Inserto los objetos        /* OID oid1 = odb.store(j1);       odb.store(j2);       odb.store(j3);       odb.store(j4);       odb.store(pais1);       odb.store(pais2);  
+        System.out.println(oid1);        OID oid2 = odb.getObjectId(j1);        System.out.println(oid2); */  
+        // sacar los datos de todos los jugadores        Objects<Jugadores> objects = odb.getObjects(Jugadores.class);  
+        int i = 1;  
+  
+        System.out.println(objects.size() + " jugadores:");  
+  
+        while(objects.hasNext()){  
+            Jugadores jug= objects.next();  
+  
+            System.out.println((i++) + "\t: " + jug.getNombre() + "*" +  
+                    jug.getDeporte() + "*" + jug.getCiudad() + "*" + jug.getEdad());  
+        }  
+        System.out.println("------------");  
+  
+      ///////CONSULTA 1//////////  
+  
+      IQuery query = new CriteriaQuery(Jugadores.class, Where.equal("deporte", "tenis"));  
+      query.orderByDesc("edad");  
+      i = 1;  
+  
+      Objects<Jugadores> objects1 = odb.getObjects(query);  
+  
+      System.out.println("Jugadores que juegan al tenis: ");  
+  
+      while(objects1.hasNext()){  
+          Jugadores jug = objects1.next();  
+  
+          System.out.println((i++) + "\t: " + jug.getNombre() + "*" +  
+                  jug.getDeporte() + "*" + jug.getCiudad() + "*" + jug.getEdad());  
+      }  
+      System.out.println("------------");  
+  
+        /* IQuery query2 = new CriteriaQuery (Jugadores.class, Where.equal("nombre", "Mar%3Fa"));  
+        Objects<Jugadores> objetos = odb.getObjects (query2); // Obtiene solo el primer objeto encontrado J        Jugadores jug = objetos.getFirst();        jug.setDeporte ("vóley-playa"); // Cambia el deporte        odb.store (jug); // Actualiza el objeto        odb.commit(); // Valida los cambios */  
+  
+        //////CONSULTA 2 CON criterio///////  
+  
+        ICriterion criterio2 = new And().add(Where.equal("ciudad", "Madrid")).  
+                add(Where.ge("edad",15));  
+  
+        query = new CriteriaQuery(Jugadores.class, criterio2);  
+  
+        Objects<Jugadores> objects2 = odb.getObjects(query);  
+  
+        mostrarDatos(objects2, "Jugadores que son de Madrid y tienen 15 a�os");  
+  
+        //////CONSULTA 3 CON jugadores que hay en un pais///////  
+  
+        String pais = "Mexico";  
+  
+        ICriterion criterio3 = new And().add(Where.equal("pais.nombrePais", pais));  
+        query = new CriteriaQuery(Jugadores.class, criterio3);  
+        Objects<Jugadores> jugadores = odb.getObjects(query);  
+  
+        mostrarDatos(jugadores, "Jugadores que son de " + pais);  
+  
+        ///////BORRAR UN PAIS///////  
+  
+       /*query = new CriteriaQuery(E01_Paises.class, Where.equal("nombrePais", "Espana"));  
+       E01_Paises paisborrar = (E01_Paises) odb.getObjects(query).getFirst();  
+       odb.delete(paisborrar);*/  
+  
+        odb.close();  
+    }  
+  
+    public static void mostrarDatos(Objects<Jugadores> objects, String mensaje) {  
+        System.out.println(mensaje);  
+        int i = 1;  
+        while(objects.hasNext()){  
+            Jugadores jug = objects.next();  
+  
+            System.out.println((i++) + "\t: " + jug.getNombre() + "*" +  
+                    jug.getDeporte() + "*" + jug.getCiudad() + "*" + jug.getEdad()  
+                    + "*" + jug.getPais().getNombrePais());  
+        }  
+        System.out.println("------------");  
+    }  
+}
+```
