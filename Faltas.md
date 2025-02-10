@@ -1,11 +1,12 @@
-Inglés: 3
+###### 2025:
+Inglés: 3 
 EIE: 1
 PMDM: 8
 SGE: 6
-AAD: 4 (3 justificadas)
-DI: 1
+AAD: 1 (+1 justificada) (+4 huelga)
+DI: 1 (+2 huelga)
 
-###### Diciembre: 
+###### Diciembre 2024: 
 AAD: 1 (vie. 13)
 SGE: 3
 PMDM: 4
