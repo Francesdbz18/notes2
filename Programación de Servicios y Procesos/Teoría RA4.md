@@ -47,4 +47,3 @@ El modelo TCP/IP está compuesto por 4 capas. La capa de aplicación define las 
 | **Facilidad de uso**      | Fácil                 | Moderada        | Fácil (si conoces Spring) | Difícil        |
 | **Flexibilidad**          | Moderada              | Alta            | Alta                      | Alta           |
 | **Protocolos soportados** | FTP, SMTP, POP3, etc. | Personalizables | HTTP, WebSocket           | Todos          |
-
