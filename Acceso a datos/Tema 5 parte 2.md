@@ -129,3 +129,15 @@ col.insert_many([{
 ])  
   
 print (col.count_documents({}))
+
+doc = col.find_one({  
+    "edad": {  
+        "$gt": 20  
+    }  
+})  
+print (doc)
+doc = col.delete_one({  
+    "edad": 20  
+})
+for document in col.find({}):  
+    print(document)
