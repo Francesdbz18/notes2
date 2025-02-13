@@ -11,30 +11,30 @@ El modelo TCP/IP está compuesto por 4 capas. La capa de aplicación define las 
 	- DNS (Domain Name System). Sistema de nombres de dominio. Es un sistema que utiliza servidores distribuidos por toda la red para resolver nombres de host en direcciones IP. Utiliza los puertos 53 TCP y UDP.
 
 2. **Se han reconocido las ventajas de la utilización de protocolos estándar para la comunicación entre aplicaciones y procesos.** 
-##### Interoperabilidad 
+#### Interoperabilidad 
 - Comunicación entre diferentes sistemas.
 - Integración de sistemas heredados.
 - Ampliación de la vida útil de las aplicaciones.
-##### Eficiencia
+#### Eficiencia
 - Reducción del tiempo de desarrollo.
 - Optimización de recursos.
 - Facilidad de mantenimiento.
-##### Escalabilidad
+#### Escalabilidad
 - Adaptación a cargas de trabajo variables.
 - Integración de nuevos sistemas.
-##### Otros beneficios
+#### Otros beneficios
 - Mayor seguridad.
 - Reducción de costos.
 - Fomento de la innovación.
 
 3. **Se han analizado librerías que permitan implementar servicios en red utilizando protocolos estándar de comunicación.**
-##### Librerías de bajo nivel
+#### Librerías de bajo nivel
 - java.net
 - Java NIO
-##### Librerías de alto nivel
+#### Librerías de alto nivel
 - Netty
 - Spring WebFlux
-##### Librerías específicas para protocolos
+#### Librerías específicas para protocolos
 - Java Mail API.
 - JDBC.
 - JMS.
