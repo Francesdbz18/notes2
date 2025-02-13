@@ -37,3 +37,66 @@ db.products.insertMany([
  } 
 }]
 ```
+
+```
+[
+  {
+    $project: {
+      nombre: "$nombre.nomb",
+      numerooficios: {
+        $size: { $ifNull: ["$oficios", []] }
+      },
+      numeroprimas: {
+        $size: { $ifNull: ["$primas", []] }
+      },
+      oficiosconcatenados: {
+        $concatArrays: ["$oficios", "$primas"]
+      }
+    }
+  }
+]
+```
+
+```
+[
+  { $sort: { "direccion.población": 1 } },
+  {
+    $project: {
+      poblacion: "$direccion.poblacion",
+      nombre: "$nombre.nomb",
+      ape1: "$nombre.ape1",
+      ape2: "$nombre.ape2",
+      oficio1: { $arrayElemAt: ["$oficios", 0] },
+      oficio2: { $arrayElemAt: ["$oficios", 1] },
+      oficioultimo: {
+        $arrayElemAt: ["$oficios", -1]
+      }
+    }
+  }
+]
+```
+
+```
+departrabajo = db.depart.findOne({_id: 'dep1'})
+```
+
+```
+db.emple.find({_id: { $in : departrabajo.emple } } )
+```
+
+```
+emplesdep = db.emple.find({_id: { $in: 
+```
+
+```
+departrabajo.emple } }).toArray()
+```
+
+```
+departrabajo = db.depart.findOne({_id: 'dep2'})
+```
+
+```
+emplesdep = db.emple.find({_id: { $in: departrabajo.emple }, salario: {$gt:1400 }} ).toArray()
+```
+
