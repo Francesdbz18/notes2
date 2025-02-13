@@ -1,6 +1,28 @@
 Ejercicios con XPath y XQuery Dada la colección empresa en eXist-db que contiene los documentos empleados.xml y departamentos.xml 
-`<empleado emp_no="1"> <apellido>Martinez</apellido> <oficio>contable</oficio> <dir>calle Marte 23</dir> <fecha_alt>10-03-2000</fecha_alt> <dept_no>10</dept_no> <salario>1000.33</slario> </empleado>`
-`<departamentos> <dpto dpto_no="1"> <dnombre>Contabilidad</dnombre> <loc>plata 1</oficio> </dpto> <dpto dpt_no="10"> <dnombre>Comunicaciones</dnombre> <loc>planta 2</loc> </dpto> <dpto dpto_no="12"> <dnombre>Informática</dnombre> <loc>planta 1</loc> </departamentos>`
+```XML
+<empleado emp_no="1"> 
+	<apellido>Martinez</apellido> 
+	<oficio>contable</oficio> 
+	<dir>calle Marte 23</dir> 
+	<fecha_alt>10-03-2000</fecha_alt> 
+	<dept_no>10</dept_no> 
+	<salario>1000.33</salario> 
+</empleado>
+<departamentos> 
+	<dpto dpto_no="1"> 
+		<dnombre>Contabilidad</dnombre> 
+		<loc>plata 1</oficio> 
+	</dpto> 
+	<dpto dpt_no="10"> 
+		<dnombre>Comunicaciones</dnombre> 
+		<loc>planta 2</loc> 
+	</dpto> 
+	<dpto dpto_no="12">
+		<dnombre>Informática</dnombre> 
+		<loc>planta 1</loc> 
+	</dpto>
+</departamentos>
+```
 ### Consultas XPath:
 
 1. **Obtener los nombres de los departamentos:**

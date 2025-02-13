@@ -38,7 +38,7 @@ db.products.insertMany([
 }]
 ```
 
-```
+```json
 [
   {
     $project: {
@@ -57,7 +57,7 @@ db.products.insertMany([
 ]
 ```
 
-```
+```json
 [
   { $sort: { "direccion.población": 1 } },
   {
@@ -76,27 +76,27 @@ db.products.insertMany([
 ]
 ```
 
-```
+```json
 departrabajo = db.depart.findOne({_id: 'dep1'})
 ```
 
-```
+```json
 db.emple.find({_id: { $in : departrabajo.emple } } )
 ```
 
-```
+```json
 emplesdep = db.emple.find({_id: { $in: 
 ```
 
-```
+```json
 departrabajo.emple } }).toArray()
 ```
 
-```
+```json
 departrabajo = db.depart.findOne({_id: 'dep2'})
 ```
 
-```
+```json
 emplesdep = db.emple.find({_id: { $in: departrabajo.emple }, salario: {$gt:1400 }} ).toArray()
 ```
 

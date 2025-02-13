@@ -1,3 +1,28 @@
+RA4: 10 preguntas
+RA5: 5 preguntas Bases de datos XML en este examen       
+Oracle
+Neodatis - bbdd objetos
+Teoría - siglas, características de BBDD objeto-relacionales y orientadas a objetos, herencia, multiplicidad, relaciones (tablas anidadas)
+
+  
+4.1. Introducción
+
+**4.2. Bases de datos Objeto-Relacionales - Oracle** 
+4.2.1 Características
+4.2.2 Tipos de Objetos   
+          Actividad 4.1
+4.2.2.1 Métodos  
+          Actividad 4.2
+4.2.3 Tablas de objetos  
+          Actividad 4.3
+4.2.4 Tipos de colección
+4.2.1 Varrays  
+          Actividad 4.4
+4.2. Tablas anidadas
+4.2.5 Referencias
+4.2.6 Herencia de tipos
+4.2.7 [Ejemplo de modelo relacional y objeto relacional](https://aulavirtual33.educa.madrid.org/ies.sanjuandelacruz.pozuelodealarcon/mod/resource/view.php?id=86380 "Ejemplo de modelo relacional y objeto relacional")
+
 ```sql
 CREATE OR REPLACE TYPE DIRECCION AS OBJECT
 (
@@ -183,6 +208,16 @@ END;
 ```
 
 ### Neodatis
+
+**4.3 Bases de Datos orientadas a objetos (BDOO) -  Neodatis**  
+4.3.1 Características de las Bases de Datos OO  
+4.3.2 El estándar ODMG  
+4.3.3 El lenguaje de consultas OQL  
+4.4 Ejemplo de BDOO  
+4.4.1 Consultas sencillas  
+4.4.2 Consultas más complejas   
+4.4.2.1 Crear una BD Neodatis a partir dle modelo relaiconal   
+4.4.3 Modelo cliente/servidor de la base de datos
 ```java
     public static void main(String[] args) {  
         //creo la conexion  
