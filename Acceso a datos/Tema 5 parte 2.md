@@ -100,7 +100,8 @@ departrabajo = db.depart.findOne({_id: 'dep2'})
 emplesdep = db.emple.find({_id: { $in: departrabajo.emple }, salario: {$gt:1400 }} ).toArray()
 ```
 
-from pymongo import MongoClient  
+```
+from pymongo import MongoClient, ASCENDING
   
 client = MongoClient('localhost')  
   
@@ -141,3 +142,18 @@ doc = col.delete_one({
 })
 for document in col.find({}):  
     print(document)
+col.update_one({  
+    "edad": 80  
+}, {  
+    "$set": {  
+        "edad": 90  
+    }  
+}) 
+col.create_index([('edad', ASCENDING)])
+
+db.drop_collection('personas')
+
+client.drop_database('prueba')
+
+client.close()
+```
