@@ -100,3 +100,18 @@ departrabajo = db.depart.findOne({_id: 'dep2'})
 emplesdep = db.emple.find({_id: { $in: departrabajo.emple }, salario: {$gt:1400 }} ).toArray()
 ```
 
+from pymongo import MongoClient  
+  
+client = MongoClient('localhost')  
+  
+db = client['prueba']  
+col = db['personas']  
+  
+print (client.list_database_names())  
+print (db.list_collection_names())  
+  
+col.insert_one({  
+    'edad': 22,  
+    'nombre': 'EL CACAS',  
+    'intereses': ['PORNO DE GORDAS', 'PAPAS FRITAS']  
+    })
