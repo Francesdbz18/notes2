@@ -115,3 +115,17 @@ col.insert_one({
     'nombre': 'EL CACAS',  
     'intereses': ['PORNO DE GORDAS', 'PAPAS FRITAS']  
     })
+    
+col.insert_many([{  
+        'edad': 10,  
+        'nombre': 'EL CULOS',  
+        'intereses': ['PORNO DE NEGRAS', 'MUTUMBU']  
+    },  
+    {  
+        'edad': 80,  
+        'nombre': 'EL CUCAS',  
+        'intereses': ['PORNO DE LATINAS', 'EL NOVIO DE SU ESPOSA']  
+    }  
+])  
+  
+print (col.count_documents({}))
