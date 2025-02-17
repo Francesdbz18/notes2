@@ -1,5 +1,15 @@
+viewmodel
+navegación
+menús
 firmar apks
 apk = msi
-his bald ass won't send em links ffs
 ciclo de vida del software
 documentación 
+
+RA2 - Lenguajes naturales: se pueden recibir lenguajes naturales como entrada (sí.)
+
+
+mierdas específicas:
+- rememberSaveable
+- imágenes
+- el coño de su calva madre
