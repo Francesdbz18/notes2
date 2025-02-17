@@ -1,0 +1,2 @@
+firmar apks
+apk = msi
