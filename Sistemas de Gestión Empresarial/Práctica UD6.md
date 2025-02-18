@@ -6,7 +6,8 @@
 	3. Aplica permisos para que estas vistas estén disponibles solo para el grupo Administradora de la Aplicación Punto de Venta (TPV o POS).
 #### Práctica teórica
 1. Modifica el modelo producto (product.product) añadiendo un campo "procedencia" que contenga uno de los continentes. 
-2. Duplica una opción de menú para que salga en otro elemento de menú distinto al suyo. Asígnala a un grupo concreto y comprobar las consecuencias de ello. 
-3. Averigua las diferencias de vista base y vista de extensión en el modo de herencia de vista. Crea una vista heredada de la vista árbol de productos, quitando la imagen y añadiendo el precio de coste. 
-4. Cambia el orden de las columnas que muestra una vista de lista cualquiera. Modificarla mediante la inclusión de una columna con el campo nuevo añadido al modelo en la actividad propuesta 1. 
-5. Añade a Mi tablero tres vistas de tres aplicaciones diferentes.
+![[Pasted image 20250218094137.png]]
+1. Duplica una opción de menú para que salga en otro elemento de menú distinto al suyo. Asígnala a un grupo concreto y comprobar las consecuencias de ello. 
+2. Averigua las diferencias de vista base y vista de extensión en el modo de herencia de vista. Crea una vista heredada de la vista árbol de productos, quitando la imagen y añadiendo el precio de coste. 
+3. Cambia el orden de las columnas que muestra una vista de lista cualquiera. Modificarla mediante la inclusión de una columna con el campo nuevo añadido al modelo en la actividad propuesta 1. 
+4. Añade a Mi tablero tres vistas de tres aplicaciones diferentes.
