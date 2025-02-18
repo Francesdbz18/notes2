@@ -12,4 +12,5 @@
 	- Ejemplo contador de segundos
 4. Cámara
 5. porno degordas
+6. Permisos (LCDSM)
 
