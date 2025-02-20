@@ -3,3 +3,15 @@ https://developer.android.com/codelabs/basic-android-kotlin-compose-viewmodel-an
 https://developer.android.com/develop/ui/compose/state?hl=es-419#viewmodel-state
 
 https://developer.android.com/develop/ui/compose/migrate/other-considerations?hl=es-419#viewmodel
+
+
+Pantalla 1:
+- Temperatura seleccionada
+- Lista de temperaturas
+- Checkbox ºC o ºF
+Pantalla 2:
+- Hora seleccionada
+- Ciudad seleccionada
+Pantalla 3:
+- Ciudad seleccionada
+- Servicio seleccionado
