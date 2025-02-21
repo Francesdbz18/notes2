@@ -131,7 +131,7 @@ Es el tiempo que, por término medio, se tarda en recuperar una unidad monetaria
 	- 10% (reducido)
 	- 21% (general).
 
-- RÉGIMEN ESPECIAL DEL RECARGO DE EQUIVALENCIA: Se aplica a los autónomos, el proveedor del autónomo le tiene que cobrar a este un recargo extra al IVA, ( 5,2%, 1,4%, 0,5% ), no a servicios, comercio mayorista, actividades industriales siempre que no transformen. 
+- RÉGIMEN ESPECIAL DEL RECARGO DE EQUIVALENCIA: Se aplica a los autónomos, el proveedor del autónomo le tiene que cobrar a este un recargo extra al IVA, (5,2%, 1,4%, 0,5%), no a servicios, comercio mayorista, actividades industriales siempre que no transformen. 
 
 - IRPF: Impuesto directo. Exentos de declarar: percibidos exclusivamente rentas procedentes de trabajo personal iguales o inferiores a 22.000 euros de un solo pagador, por ejemplo. Hay más. Los autónomos tienen dos modalidades: Estimación directa y Estimación objetiva. 
 	- Estimación objetiva: Es voluntaria. Rendimientos íntegros menos de 150.000 euros( año 2021) se basa en una serie de módulos. 
