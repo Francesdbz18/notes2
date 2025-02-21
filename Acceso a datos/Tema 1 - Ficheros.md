@@ -35,7 +35,7 @@ Encontrar canciones de un artista deseado por teclado
 No entran los dos apartados últimos: 
 
 - Paso de esquemas XML  a clases Java.
-- Creación de una aplicación Jabx con Eclipse.
+- Creación de una aplicación JAXB con Eclipse.
 - Excepciones: detección y tratamiento.
 
 **_RA1: Desarrolla aplicaciones que gestionan información almacenada en ficheros identificando el campo de aplicación de los mismos y utilizando clases específicas._**

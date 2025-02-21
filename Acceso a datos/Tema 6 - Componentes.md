@@ -9,8 +9,9 @@
 6.4. Herramientas para el desarrollo de componentes
 	6.4.1. Creación de JavaBeans con NetBeans
 6.5. Empaquetado de componentes
-6.6. ~~JavaBeans para acceder a bases de datos~~: No entra
-6.7. Patrón Data Access Object
+6.7. Patrón Data Access Object (hasta antes de 6.7.1.)
 
 #### Parte 2: Interfaz de Programación de Aplicaciones (API)
-[Cómo crear una API RESTful en Python con Flask](https://imaginaformacion.com/tutoriales/crear-api-restful-python-flask)
+1. Introducción a las APIs y a los microservicios
+2. [Cómo crear una API RESTful en Python con Flask](https://imaginaformacion.com/tutoriales/crear-api-restful-python-flask)
+3. Funciones Lambda en AWS
