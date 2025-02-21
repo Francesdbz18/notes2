@@ -1,3 +1,4 @@
+#### Parte 1: Desarrollo de componentes
 6.2. Concepto de componente
 	6.2.1. Características
 	6.2.2. Ventajas e inconvenientes
@@ -10,3 +11,6 @@
 6.5. Empaquetado de componentes
 6.6. ~~JavaBeans para acceder a bases de datos~~: No entra
 6.7. Patrón Data Access Object
+
+#### Parte 2: Interfaz de Programación de Aplicaciones (API)
+[Cómo crear una API RESTful en Python con Flask](https://imaginaformacion.com/tutoriales/crear-api-restful-python-flask)
