@@ -56,21 +56,13 @@ RF = (Resultado del ejercicio / recursos propios (patrimonio neto)) x 100
 ##### Ratios financieros
 
 ###### Tesorería
-
 T = (REALIZABLE + DISPONIBLE) / PASIVO CORRIENTE 
-
 Significado: Liquidez inmediata – valor óptimo: entre 0,7 y 1,00.
-
 ###### Liquidez
-
 L= Activo corriente / Pasivo corriente
-
 Significado: solvencia a corto plazo.- valor óptimo: entre 1,5 y 1,8
-
 ###### Garantía
-
 G = Activo total / Pasivo total 
-
 Significado: solvencia a largo plazo - valor óptimo: entre 1,5 y 2,5.
 
 ##### Periodo Medio de Maduración (entra como teoría)
