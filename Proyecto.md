@@ -18,7 +18,9 @@
 	- Incorporar documentación en la memoria y justificaciones.
 	- Entregar archivos con el resultado del prototipo.
 6. Modelado de datos
-	- Modelado de datos **completo**.
+	- Modelado de datos **completo**. (M.E.R., M.R.)
+	- Incorporar en memoria especificación de requisitos de BBDD, diagrama E/R, tablas en código SQL.
+	- Entregar *aparte* archivos correspondientes al E/R y el código de las tablas
 7. x-onga
 8. Despliegue y publicación
 	- Desplegar en la nube, generar un instalador...
