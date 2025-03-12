@@ -45,3 +45,6 @@
 	- Aplicar buenas prácticas y clean code.
 	- JUnit, Selenium.
 	- Incorporar en memoria capturas de pantalla, pruebas realizadas y capturas de pantalla.
+13. Entregas y seguimiento
+	- Tutorías regulares con una hoja de seguimiento que repasa objetivos, observaciones y cuestiones importantes de la sesión actual y la próxima. Debe ser firmada por profesor y tutor.
+	- El tutor establece formas de entrega y seguimiento del proyecto.
