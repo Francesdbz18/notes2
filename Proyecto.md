@@ -20,11 +20,28 @@
 6. Modelado de datos
 	- Modelado de datos **completo**. (M.E.R., M.R.)
 	- Incorporar en memoria especificación de requisitos de BBDD, diagrama E/R, tablas en código SQL.
-	- Entregar *aparte* archivos correspondientes al E/R y el código de las tablas
-7. x-onga
-8. Despliegue y publicación
+	- Entregar *aparte* archivos correspondientes al E/R y el código de las tablas.
+7. Seguridad y autenticación
+	- Seguridad en la BBDD: usuarios, permisos, roles, cifrar contraseñas...
+	- Incorporar en la memoria decisiones tomadas y justificación de las mismas.
+8. Diseño Orientado a Objetos o paradigma elegido
+	- Incorporar diagramas de clases, explicación de partes del código que se consideren importantes (con capturas de pantalla).
+	- Entregar diagrama de clases.
+	- Entregar código ya sea en un repositorio (público o con acceso a tutor y miembros del tribunal) o en un pendrive, teniendo siempre este último para evitar problemas.
+9. Despliegue y publicación
 	- Desplegar en la nube, generar un instalador...
 	- Docker, Kubernetes, Jenkins, Electron
 	- Desplegar en Oracle Cloud, AWS, hosting propio, etc...
 	- vamos nome jodas
 	- El día de la exposición debe haber una simulación de la instalación y el uso de la aplicación, o, en su defecto, grabar videos con la aplicación funcionando.
+10. Transversales
+	- Presupuesto, riesgos técnicos, viabilidad.
+	- Herramientas como Excel y RiskWatch.
+	- Incorporar tareas y justificaciones.
+11. Dificultades encontradas
+	- Identificar problemas y dar soluciones a los mismos.
+12. Pruebas y calidad del código
+	- Pruebas unitarias, de integración y de aceptación.
+	- Aplicar buenas prácticas y clean code.
+	- JUnit, Selenium.
+	- Incorporar en memoria capturas de pantalla, pruebas realizadas y capturas de pantalla.
