@@ -22,4 +22,14 @@ Convenciones:
 
 Paquete y orden:
 - Una orden por proyecto con todo el contenido.
-- Nombre: ZPRACS25_XX
+- Nombre de paquete: ZPRACS25_XX
+- Tendremos un paquete por persona. Se recomienda agrupar los ejercicios de un mismo tema en una orden.
+
+Toolbar:
+- Cambiar entre editar y ver
+- Validar sintaxis.
+- Ejecutar
+- Visualizar objetos relacionados al programa.
+- Módulo: genera llamadas a métodos y funciones.
+- Pretty Printer: corrige indentaciones, mayúsculas, minúsculas...
+- Elementos de texto
