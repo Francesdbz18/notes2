@@ -36,3 +36,9 @@ Toolbar:
 - Buscar texto
 - Buscar texto en todo el report
 - Finalizar: vuelve al inicio de SE38.
+
+Debugging:
+- /h durante ejecución, empieza línea por línea
+- Establecer breakpoint cliqueando crea un breakpoint durante la sesión.
+- Escribir BREAK-POINT. establece un breakpoint que no se borra.
+- 
