@@ -41,4 +41,7 @@ Debugging:
 - /h durante ejecución, empieza línea por línea
 - Establecer breakpoint cliqueando crea un breakpoint durante la sesión.
 - Escribir BREAK-POINT. establece un breakpoint que no se borra.
-- 
+- F5: pasa a la siguiente línea ejecutable, incluyendo subrutinas (métodos).
+- F6: F5 sin entrar a la subrutina.
+- F7: Si se está en un archivo fuera del programa principal, vuelve.
+- F8: salta hasta el siguiente breakpoint o, en su defecto, hasta el final.
