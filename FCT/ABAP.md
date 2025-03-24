@@ -33,3 +33,6 @@ Toolbar:
 - Módulo: genera llamadas a métodos y funciones.
 - Pretty Printer: corrige indentaciones, mayúsculas, minúsculas...
 - Elementos de texto
+- Buscar texto
+- Buscar texto en todo el report
+- Finalizar: vuelve al inicio de SE38.
