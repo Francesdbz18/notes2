@@ -1,3 +1,4 @@
+[Acquiring Core ABAP Skills](https://learning.sap.com/learning-journeys/acquire-core-abap-skills)
 ![[Pasted image 20250324105634.png]]
 Transacciones
 - SE38: Editor de código
