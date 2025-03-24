@@ -5,7 +5,7 @@ Transacciones
 - SE37: Módulo funciones
 - SE80: Navegador de objetos
 - SE11: Diccionario de datos, tablas
-- SE16: BD
+- SE16: BD (DE)
 - SE16N: BD
 (Z3ENRAYA, ZSHOP)
 
