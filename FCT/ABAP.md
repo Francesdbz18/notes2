@@ -1,3 +1,4 @@
+![[Pasted image 20250324105634.png]]
 Transacciones
 - SE38: Editor de código
 - SE37: Módulo funciones
@@ -18,3 +19,7 @@ Atajos y trucos:
 Convenciones:
 - Los programas deben empezar por Z (o Y).
 - Todo se escribe en mayúsculas. Es posible usar minúsculas en textos y tablas.
+
+Paquete y orden:
+- Una orden por proyecto con todo el contenido.
+- Nombre: ZPRACS25_XX
