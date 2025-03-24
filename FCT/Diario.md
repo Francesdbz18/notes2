@@ -9,4 +9,10 @@
 	- Introducción al módulo de Compras
 	- Introducción a gestión de stocks
 - Viernes 21/03
+	- Introducción al módulo de Ventas
+	- Introducción al módulo de Finanzas
+
 ### Semana 1
+- Lunes 24/03
+	- Introducción e instalación de SAP Logon 
+	- Primeros pasos en SAP S/4HANA
