@@ -88,5 +88,38 @@ resul1 = int2 ** int.
 WRITE: 'Potencia de 2: ', resul1, cl_abap_char_utilities=>cr_lf.  
 NEW-LINE.
 ```
-1. Declarar 2 strings, concatenarlas, imprimir substrings de cada una y concatenar los substrings.
-2. 
+2. Declarar 2 strings, concatenarlas, imprimir substrings de cada una y concatenar los substrings.
+```ABAP
+DATA: str1 TYPE string VALUE 'Adiós',  
+      str2 TYPE string VALUE 'Hola',  
+      concatenacion TYPE string,  
+      substr1 TYPE string,  
+      substr2 TYPE string.  
+concatenacion = str1 && str2.  
+WRITE: concatenacion.  
+NEW-LINE.  
+CONCATENATE str1 str2 INTO concatenacion.  
+WRITE: concatenacion.  
+new-LINE.  
+substr1 = str1+2(2).  
+WRITE: substr1.  
+NEW-LINE.  
+substr2 = str2(2).  
+WRITE: substr2.  
+new-LINE.  
+CONCATENATE substr1 substr2 INTO concatenacion.  
+WRITE: concatenacion.
+```
+3.  Declarar: 
+	1. un tipo producto con campos:
+		1. ID(C5)
+		2. Name(c15)
+		3. UPrice(Pd5). 
+	2. Un tipo pedido con campos:
+		1. ID(C10)
+		2. Date (D)
+		3. Time (T)
+		4. 5x ProductX
+		5. TotalPrice (Pd2)
+	3. 5 variables Producto
+	4. 1 
