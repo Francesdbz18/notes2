@@ -58,5 +58,35 @@ acento agudo: no elimina espacios
 ### Ejercicios:
 Nombre: ZEJERCICIO_NUM_XX
 1. Declara 2 variables de cada uno de los tipos de variables de tipo numéricos aprendidas y asígnales valores arbitrarios. Realiza las siguientes operaciones entre dos variables de cada tipo: suma, resta, multiplicación, división, división entera, resto, exponenciación
-2. Declarar 2 strings, concatenarlas, imprimir substrings de cada una y concatenar los substrings.
-3. 
+```ABAP
+REPORT zejercicio_1_ff.  
+DATA: int        TYPE i VALUE 2,  
+      int2       TYPE i VALUE 5,  
+      float      TYPE f VALUE '1.5',  
+      float2     TYPE f VALUE '3.1',  
+      decfloat1 TYPE decfloat16 VALUE '4.5',  
+      decfloat12 TYPE decfloat16 VALUE '9.5',  
+      decfloat2 TYPE decfloat34 VALUE '8.9',  
+      decfloat22 TYPE decfloat34 VALUE '4.5',  
+      packed1    TYPE p LENGTH 16 DECIMALS 3 VALUE '5.444',  
+      packed12    TYPE p LENGTH 16 DECIMALS 4 VALUE '5.4444'.  
+  
+DATA: resul1 TYPE i.  
+resul1 = int + int2.  
+WRITE: 'Suma: ', resul1.  
+resul1 = int * int2.  
+WRITE: 'Multiplicación: ', resul1.  
+resul1 = int2 - int.  
+WRITE: 'Resta: ',resul1.  
+resul1 = int2 / int.  
+WRITE: 'DIvisión: ' ,resul1.  
+resul1 = int2 DIV int.  
+WRITE: 'División entera: ', resul1.  
+resul1 = int2 MOD int.  
+WRITE: 'Resto: ', resul1.  
+resul1 = int2 ** int.  
+WRITE: 'Potencia de 2: ', resul1, cl_abap_char_utilities=>cr_lf.  
+NEW-LINE.
+```
+1. Declarar 2 strings, concatenarlas, imprimir substrings de cada una y concatenar los substrings.
+2. 
