@@ -213,3 +213,4 @@ WRITE: pedido1-producto5-uprice.
 new-line.  
 WRITe: pedido1-totalprice.
 ```
+4. Investiga cómo capturar excepciones y cómo dar formato a una variable tipo fecha en la impresión por pantalla.
