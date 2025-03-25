@@ -110,7 +110,7 @@ new-LINE.
 CONCATENATE substr1 substr2 INTO concatenacion.  
 WRITE: concatenacion.
 ```
-3.  Declarar: 
+3.  Declarar e imprimir por pantalla: 
 	1. un tipo producto con campos:
 		1. ID(C5)
 		2. Name(c15)
@@ -122,4 +122,4 @@ WRITE: concatenacion.
 		4. 5x ProductX
 		5. TotalPrice (Pd2)
 	3. 5 variables Producto
-	4. 1 
+	4. 1 variable pedido
