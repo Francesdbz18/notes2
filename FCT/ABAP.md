@@ -46,3 +46,8 @@
 - F6: F5 sin entrar a la subrutina.
 - F7: Si se está en un archivo fuera del programa principal, vuelve.
 - F8: salta hasta el siguiente breakpoint o, en su defecto, hasta el final.
+
+```ABAP
+WRITE: 'pene'.
+
+```
