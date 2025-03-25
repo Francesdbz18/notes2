@@ -123,3 +123,93 @@ WRITE: concatenacion.
 		5. TotalPrice (Pd2)
 	3. 5 variables Producto
 	4. 1 variable pedido
+```ABAP
+TYPES: BEGIN OF producto,  
+         id     TYPE c LENGTH 5,  
+         name   TYPE c LENGTH 15,  
+         uprice TYPE p DECIMALS 2,  
+       END OF producto,  
+       BEGIN OF pedido,  
+         id         TYPE c LENGTH 10,  
+         date       TYPE d,  
+         time       TYPE t,  
+         producto1   TYPE producto,  
+         producto2   TYPE producto,  
+         producto3   TYPE producto,  
+         producto4   TYPE producto,  
+         producto5   TYPE producto,  
+         totalprice TYPE p DECIMALS 2,  
+       END OF pedido.  
+DATA:  
+      product1 type producto,  
+      product2 type producto,  
+      product3 type producto,  
+      product4 type producto,  
+      product5 type producto.  
+  
+product1-id = 'AAAAA'.  
+product1-name = 'Cuaderno'.  
+product1-uprice = '11.55'.  
+product2-id = 'BBBBB'.  
+product2-name = 'Estuche'.  
+product2-uprice = '10.05'.  
+product3-id = 'CCCCC'.  
+product3-name = 'Bolígrafo'.  
+product3-uprice = '1.55'.  
+product4-id = 'DDDDD'.  
+product4-name = 'Lápiz'.  
+product4-uprice = '2.55'.  
+product5-id = 'EEEEE'.  
+product5-name = 'Corrector'.  
+product5-uprice = '5.55'.  
+  
+DATA: pedido1 type pedido.  
+  
+pedido1-id = 'aaaaaaaaaaaaaaa'.  
+pedido1-date = sy-datum.  
+pedido1-time = cl_demo_date_time=>get_user_time( ).  
+pedido1-producto1 = product1.  
+pedido1-producto2 = product2.  
+pedido1-producto3 = product3.  
+pedido1-producto4 = product4.  
+pedido1-producto5 = product5.  
+pedido1-totalprice = pedido1-producto1-uprice + pedido1-producto2-uprice + pedido1-producto3-uprice + pedido1-producto4-uprice + pedido1-producto5-uprice.  
+  
+WRITE: pedido1-id.  
+new-line.  
+WRITE: pedido1-date.  
+new-line.  
+WRITE: pedido1-time.  
+new-line.  
+WRITE: pedido1-producto1-id.  
+new-line.  
+WRITE: pedido1-producto1-name.  
+new-line.  
+WRITE: pedido1-producto1-uprice.  
+new-line.  
+WRITE: pedido1-producto2-id.  
+new-line.  
+WRITE: pedido1-producto2-name.  
+new-line.  
+WRITE: pedido1-producto2-uprice.  
+new-line.  
+WRITE: pedido1-producto3-id.  
+new-line.  
+WRITE: pedido1-producto3-name.  
+new-line.  
+WRITE: pedido1-producto3-uprice.  
+new-line.  
+WRITE: pedido1-producto4-id.  
+new-line.  
+WRITE: pedido1-producto4-name.  
+new-line.  
+WRITE: pedido1-producto4-uprice.  
+new-line.  
+WRITE: pedido1-producto5-id.  
+new-line.  
+WRITE: pedido1-producto5-name.  
+new-line.  
+WRITE: pedido1-producto5-uprice.  
+new-line.  
+WRITe: pedido1-totalprice.
+```
