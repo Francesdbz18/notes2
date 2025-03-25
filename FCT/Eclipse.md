@@ -1,1 +1,1 @@
-"Funciona" con JRE 21 en Eclipse EE 2025-03 con tools.hana
+"Funciona" con JRE 21 en Eclipse EE 2025-03 con tools.hana.ondemand.com/latest
