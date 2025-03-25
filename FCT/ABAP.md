@@ -51,3 +51,10 @@
 WRITE: 'pene'.
 
 ```
+' str ': elimina espacios
+acento agudo: no elimina espacios
+
+
+### Ejercicios:
+Nombre: ZEJERCICIO_NUM_XX
+1. Declara 2 variables de cada uno de los tipos de variables de tipo numéricos aprendids
