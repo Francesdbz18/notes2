@@ -1,3 +1,7 @@
+[[Ejercicios Viabilidad Financiera]]
+[[Tema 7]]
+[[Tema 10]]
+
 #### Unidad 7: Fuentes de financiación ajenas
 
 - Crédito comercial: es el aplazamiento en el pago que las empresas conceden a sus clientes en una operación de compra-venta de bienes o servicios.
