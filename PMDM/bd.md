@@ -1,3 +1,6 @@
+[[examen]]
+[[]]
+
 ### Paso 1: Definir el modelo de datos para Room
 
 Primero, necesitamos definir el modelo de datos para los registros.
