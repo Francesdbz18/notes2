@@ -20,6 +20,7 @@
 ### Convenciones:
 - Los programas deben empezar por Z (o Y).
 - Todo se escribe en mayúsculas. Es posible usar minúsculas en textos y tablas.
+- Variables: global =gv_, local = lv_, parameters = p_, select options = s_
 
 ### Paquete y orden:
 - Una orden por proyecto con todo el contenido.
