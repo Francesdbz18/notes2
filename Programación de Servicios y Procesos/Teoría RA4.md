@@ -1,3 +1,5 @@
+[[04 Generación de Servicios en Red.pdf]]
+
  1. **Se han identificado diferentes protocolos estándar de comunicación para la implementación de servicios en red.** 
 El modelo TCP/IP está compuesto por 4 capas. La capa de aplicación define las aplicaciones de red y los servicios estándar. Estos servicios utilizan la capa de transporte para enviar y recibir datos. Existen varios protocolos de capa de aplicación.
 	- TELNET (Telecommunication Network) es un protocolo de emulación de terminal. Permite a un usuario acceder a una máquina remota y manejarla como si estuviese en ella. Su talón de Aquiles es la seguridad, ya que los nombres de usuario y las contraseñas viajan por la red como texto plano. El puerto estándar Telnet es el 23. Hoy en día está obsoleto, en su lugar se utilizan “Conexión a escritorio remoto”, VNC, SSH o Wine.
