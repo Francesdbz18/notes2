@@ -214,4 +214,4 @@ new-line.
 WRITe: pedido1-totalprice.
 ```
 4. Investiga cómo capturar excepciones y cómo dar formato a una variable tipo fecha en la impresión por pantalla.
-3.5. Rellenar la información de los productos (ejercicio 3)  con parameters y select options. Añadir un campo cantidad al producto.
+3.5. Rellenar la información de los productos (ejercicio 3) con parameters y select options. Añadir un campo cantidad al producto.
