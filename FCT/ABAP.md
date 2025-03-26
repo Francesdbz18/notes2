@@ -407,5 +407,11 @@ ENDCASE.
 ```
 o1. Año bisiesto.
 ```ABAP
-
+PARAMETERS p_num TYPE i OBLIGATORY.  
+IF ( p_num MOD 4 EQ 0 AND p_num MOD 100 NE 0 ) OR ( p_num MOD 400 EQ 0 ).  
+  WRITE 'Es un año bisiesto.'.  
+ELSE.  
+  WRITE ' No es un año bisiesto.'.  
+ENDIF.
 ```
+o2. Número aleatorio en rango de notas.
