@@ -334,3 +334,11 @@ CASE p_num.
     WRITE 'ERROR: Escriba un número del 1 al 7.'.  
 ENDCASE.
 ```
+9. Contar usando WHILE.
+```ABAP
+REPORT zbucles_9_ff.  
+PARAMETERS p_num TYPE i OBLIGATORY.  
+WHILE sy-index LE p_num.  
+  WRITE sy-index.  
+ENDWHILE.
+```
