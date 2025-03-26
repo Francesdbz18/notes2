@@ -291,11 +291,9 @@ ENDWHILE.
 ```ABAP
 PARAMETERS p_num TYPE i OBLIGATORY.  
 DATA:  
-  gv_num  TYPE i VALUE 0,  
   gv_suma TYPE i VALUE 0.  
 DO ( p_num ) TIMES.  
-  gv_num = gv_num + 1.  
-  gv_suma = gv_suma + gv_num.  
+  gv_suma = gv_suma + sy-index.  
   WRITE gv_suma.  
 ENDDO.
 ```
