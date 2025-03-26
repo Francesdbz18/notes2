@@ -279,3 +279,12 @@ CASE p_num.
     WRITE'ingrese una nota válida'.  
 ENDCASE.
 ```
+4. Imprimir del 1 al 5 usando WHILE.
+```ABAP
+WHILE gv_num LT 5.  
+  gv_num = gv_num + 1.  
+  WRITE gv_num.  
+  NEW-LINE.  
+ENDWHILE.
+```
+5. Solicitar N y calcular suma de los primeros N números.
