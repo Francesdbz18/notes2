@@ -312,3 +312,25 @@ ENDDO.
 ```ABAP
 
 ```
+8. Días de la semana con CASE.
+```ABAP
+PARAMETERS p_num TYPE i OBLIGATORY.  
+CASE p_num.  
+  WHEN 1.  
+    WRITE 'lunes'.  
+  WHEN 2.  
+    WRITE 'martes'.  
+  WHEN 3.  
+    WRITE 'miércoles'.  
+  WHEN 4.  
+    WRITE 'jueves'.  
+  WHEN 5.  
+    WRITE 'viernes'.  
+  WHEN 6.  
+    WRITE 'sábado'.  
+  WHEN 7.  
+    WRITE 'domingo'.  
+  WHEN OTHERS.  
+    WRITE 'ERROR: Escriba un número del 1 al 7.'.  
+ENDCASE.
+```
