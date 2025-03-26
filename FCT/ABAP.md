@@ -362,4 +362,13 @@ while sy-index le 10.
   exit.  
   ENDWHILE.
 ```
-12. 
+12. Saltar pares usando continue.
+```ABAP
+WHILE sy-index LE 10.  
+  IF sy-index MOD 2 NE 0.  
+    CONTINUE.  
+  ENDIF.  
+  WRITE sy-index.  
+ENDWHILE.
+```
+13. 
