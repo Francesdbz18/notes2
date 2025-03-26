@@ -242,3 +242,4 @@ do 10 times.
   write i.  
   enddo.
 ```
+2. Par o impar con IF.
