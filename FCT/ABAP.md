@@ -380,5 +380,17 @@ ENDWHILE.
 ```
 14. Exit dentro de un DO.
 ```ABAP
-
+PARAMETERS p_num TYPE i OBLIGATORY.  
+DATA:  
+  gv_suma TYPE i VALUE 0.  
+DO ( p_num ) TIMES.  
+  gv_suma = gv_suma + sy-index.  
+  IF gv_suma GE 50.  
+    NEW-LINE.  
+    WRITE: 'La suma ha parado en: ', sy-index.  
+    EXIT.  
+  ENDIF.  
+  WRITE gv_suma.  
+ENDDO.
 ```
+15. 
