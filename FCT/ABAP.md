@@ -353,3 +353,12 @@ DO ( p_num / 2 ) TIMES.
   WRITE gv_suma.  
 ENDDO.
 ```
+11. Detener la ejecución con EXIT.
+```ABAP
+REPORT ZBUCLES_11_FF.  
+while sy-index le 10.  
+  write sy-index.  
+  check sy-index eq 5.  
+  exit.  
+  ENDWHILE.
+```
