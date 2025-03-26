@@ -288,3 +288,26 @@ WHILE gv_num LT 5.
 ENDWHILE.
 ```
 5. Solicitar N y calcular suma de los primeros N números.
+```ABAP
+PARAMETERS p_num TYPE i OBLIGATORY.  
+DATA:  
+  gv_num  TYPE i VALUE 0,  
+  gv_suma TYPE i VALUE 0.  
+DO ( p_num ) TIMES.  
+  gv_num = gv_num + 1.  
+  gv_suma = gv_suma + gv_num.  
+  WRITE gv_suma.  
+ENDDO.
+```
+6. Tabla de multiplicar con DO.
+```ABAP
+PARAMETERS p_num TYPE i OBLIGATORY.  
+DATA: gv_resul TYPE i VALUE 0,  
+      gv_index TYPE i VALUE 1.  
+DO 10 TIMES.  
+  gv_resul = gv_index * p_num.  
+  WRITE gv_resul.  
+  gv_index = gv_index + 1.  
+ENDDO.
+```
+7. P
