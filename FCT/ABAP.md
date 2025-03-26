@@ -252,3 +252,30 @@ ELSE.
 ENDIF.
 ```
 3. Clasificar notas con CASE.
+```ABAP
+PARAMETERS p_num TYPE i OBLIGATORY.  
+CASE p_num.  
+  WHEN 1.  
+    WRITE'suspenso'.  
+  WHEN 2.  
+    WRITE'suspenso'.  
+  WHEN 3.  
+    WRITE'suspenso'.  
+  WHEN 4.  
+    WRITE 'suspenso'.  
+  WHEN 5.  
+    WRITE'bien'.  
+  WHEN 6.  
+    WRITE 'bien'.  
+  WHEN 7.  
+    WRITE 'notable'.  
+  WHEN 8.  
+    WRITE 'notsble'.  
+  WHEN 9.  
+    WRITE 'sobresaliente'.  
+  WHEN 10.  
+    WRITE 'sobresaliente'.  
+  WHEN OTHERS.  
+    WRITE'ingrese una nota válida'.  
+ENDCASE.
+```
