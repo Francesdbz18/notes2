@@ -243,3 +243,12 @@ do 10 times.
   enddo.
 ```
 2. Par o impar con IF.
+```ABAP
+PARAMETERs p_num TYPE i OBLIGATORY.  
+IF p_num MOD 2 EQ 0.  
+  WRITE 'par.'.  
+ELSE.  
+  WRITE 'impar'.  
+ENDIF.
+```
+3. Clasificar notas con CASE.
