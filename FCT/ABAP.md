@@ -220,4 +220,15 @@ WRITe: pedido1-totalprice.
 ```ABAP
 
 ```
-5. A
+Operadores:
+- EQ: Equals
+- > o GT: greater than
+- < o LT:  menor
+- <>
+- >=
+- <=
+- CS
+- CP
+- BREAK
+- CONTINUE
+- CHECK
