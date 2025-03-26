@@ -393,4 +393,16 @@ DO ( p_num ) TIMES.
   WRITE gv_suma.  
 ENDDO.
 ```
-15. 
+15.  CHECK dentro de CASE.
+```ABAP
+PARAMETERS p_num TYPE i OBLIGATORY.  
+CASE p_num.  
+  WHEN 1 OR 3 OR 5 OR 7 OR 9.  
+    CHECK p_num GE 5.  
+    WRITE 'Es impar.'.  
+  WHEN 2 OR 4 OR 6 OR 8 OR 10.  
+    CHECK p_num GE 5.  
+    WRITE 'Es par.'.  
+ENDCASE.
+```
+o1. 
