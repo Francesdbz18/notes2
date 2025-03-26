@@ -342,3 +342,14 @@ WHILE sy-index LE p_num.
   WRITE sy-index.  
 ENDWHILE.
 ```
+10. Sumar numeros pares con DO.
+```ABAP
+REPORT zbucles_10_ff.  
+PARAMETERS p_num TYPE i OBLIGATORY.  
+DATA: gv_suma TYPE i VALUE 0.  
+DO ( p_num / 2 ) TIMES.  
+  gv_suma = gv_suma + 2.  
+  CHECK gv_suma lt p_num.  
+  WRITE gv_suma.  
+ENDDO.
+```
