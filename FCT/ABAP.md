@@ -371,4 +371,14 @@ WHILE sy-index LE 10.
   WRITE sy-index.  
 ENDWHILE.
 ```
-13. 
+13. Mostrar sólo múltiplos de 3 en while.
+```ABAP
+WHILE sy-index LE 10.  
+  CHECK sy-index MOD 3 EQ 0.  
+  WRITE sy-index.  
+ENDWHILE.
+```
+14. Exit dentro de un DO.
+```ABAP
+
+```
