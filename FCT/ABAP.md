@@ -232,3 +232,13 @@ Operadores:
 - BREAK
 - CONTINUE
 - CHECK
+
+Ejercicios
+1. Contar hasta 10 con DO.
+```ABAP
+DATA i type i value 0.  
+do 10 times.  
+  i = i + 1.  
+  write i.  
+  enddo.
+```
