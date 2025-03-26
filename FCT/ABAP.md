@@ -310,4 +310,7 @@ DO 10 TIMES.
   gv_index = gv_index + 1.  
 ENDDO.
 ```
-7. P
+7. Positivo, negativo o 0 con if.
+```ABAP
+
+```
