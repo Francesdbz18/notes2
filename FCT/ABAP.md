@@ -437,3 +437,5 @@ CASE p_str.
 ENDCASE.
 ```
 > [!NOTE] MODIFY TABLE añade nuevos campos si no están en la tabla
+
+- CLEAR y REFRESH para vaciar variables y tablas respectivamente.
