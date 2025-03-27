@@ -607,3 +607,13 @@ LOOP AT lt_empleados INTO empleado.
 ENDLOOP.
 ```
 7. Ordenar tabla manualmente.
+```abap
+SORT lt_empleados by ID.
+```
+8. Contar registros.
+```abap
+DATA(lv_count) = lines( lt_empleados ).  
+  
+WRITE: / 'La tabla tiene ', lv_count, ' registros.'.
+```
+9. 
