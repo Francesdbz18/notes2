@@ -482,3 +482,7 @@ DATA: gt_sorted_table TYPE SORTED TABLE OF gs_clientes with UNIQUE key�
           gv_clientes-budget.  
       ENDLOOP.
 ```
+3. Hashed table
+```abap
+
+```
