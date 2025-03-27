@@ -436,3 +436,4 @@ CASE p_str.
     WRITE 'Introduzca una calificación correcta.'.  
 ENDCASE.
 ```
+> [!NOTE] MODIFY TABLE añade nuevos campos si no están en la tabla
