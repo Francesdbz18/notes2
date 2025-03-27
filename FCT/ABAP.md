@@ -581,5 +581,29 @@ ENDLOOP.
 ```
 6. Uso de una tabla con estructura y sy index.
 ```abap
-
+REPORT ztablas_6_ff.  
+TYPES: BEGIN OF ty_empleado,  
+         nombre TYPE string,  
+         orden  TYPE c,  
+       END OF ty_empleado.  
+  
+DATA: lt_empleados TYPE STANDARD TABLE OF ty_empleado,  
+      empleado     TYPE ty_empleado.  
+  
+DO 5 TIMES.  
+  empleado-orden = sy-index.  
+  if sy-index eq 1.  
+    empleado-nombre = sy-uname.  
+    else.  
+      CONCATENATE 'Empleado ' empleado-orden into empleado-nombre.  
+      endif.  
+      append empleado to lt_empleados.  
+ENDDO.  
+  
+LOOP AT lt_empleados INTO empleado.  
+  WRITE: /  
+         'Nombre:', empleado-nombre,  
+         'Orden:', empleado-orden.  
+ENDLOOP.
 ```
+7. 
