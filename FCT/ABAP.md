@@ -445,3 +445,18 @@ ENDCASE.
 
 LOOP AT gt_test INTO DATA(gs_test2).
 ENDLOOP.
+
+1. Llenar standard table de ints.
+```ABAP
+REPORT ztablas_1_ff.  
+DATA: int    TYPE i,  
+      gt_int TYPE TABLE OF i.  
+WHILE sy-index LE 5.  
+  APPEND sy-index TO gt_int.  
+ENDWHILE.  
+  
+LOOP AT gt_int INTO int.  
+  WRITE: int.  
+ENDLOOP.
+```
+2. 
