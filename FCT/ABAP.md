@@ -618,5 +618,14 @@ WRITE: / 'La tabla tiene ', lv_count, ' registros.'.
 ```
 9. Buscar valores.
 ```abap
-
+PARAMETERS p_num TYPE i OBLIGATORY.  
+DATA lv_num TYPE i.  
+READ TABLE lt_empleados INTO lv_empleado WITH KEY salario = p_num.  
+IF sy-subrc = 0.  
+  WRITE: / 'El número fue encontrado en la tabla.'.  
+ELSE.  
+  WRITE: / 'El número no se encuentra en la tabla.'.  
+ENDIF.
 ```
+10. Estructuras anidadas.
+
