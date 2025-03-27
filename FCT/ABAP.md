@@ -21,6 +21,7 @@
 - Los programas deben empezar por Z (o Y).
 - Todo se escribe en mayúsculas. Es posible usar minúsculas en textos y tablas.
 - Variables: global =gv_, local = lv_, parameters = p_, select options = s_
+- Dentro de una subrutina: clear o refresh a estructuras antes de volver a rellenarlas.
 
 ### Paquete y orden:
 - Una orden por proyecto con todo el contenido.
@@ -440,6 +441,7 @@ ENDCASE.
 
 - CLEAR y REFRESH para vaciar variables y tablas respectivamente.
 - Para crear tablas, estructuras y tipo tablas globales, SE11.
+- No se pueden imprimir por pantalla estructuras completas en una única línea.
 
 LOOP AT gt_test INTO DATA(gs_test2).
 ENDLOOP.
