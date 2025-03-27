@@ -459,4 +459,7 @@ LOOP AT gt_int INTO int.
   WRITE: int.  
 ENDLOOP.
 ```
-2. 
+2. Sorted table.
+```ABAP
+
+```
