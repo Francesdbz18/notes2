@@ -461,6 +461,7 @@ ENDLOOP.
 ```
 2. Sorted table.
 ```abap
+REPORT ZTABLAS_2_FF.  
 TYPES: BEGIN OF gs_clientes,  
   ID TYPE i,  
   name type string,  
@@ -471,9 +472,11 @@ DATA: gt_sorted_table TYPE SORTED TABLE OF gs_clientes with UNIQUE key�
       gv_clientes type gs_clientes.  
   gv_clientes-ID = 1. gv_clientes-name = 'Juanito Alimaña'. gv_clientes-budget = 69420.  
   insert gv_clientes into table gt_sorted_table.  
-  gv_clientes-ID = 2. gv_clientes-name = 'Pedrito Navaja'. gv_clientes-budget = 45000.  
-  insert gv_clientes into table gt_sorted_table.  
   gv_clientes-ID = 3. gv_clientes-name = 'Pablo Pueblo'. gv_clientes-budget = 2.  
+  insert gv_clientes into table gt_sorted_table.  
+  gv_clientes-ID = 1. gv_clientes-name = 'Juanito Alimaña'. gv_clientes-budget = 69420.  
+  insert gv_clientes into table gt_sorted_table.  
+  gv_clientes-ID = 2. gv_clientes-name = 'Pedrito Navaja'. gv_clientes-budget = 45000.  
   insert gv_clientes into table gt_sorted_table.  
   
   LOOP AT gt_sorted_table into gv_clientes.  
