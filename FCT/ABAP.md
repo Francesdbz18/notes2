@@ -579,4 +579,7 @@ LOOP AT lt_empleados INTO lv_empleado.
          'Salario:', lv_empleado-salario.  
 ENDLOOP.
 ```
-6. 
+6. Uso de una tabla con estructura y sy index.
+```abap
+
+```
