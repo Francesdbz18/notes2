@@ -544,3 +544,36 @@ LOOP AT lt_empleados INTO lv_empleado.
 ENDLOOP.
 ```
 5. Eliminar duplicados.
+```abap
+lv_empleado-id = 1.  
+lv_empleado-nombre = 'Juan Perez'.  
+lv_empleado-salario = 3500.  
+INSERT lv_empleado INTO TABLE lt_empleados.  
+  
+lv_empleado-id = 2.  
+lv_empleado-nombre = 'Maria Gomez'.  
+lv_empleado-salario = 4200.  
+INSERT lv_empleado INTO TABLE lt_empleados.  
+  
+lv_empleado-id = 3.  
+lv_empleado-nombre = 'Carlos Ruiz'.  
+lv_empleado-salario = 5000.  
+INSERT lv_empleado INTO TABLE lt_empleados.  
+  
+LOOP AT lt_empleados INTO lv_empleado.  
+  WRITE: / 'ID:', lv_empleado-id,  
+         'Nombre:', lv_empleado-nombre,  
+         'Salario:', lv_empleado-salario.  
+ENDLOOP.  
+  
+sort lt_empleados.  
+DELETE ADJACENT DUPLICATES FROM lt_empleados COMPARING ALL FIELDS.  
+  
+write /'TABLA TRAS ORDENAR Y ELIMINAR ADYACENTES.'.  
+LOOP AT lt_empleados INTO lv_empleado.  
+  WRITE: / 'ID:', lv_empleado-id,  
+         'Nombre:', lv_empleado-nombre,  
+         'Salario:', lv_empleado-salario.  
+ENDLOOP.
+```
+6. 
