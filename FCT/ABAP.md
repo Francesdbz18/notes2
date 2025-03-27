@@ -440,4 +440,6 @@ ENDCASE.
 
 - CLEAR y REFRESH para vaciar variables y tablas respectivamente.
 - Para crear tablas, estructuras y tipo tablas globales, SE11.
-- 
+
+LOOP AT gt_test INTO DATA(gs_test2).
+ENDLOOP.
