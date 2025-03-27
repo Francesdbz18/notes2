@@ -606,4 +606,4 @@ LOOP AT lt_empleados INTO empleado.
          'Orden:', empleado-orden.  
 ENDLOOP.
 ```
-7. 
+7. Ordenar tabla manualmente.
