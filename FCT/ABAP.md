@@ -616,4 +616,7 @@ DATA(lv_count) = lines( lt_empleados ).
   
 WRITE: / 'La tabla tiene ', lv_count, ' registros.'.
 ```
-9. 
+9. Buscar valores.
+```abap
+
+```
