@@ -515,5 +515,32 @@ ENDLOOP.
 ```
 4. Empleados
 ```abap
-
+TYPES: BEGIN OF ty_empleado,  
+         id      TYPE i,  
+         nombre  TYPE string,  
+         salario TYPE p LENGTH 10 DECIMALS 2,  
+       END OF ty_empleado.  
+DATA: lt_empleados TYPE STANDARD TABLE OF ty_empleado.  
+DATA: lv_empleado TYPE ty_empleado.  
+lv_empleado-id = 1.  
+lv_empleado-nombre = 'Juan Perez'.  
+lv_empleado-salario = 3500.  
+INSERT lv_empleado INTO TABLE lt_empleados.  
+  
+lv_empleado-id = 2.  
+lv_empleado-nombre = 'Maria Gomez'.  
+lv_empleado-salario = 4200.  
+INSERT lv_empleado INTO TABLE lt_empleados.  
+  
+lv_empleado-id = 3.  
+lv_empleado-nombre = 'Carlos Ruiz'.  
+lv_empleado-salario = 5000.  
+INSERT lv_empleado INTO TABLE lt_empleados.  
+  
+LOOP AT lt_empleados INTO lv_empleado.  
+  WRITE: / 'ID:', lv_empleado-id,  
+         'Nombre:', lv_empleado-nombre,  
+         'Salario:', lv_empleado-salario.  
+ENDLOOP.
 ```
+5. Eliminar duplicados.
