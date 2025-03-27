@@ -439,3 +439,5 @@ ENDCASE.
 > [!NOTE] MODIFY TABLE añade nuevos campos si no están en la tabla
 
 - CLEAR y REFRESH para vaciar variables y tablas respectivamente.
+- Para crear tablas, estructuras y tipo tablas globales, SE11.
+- 
