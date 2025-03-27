@@ -416,5 +416,23 @@ ENDIF.
 ```
 o2. Número aleatorio en rango de notas.
 ```ABAP
-
+DATA: lo_ran  TYPE REF TO cl_abap_random_int,   lv_i   TYPE i,   lv_seed TYPE i.  
+lv_seed = sy-timlo.lo_ran = cl_abap_random_int=>create( min = 5 max = 25 seed = lv_seed ). lv_i = lo_ran->get_next( ).  
+PARAMETERS p_str TYPE string OBLIGATORY.  
+CASE p_str.  
+  WHEN 'SUSPENSO'.  
+    lo_ran = cl_abap_random_int=>create( min = 1 max = 4 seed = lv_seed ). lv_i = lo_ran->get_next( ).  
+    WRITE lv_i.  
+  WHEN 'BIEN'.  
+    lo_ran = cl_abap_random_int=>create( min = 5 max = 6 seed = lv_seed ). lv_i = lo_ran->get_next( ).  
+    WRITE lv_i.  
+  WHEN 'NOTABLE'.  
+    lo_ran = cl_abap_random_int=>create( min = 7 max = 8 seed = lv_seed ). lv_i = lo_ran->get_next( ).  
+    WRITE lv_i.  
+  WHEN 'SOBRESALIENTE'.  
+    lo_ran = cl_abap_random_int=>create( min = 9 max = 10 seed = lv_seed ). lv_i = lo_ran->get_next( ).  
+    WRITE lv_i.  
+  WHEN OTHERS.  
+    WRITE 'Introduzca una calificación correcta.'.  
+ENDCASE.
 ```
