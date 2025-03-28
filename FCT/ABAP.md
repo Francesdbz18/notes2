@@ -678,3 +678,19 @@ ENDFORM.
 START-OF-SELECTION.  
   PERFORM countVowels USING p_str.
 ```
+5. Invertir una cadena.
+```abap
+PARAMETERS p_str TYPE string OBLIGATORY.  
+  
+  
+FORM invert USING p_str TYPE string.  
+  data(lv_length) = strlen( p_str ).  
+  data(i) = lv_length.  
+  data(reversed) = p_str.  
+  reversed = reverse( reversed ).  
+  write reversed.  
+  ENDFORM.  
+  
+  START-OF-SELECTION.  
+  perform invert using p_str.
+```
