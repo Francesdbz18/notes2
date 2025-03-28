@@ -632,3 +632,19 @@ ENDIF.
 ### Field symbols
 LOOP AT *tabla* ASSIGNING *field-symbols*
 LOOP AT screen: modificar atributos de elementos por pantalla.
+
+1. Cuadrado de un número.
+
+```abap
+REPORT zsubrutinas_1_ff.  
+PARAMETERS p_num TYPE i OBLIGATORY.  
+  
+FORM square USING n TYPE i.  
+  n = n * n.  
+  WRITE n.  
+ENDFORM.  
+  
+START-OF-SELECTION.  
+  PERFORM square USING p_num.
+```
+2. 
