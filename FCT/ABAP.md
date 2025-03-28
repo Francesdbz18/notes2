@@ -769,3 +769,26 @@ LOOP AT lt_nombres INTO lv_nombre.
 ENDLOOP.
 ```
 2. Suma de elementos de una tabla interna (con varios campos)
+3. Copiar valores de una tabla a otra sin LOOP AT.
+```abap
+REPORT zfieldsymbols_3_ff.  
+DATA: lt_tabla1 TYPE TABLE OF string,  
+      lt_tabla2 TYPE TABLE OF string,  
+      lv_str    TYPE string.  
+  
+lv_str = 'Juanito'.  
+APPEND lv_str TO lt_tabla1.  
+  
+lv_str = 'Pepita'.  
+APPEND lv_str TO lt_tabla1.  
+  
+FIELD-SYMBOLS <fs_tabla>.  
+  
+ASSIGN lt_tabla1 TO <fs_tabla>.  
+lt_tabla2 = <fs_tabla>.  
+  
+LOOP AT lt_tabla2 INTO lv_str.  
+  WRITE / lv_str.  
+ENDLOOP.
+```
+4. Ordenar tabla.
