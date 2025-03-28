@@ -768,4 +768,4 @@ LOOP AT lt_nombres INTO lv_nombre.
   WRITE: / lv_nombre.  
 ENDLOOP.
 ```
-2. 
+2. Suma de elementos de una tabla interna (con varios campos)
