@@ -647,4 +647,19 @@ ENDFORM.
 START-OF-SELECTION.  
   PERFORM square USING p_num.
 ```
-2. 
+2. Conversión de grados Celsius a grados Fahrenheit.
+3. Suma de dos números.
+```abap
+REPORT zsubrutinas_3_ff.  
+PARAMETERS p_num TYPE i OBLIGATORY.  
+PARAMETERS p_num2 TYPE i OBLIGATORY.  
+DATA suma TYPE i.  
+  
+FORM sumar USING num TYPE i num2 TYPE i CHANGING suma.  
+  suma = num + num2.  
+ENDFORM.  
+  
+START-OF-SELECTION.  
+  PERFORM sumar USING p_num p_num2 CHANGING suma.  
+  WRITE suma.
+```
