@@ -631,3 +631,4 @@ ENDIF.
 
 ### Field symbols
 LOOP AT *tabla* ASSIGNING *field-symbols*
+LOOP AT screen: modificar atributos de elementos por pantalla.
