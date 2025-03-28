@@ -663,3 +663,18 @@ START-OF-SELECTION.
   PERFORM sumar USING p_num p_num2 CHANGING suma.  
   WRITE suma.
 ```
+4. Contar vocales.
+```abap
+REPORT zsubrutinas_4_ff.  
+PARAMETERS p_str TYPE string OBLIGATORY.  
+  
+  
+FORM countVowels USING p_str TYPE string.  
+  TRANSLATE p_str TO UPPER CASE.  
+  DATA(resultado) = count_any_of(     val = p_str sub   = `AEIOU` ).  
+  WRITE resultado.  
+ENDFORM.  
+  
+START-OF-SELECTION.  
+  PERFORM countVowels USING p_str.
+```
