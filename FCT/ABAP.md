@@ -629,3 +629,5 @@ ENDIF.
 ```
 10. Estructuras anidadas.
 
+### Field symbols
+LOOP AT *tabla* ASSIGNING *field-symbols*
