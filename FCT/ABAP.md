@@ -851,3 +851,4 @@ ENDLOOP.
 sel -> sub con subrutina con loop at screen. radiobuttons y parameters
 sub -> métodos
 principal -> mostrar en pantalla
+top -> variables globales
