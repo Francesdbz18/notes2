@@ -848,7 +848,7 @@ LOOP AT lt_tabla1 INTO lv_str.
   WRITE / lv_str.  
 ENDLOOP.
 ```
-sel -> sub con subrutina con loop at screen. radiobuttons y parameters
+sel -> sub con subrutina con loop at screen. incluye radiobuttons y parameters
 sub -> métodos
 principal -> mostrar en pantalla
 top -> variables globales
