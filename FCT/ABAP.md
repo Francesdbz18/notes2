@@ -815,3 +815,36 @@ LOOP AT lt_tabla1 INTO lv_str.
   WRITE / lv_str.  
 ENDLOOP.
 ```
+5. Buscar y modificar un valor.
+```abap
+REPORT ZFIELDSYMBOLS_5_FF.  
+DATA: lt_tabla1 TYPE TABLE OF string,  
+      lv_str    TYPE string,  
+      lv_buscado type string,  
+      lv_nuevo type string.  
+  
+lv_str = 'Juanito'.  
+APPEND lv_str TO lt_tabla1.  
+  
+lv_str = 'Pepita'.  
+APPEND lv_str TO lt_tabla1.  
+  
+lv_str = 'Fulanito'.  
+APPEND lv_str TO lt_tabla1.  
+  
+lv_buscado = 'Pepita'.  
+lv_nuevo = 'Francesco'.  
+  
+FIELD-SYMBOLS <fs_tabla>.  
+  
+LOOP AT lt_tabla1 ASSIGNING <fs_tabla>.  
+  IF <fs_tabla> = lv_buscado.  
+    " Reemplazar el valor si coincide  
+    <fs_tabla> = lv_nuevo.  
+  ENDIF.  
+ENDLOOP.  
+  
+LOOP AT lt_tabla1 INTO lv_str.  
+  WRITE / lv_str.  
+ENDLOOP.
+```
