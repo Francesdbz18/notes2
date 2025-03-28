@@ -737,3 +737,25 @@ PARAMETERS: p_num TYPE i.
 START-OF-SELECTION.  
   WRITE: / p_num.
 ```
+5. END-OF-SELECTION
+```abap
+DATA: lt_values TYPE TABLE OF i,  
+      lv_value  TYPE i.  
+  
+START-OF-SELECTION.  
+  DO 10 TIMES.  
+    lv_value = sy-index.  
+    APPEND lv_value TO lt_values.  
+  ENDDO.  
+  LOOP AT lt_values INTO lv_value.  
+    WRITE: / lv_value.  
+  ENDLOOP.  
+  
+END-OF-SELECTION.  
+  WRITE: / 'Se acabó.'.
+```
+### Field-symbols
+1. Modificar valores
+```
+
+```
