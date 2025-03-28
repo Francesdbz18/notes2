@@ -729,4 +729,11 @@ AT SELECTION-SCREEN OUTPUT.
 END-OF-SELECTION.  
   write 'Te lo advertí. *kaboom*'.
 ```
-4. 
+4. start-of-selection
+```abap
+REPORT ZEVENTOS_4_FF.  
+PARAMETERS: p_num TYPE i.  
+  
+START-OF-SELECTION.  
+  WRITE: / p_num.
+```
