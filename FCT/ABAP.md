@@ -757,5 +757,15 @@ END-OF-SELECTION.
 ### Field-symbols
 1. Modificar valores
 ```
-
+DATA: lt_nombres TYPE TABLE OF string,  
+      lv_nombre  TYPE string.  
+APPEND 'Álex' TO lt_nombres.  
+APPEND 'Andrés' TO lt_nombres.  
+APPEND 'Francesco' TO lt_nombres.  
+READ TABLE lt_nombres ASSIGNING FIELD-SYMBOL(<fs>) INDEX 2.  
+<fs> = 'Natalia'.  
+LOOP AT lt_nombres INTO lv_nombre.  
+  WRITE: / lv_nombre.  
+ENDLOOP.
 ```
+2. 
