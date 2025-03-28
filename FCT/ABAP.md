@@ -792,3 +792,26 @@ LOOP AT lt_tabla2 INTO lv_str.
 ENDLOOP.
 ```
 4. Ordenar tabla.
+```abap
+REPORT ZFIELDSYMBOLS_4_FF.  
+DATA: lt_tabla1 TYPE TABLE OF string,  
+      lv_str    TYPE string.  
+  
+lv_str = 'Juanito'.  
+APPEND lv_str TO lt_tabla1.  
+  
+lv_str = 'Pepita'.  
+APPEND lv_str TO lt_tabla1.  
+  
+lv_str = 'Fulanito'.  
+APPEND lv_str TO lt_tabla1.  
+  
+FIELD-SYMBOLS <fs_tabla>.  
+  
+ASSIGN lt_tabla1 TO <fs_tabla>.  
+sort <fs_tabla>.  
+  
+LOOP AT lt_tabla1 INTO lv_str.  
+  WRITE / lv_str.  
+ENDLOOP.
+```
