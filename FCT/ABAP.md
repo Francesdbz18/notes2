@@ -718,3 +718,15 @@ AT SELECTION-SCREEN.
     message 'El número debe ser positivo.' type 'E'.  
   ENDIF.
 ```
+3. AT SELECTION-SCREEN OUTPUT
+```abap
+REPORT ZEVENTOS_3_FF.  
+PARAMETERS: p_str TYPE string.  
+  
+AT SELECTION-SCREEN OUTPUT.  
+  MESSAGE 'Si ejecutas este programa, el servidor va a explotar.' TYPE 'W'.  
+  
+END-OF-SELECTION.  
+  write 'Te lo advertí. *kaboom*'.
+```
+4. 
