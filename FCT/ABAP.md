@@ -633,6 +633,8 @@ ENDIF.
 LOOP AT *tabla* ASSIGNING *field-symbols*
 LOOP AT screen: modificar atributos de elementos por pantalla.
 
+### Subrutinas
+
 1. Cuadrado de un número.
 
 ```abap
@@ -693,4 +695,9 @@ FORM invert USING p_str TYPE string.
   
   START-OF-SELECTION.  
   perform invert using p_str.
+```
+### Eventos del programa
+1. INITIALIZATION
+```abap
+
 ```
