@@ -708,3 +708,13 @@ gv_num = 69420.
 START-OF-SELECTION.  
 write gv_num.
 ```
+2. AT SELECTION-SCREEN
+```abap
+PARAMETERS: p_num TYPE i.  
+  
+AT SELECTION-SCREEN.  
+  IF p_num <= 0.  
+*IMPORTANTE: La siguiente línea es un mensaje de error.  
+    message 'El número debe ser positivo.' type 'E'.  
+  ENDIF.
+```
