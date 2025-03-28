@@ -699,5 +699,12 @@ FORM invert USING p_str TYPE string.
 ### Eventos del programa
 1. INITIALIZATION
 ```abap
-
+REPORT ZEVENTOS_1_FF.  
+data gv_num type i.  
+  
+INITIALIZATION.  
+gv_num = 69420.  
+  
+START-OF-SELECTION.  
+write gv_num.
 ```
