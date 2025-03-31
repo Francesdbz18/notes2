@@ -678,7 +678,37 @@ LOOP AT lt_empleados INTO lv_empleado.
          ' Número:', lv_empleado-direccion-numero.  
 ENDLOOP.
 ```
-11. 
+11. Fusión de dos tablas.
+```
+DATA: lt_tabla1    TYPE STANDARD TABLE OF i,  
+      lt_tabla2    TYPE STANDARD TABLE OF i,  
+      lt_resultado TYPE STANDARD TABLE OF i,  
+      lv_numero    TYPE i.  
+APPEND 10 TO lt_tabla1.  
+APPEND 20 TO lt_tabla1.  
+APPEND 30 TO lt_tabla1.  
+APPEND 40 TO lt_tabla1.  
+APPEND 20 TO lt_tabla2.  
+APPEND 50 TO lt_tabla2.  
+APPEND 60 TO lt_tabla2.  
+APPEND 30 TO lt_tabla2.  
+LOOP AT lt_tabla1 INTO lv_numero.  
+  INSERT lv_numero INTO TABLE lt_resultado.  
+ENDLOOP.  
+LOOP AT lt_tabla2 INTO lv_numero.  
+  READ TABLE lt_resultado TRANSPORTING NO FIELDS WITH KEY table_line = lv_numero.  
+  IF sy-subrc <> 0.  
+    INSERT lv_numero INTO TABLE lt_resultado.  
+  ENDIF.  
+ENDLOOP.  
+LOOP AT lt_resultado INTO lv_numero.  
+  WRITE: / lv_numero.  
+ENDLOOP.
+```
+12. Contar frecuencia.
+```
+
+```
 12. Tablas anidadas.
 ```
 TYPES: BEGIN OF ty_proyecto,  
