@@ -853,3 +853,49 @@ sel -> sub con subrutina con loop at screen. incluye radiobuttons y parameters
 sub -> métodos
 principal -> mostrar en pantalla
 top -> variables globales
+
+
+### Clases y métodos.
+
+1. Llamar a un método.
+```
+REPORT ZCLASES_01_FF.  
+  
+DATA: alv_grid TYPE REF TO cl_gui_alv_grid,  
+      lt_hola type table of string.  
+CREATE OBJECT alv_grid  
+  EXPORTING  
+    i_parent = cl_gui_container=>screen0.  
+CALL METHOD alv_grid->set_table_for_first_display  
+*  EXPORTING  
+*    i_buffer_active               =  
+*    i_bypassing_buffer            =  
+*    i_consistency_check           =  
+*    i_structure_name              =  
+*    is_variant                    =  
+*    i_save                        =  
+*    i_default                     = 'X'  
+*    is_layout                     =  
+*    is_print                      =  
+*    it_special_groups             =  
+*    it_toolbar_excluding          =  
+*    it_hyperlink                  =  
+*    it_alv_graphics               =  
+*    it_except_qinfo               =  
+*    ir_salv_adapter               =  
+  CHANGING  
+    it_outtab                     = lt_hola  
+*    it_fieldcatalog               =  
+*    it_sort                       =  
+*    it_filter                     =  
+*  EXCEPTIONS  
+*    invalid_parameter_combination = 1  
+*    program_error                 = 2  
+*    too_many_lines                = 3  
+*    others                        = 4  
+        .  
+IF sy-subrc <> 0.  
+* Implement suitable error handling here  
+ENDIF.
+```
+2. 
