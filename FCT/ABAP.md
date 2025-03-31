@@ -22,6 +22,7 @@
 - Todo se escribe en mayúsculas. Es posible usar minúsculas en textos y tablas.
 - Variables: global =gv_, local = lv_, parameters = p_, select options = s_
 - Dentro de una subrutina: clear o refresh a estructuras antes de volver a rellenarlas.
+- Nombres de clases: ZCL_XXXX.
 
 ### Paquete y orden:
 - Una orden por proyecto con todo el contenido.
