@@ -986,6 +986,88 @@ START-OF-SELECTION. "Sin esto me daba un error de código no accesible
            / lo_empleado->get_departamento( ),  
            / lo_empleado->get_salario( ).
 ```
-4. En el programa ZCLASES_04_XX implementa la clase LCL_PRODUCTO que represente un producto en un sistema de inventario. Esta clase debe tener los atributos código de producto, descripción, stock, precio y unidad, que tendrá por defecto el valor 'EUR'. Implementa los métodos para asignar y traer los valores de sus variables y los métodos para calcular el precio total del stock actual y otro para actualizar el stock disponible. 1. En el programa anterior, crea dos instancias y rellénalas con datos diferentes utilizando los diferentes métodos. Posteriormente crea otra instancia e iguálala a la primera, mira lo que ocurre. Modifica los datos e imprímelos por pantalla. 
+4. Clase Producto.
+```
+CLASS lcl_producto DEFINITION.  
+  PUBLIC SECTION.  
+    DATA: codigo      TYPE string,  
+          descripcion TYPE string,  
+          stock       TYPE i,  
+          precio      TYPE i,  
+          unidad      TYPE string VALUE 'EUR'.  
+  
+    METHODS: set_datos IMPORTING p_codigo      TYPE string  
+                                 p_descripcion TYPE string  
+                                 p_stock       TYPE i  
+                                 p_precio      TYPE i,  
+      get_datos RETURNING VALUE(r_datos) TYPE string,  
+      calcular_precio_total RETURNING VALUE(r_total) TYPE i,  
+      actualizar_stock IMPORTING p_nuevo_stock TYPE i.  
+ENDCLASS.  
+  
+CLASS lcl_producto IMPLEMENTATION.  
+  METHOD set_datos.  
+    codigo = p_codigo.  
+    descripcion = p_descripcion.  
+    stock = p_stock.  
+    precio = p_precio.  
+  ENDMETHOD.  
+  
+  METHOD get_datos.  
+    DATA: stock_str  TYPE string,  
+          precio_str TYPE string.  
+  
+    stock_str = CONV string( stock ).  
+    precio_str = CONV string( precio ).  
+    CONCATENATE 'Código:' codigo 'Descripción:' descripcion 'Stock:' stock_str 'Precio:' precio_Str unidad INTO r_datos SEPARATED BY space.  
+  ENDMETHOD.  
+  
+  METHOD calcular_precio_total.  
+    r_total = stock * precio.  
+  ENDMETHOD.  
+  
+  METHOD actualizar_stock.  
+    stock = p_nuevo_stock.  
+  ENDMETHOD.  
+ENDCLASS.  
+  
+START-OF-SELECTION.  
+  DATA: producto1 TYPE REF TO lcl_producto,  
+        producto2 TYPE REF TO lcl_producto,  
+        producto3 TYPE REF TO lcl_producto,  
+        datos     TYPE string,  
+        total     TYPE p DECIMALS 2.  
+  
+  CREATE OBJECT producto1.  
+  CREATE OBJECT producto2.  
+  CREATE OBJECT producto3.  
+  
+  producto1->set_datos( p_codigo = 'P001' p_descripcion = 'Laptop' p_stock = 10 p_precio = 50 ).  
+  producto2->set_datos( p_codigo = 'P002' p_descripcion = 'Mouse' p_stock = 50 p_precio = 20 ).  
+  
+  WRITE: / 'Datos Producto 1:'.  
+  datos = producto1->get_datos( ).  
+  WRITE: / datos.  
+  
+  WRITE: / 'Datos Producto 2:'.  
+  datos = producto2->get_datos( ).  
+  WRITE: / datos.  
+  
+  producto3 = producto1.  
+  
+  
+  WRITE: / 'Datos Producto 3:'.  
+  datos = producto3->get_datos( ).  
+  WRITE: / datos.  
+  
+  producto3->set_datos( p_codigo = 'P004' p_descripcion = 'Monitor' p_stock = 15 p_precio = 150 ).  
+  
+  WRITE: / 'Datos Producto 1 después de modificar Producto 3:'.  
+  datos = producto1->get_datos( ).  
+  WRITE: / datos.
+```
 5. En el programa ZCLASES_05_XX debes crear dos clases, la de empleado y la de empleado_temporal. Ambos tendrán como atributos el número de empleado, el nombre y el salario; y los temporales contarán además con fecha de inicio y fecha de finalización. Ambos contarán con un método para establecer el salario; los temporales tendrán además, un método para establecer cuántos días tiene el contrato. Se crearán 2 empleados y 2 empleados temporales y se mostrará por pantalla el resultado de sus métodos. 
-6. En el programa ZCLASES_06_XX desarrollar un sistema de gestión de inventario para una tienda en línea. Cuando un cliente realiza una compra, se debe actualizar el inventario del producto disponibles (Clase producto). Sin embargo, si un producto está por debajo de un cierto umbral de stock, se debe enviar una notificación al departamento de compras para reabastecer el producto (evento que recoge la clase tienda).
+```
+
+```
+5. En el programa ZCLASES_06_XX desarrollar un sistema de gestión de inventario para una tienda en línea. Cuando un cliente realiza una compra, se debe actualizar el inventario del producto disponibles (Clase producto). Sin embargo, si un producto está por debajo de un cierto umbral de stock, se debe enviar una notificación al departamento de compras para reabastecer el producto (evento que recoge la clase tienda).
