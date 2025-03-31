@@ -1068,6 +1068,106 @@ START-OF-SELECTION.
 ```
 5. En el programa ZCLASES_05_XX debes crear dos clases, la de empleado y la de empleado_temporal. Ambos tendrán como atributos el número de empleado, el nombre y el salario; y los temporales contarán además con fecha de inicio y fecha de finalización. Ambos contarán con un método para establecer el salario; los temporales tendrán además, un método para establecer cuántos días tiene el contrato. Se crearán 2 empleados y 2 empleados temporales y se mostrará por pantalla el resultado de sus métodos. 
 ```
-
+CLASS lcl_empleado DEFINITION.  
+  PUBLIC SECTION.  
+    DATA: num_empleado TYPE string,  
+          nombre       TYPE string,  
+          salario      TYPE p DECIMALS 2.  
+  
+    METHODS: set_salario IMPORTING p_salario TYPE i,  
+      get_datos RETURNING VALUE(r_datos) TYPE string.  
+ENDCLASS.  
+  
+CLASS lcl_empleado IMPLEMENTATION.  
+  METHOD set_salario.  
+    salario = p_salario.  
+  ENDMETHOD.  
+  
+  METHOD get_datos.  
+    DATA salario_Str TYPE string.  
+    salario_str = CONV string( salario ).  
+    CONCATENATE 'Empleado:' num_empleado 'Nombre:' nombre 'Salario:' salario_str INTO r_datos SEPARATED BY space.  
+  ENDMETHOD.  
+ENDCLASS.  
+  
+CLASS lcl_empleado_temporal DEFINITION INHERITING FROM lcl_empleado.  
+  PUBLIC SECTION.  
+    DATA: fecha_inicio TYPE d,  
+          fecha_fin    TYPE d.  
+  
+    METHODS: set_fechas IMPORTING p_inicio TYPE d p_fin TYPE d,  
+      calcular_dias_contrato RETURNING VALUE(r_dias) TYPE i,  
+      get_datos_temp RETURNING VALUE(r_datos) TYPE string.  
+ENDCLASS.  
+  
+CLASS lcl_empleado_temporal IMPLEMENTATION.  
+  METHOD set_fechas.  
+    fecha_inicio = p_inicio.  
+    fecha_fin = p_fin.  
+  ENDMETHOD.  
+  
+  METHOD calcular_dias_contrato.  
+    r_dias = fecha_fin - fecha_inicio.  
+  ENDMETHOD.  
+  
+  METHOD get_datos_temp.  
+    DATA: base_datos TYPE string.  
+    base_datos = me->get_datos( ).  
+  
+    CONCATENATE base_datos 'Fecha Inicio:' fecha_inicio 'Fecha Fin:' fecha_fin INTO r_datos SEPARATED BY space.  
+  ENDMETHOD.  
+ENDCLASS.  
+  
+START-OF-SELECTION.  
+  DATA: empleado1 TYPE REF TO lcl_empleado,  
+        empleado2 TYPE REF TO lcl_empleado,  
+        temp1     TYPE REF TO lcl_empleado_temporal,  
+        temp2     TYPE REF TO lcl_empleado_temporal,  
+        datos     TYPE string,  
+        dias      TYPE i.  
+  
+  CREATE OBJECT empleado1.  
+  CREATE OBJECT empleado2.  
+  CREATE OBJECT temp1.  
+  CREATE OBJECT temp2.  
+  
+  empleado1->num_empleado = '1'.  
+  empleado1->nombre = 'Juan'.  
+  empleado1->set_salario( 2500 ).  
+  
+  empleado2->num_empleado = '2'.  
+  empleado2->nombre = 'Ana'.  
+  empleado2->set_salario( 2700 ).  
+  
+  temp1->num_empleado = '3'.  
+  temp1->nombre = 'Luis'.  
+  temp1->set_salario( 1800 ).  
+  temp1->set_fechas( p_inicio = '20240301' p_fin = '20240630' ).  
+  
+  temp2->num_empleado = '4'.  
+  temp2->nombre = 'Marta'.  
+  temp2->set_salario( 1900 ).  
+  temp2->set_fechas( p_inicio = '20240401' p_fin = '20240731' ).  
+  
+  WRITE: / 'Datos Empleado 1:'.  
+  datos = empleado1->get_datos( ).  
+  WRITE: / datos.  
+  
+  WRITE: / 'Datos Empleado 2:'.  
+  datos = empleado2->get_datos( ).  
+  WRITE: / datos.  
+  
+  " Mostrar datos de los empleados temporales  
+  WRITE: / 'Datos Empleado Temporal 1:'.  
+  datos = temp1->get_datos_temp( ).  
+  WRITE: / datos.  
+  dias = temp1->calcular_dias_contrato( ).  
+  WRITE: / 'Días de contrato:', dias.  
+  
+  WRITE: / 'Datos Empleado Temporal 2:'.  
+  datos = temp2->get_datos_temp( ).  
+  WRITE: / datos.  
+  dias = temp2->calcular_dias_contrato( ).  
+  WRITE: / 'Días de contrato:', dias.
 ```
 5. En el programa ZCLASES_06_XX desarrollar un sistema de gestión de inventario para una tienda en línea. Cuando un cliente realiza una compra, se debe actualizar el inventario del producto disponibles (Clase producto). Sin embargo, si un producto está por debajo de un cierto umbral de stock, se debe enviar una notificación al departamento de compras para reabastecer el producto (evento que recoge la clase tienda).
