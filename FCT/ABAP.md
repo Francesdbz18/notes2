@@ -7,6 +7,7 @@
 - SE11: Diccionario de datos, tablas
 - SE16: BD (deprecated, use SE11 & SE16N)
 - SE16N: BD
+- SE24: Generador clases.
 (Z3ENRAYA, ZSHOP)
 
 ### Atajos y trucos: 
