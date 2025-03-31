@@ -903,6 +903,86 @@ ENDIF.
 * En el método file_save_dialog, los parámetros obligatorios son: filename, path y fullpath, que reciben una cadena de caracteres cada uno. Muestra un cuadro de diálogo de guardar un archivo.
 * En el método gui_download, son obligatorios los parámetros filelength (i) y data_tab (standard table). Descarga datos al PC cliente.
 * En gui_upload son obligatorios los mismos que en gui_download, con la adición de header (xstring). Recibe datos del PC cliente.
-```
 
+3. Crear una clase Empleado.
+```
+CLASS lcl_empleado DEFINITION.  
+  PUBLIC SECTION.  
+    DATA: nombre       TYPE string,  
+          apellido     TYPE string,  
+          edad         TYPE i,  
+          puesto       TYPE string,  
+          departamento TYPE string,  
+          salario      TYPE p DECIMALS 2.  
+    METHODS: set_nombre IMPORTING valor TYPE string,  
+      set_apellido IMPORTING valor TYPE string,  
+      set_edad IMPORTING valor TYPE i,  
+      set_puesto IMPORTING valor TYPE string,  
+      set_departamento IMPORTING valor TYPE string,  
+      set_salario IMPORTING valor TYPE i.  
+    METHODS: get_nombre RETURNING VALUE(resultado) TYPE string,  
+      get_apellido RETURNING VALUE(resultado) TYPE string,  
+      get_edad RETURNING VALUE(resultado) TYPE i,  
+      get_puesto RETURNING VALUE(resultado) TYPE string,  
+      get_departamento RETURNING VALUE(resultado) TYPE string,  
+      get_salario RETURNING VALUE(resultado) TYPE i. "Quise hacerlo de tipo packed con 2 decimales, pero daba un error lol  
+ENDCLASS.  
+  
+CLASS lcl_empleado IMPLEMENTATION.  
+  
+  METHOD set_nombre.  
+    nombre = valor.  
+  ENDMETHOD.  
+  METHOD set_apellido.  
+    apellido = valor.  
+  ENDMETHOD.  
+  METHOD set_edad.  
+    edad = valor.  
+  ENDMETHOD.  
+  METHOD set_puesto.  
+    puesto = valor.  
+  ENDMETHOD.  
+  METHOD set_departamento.  
+    departamento = valor.  
+  ENDMETHOD.  
+  METHOD set_salario.  
+    salario = valor.  
+  ENDMETHOD.  
+  METHOD get_nombre.  
+    resultado = nombre.  
+  ENDMETHOD.  
+  METHOD get_apellido.  
+    resultado = apellido.  
+  ENDMETHOD.  
+  METHOD get_edad.  
+    resultado = edad.  
+  ENDMETHOD.  
+  METHOD get_puesto.  
+    resultado = puesto.  
+  ENDMETHOD.  
+  METHOD get_departamento.  
+    resultado = departamento.  
+  ENDMETHOD.  
+  METHOD get_salario.  
+    resultado = salario.  
+  ENDMETHOD.  
+  
+ENDCLASS.  
+  
+START-OF-SELECTION. "Sin esto me daba un error de código no accesible...  
+  
+  DATA(lo_empleado) = NEW lcl_empleado( ).  
+  lo_empleado->set_nombre( 'Francesco' ).  
+  lo_empleado->set_apellido( 'Fevoli' ).  
+  lo_empleado->set_edad( 20 ).  
+  lo_empleado->set_puesto( 'Desarrollador' ).  
+  lo_empleado->set_departamento( 'IT' ).  
+  lo_empleado->set_salario( 15000 ).  
+  
+  WRITE: / lo_empleado->get_nombre( ),  
+           / lo_empleado->get_apellido( ),  
+           / lo_empleado->get_edad( ),  
+           / lo_empleado->get_puesto( ),  
+           / lo_empleado->get_departamento( ),  
+           / lo_empleado->get_salario( ).
 ```
