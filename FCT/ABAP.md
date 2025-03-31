@@ -630,7 +630,97 @@ ELSE.
 ENDIF.
 ```
 10. Estructuras anidadas.
-
+```
+TYPES:  
+  BEGIN OF ty_direccion,  
+    calle  TYPE string,  
+    numero TYPE i,  
+  END OF ty_direccion,  
+  BEGIN OF ty_empleado,  
+    id        TYPE i,  
+    nombre    TYPE string,  
+    salario   TYPE p LENGTH 10 DECIMALS 2,  
+    direccion TYPE ty_direccion,  
+  END OF ty_empleado.  
+  
+DATA: lt_empleados TYPE STANDARD TABLE OF ty_empleado.  
+DATA: lv_empleado TYPE ty_empleado.  
+DATA: lv_direccion TYPE ty_direccion.  
+lv_empleado-id = 1.  
+lv_empleado-nombre = 'Juan Perez'.  
+lv_empleado-salario = 3500.  
+lv_direccion-calle = 'Plaza de Chueca'.  
+lv_direccion-numero = 3.  
+lv_empleado-direccion = lv_direccion.  
+INSERT lv_empleado INTO TABLE lt_empleados.  
+  
+lv_empleado-id = 2.  
+lv_empleado-nombre = 'Maria Gomez'.  
+lv_empleado-salario = 4200.  
+lv_direccion-calle = 'Calle de Válgame Dios'.  
+lv_direccion-numero = 2.  
+lv_empleado-direccion = lv_direccion.  
+INSERT lv_empleado INTO TABLE lt_empleados.  
+  
+lv_empleado-id = 3.  
+lv_empleado-nombre = 'Carlos Ruiz'.  
+lv_empleado-salario = 5000.  
+lv_direccion-calle = 'Calle de Augusto Figueroa'.  
+lv_direccion-numero = 30.  
+lv_empleado-direccion = lv_direccion.  
+INSERT lv_empleado INTO TABLE lt_empleados.  
+  
+LOOP AT lt_empleados INTO lv_empleado.  
+  WRITE: / 'ID:', lv_empleado-id,  
+         ' Nombre:', lv_empleado-nombre,  
+         ' Salario:', lv_empleado-salario,  
+         ' Calle:', lv_empleado-direccion-calle,  
+         ' Número:', lv_empleado-direccion-numero.  
+ENDLOOP.
+```
+11. 
+12. Tablas anidadas.
+```
+TYPES: BEGIN OF ty_proyecto,  
+         nombre_proyecto TYPE c LENGTH 30,  
+       END OF ty_proyecto.  
+  
+TYPES: ty_tabla_proyectos TYPE STANDARD TABLE OF ty_proyecto WITH EMPTY KEY.  
+  
+TYPES: BEGIN OF ty_empleado,  
+         id        TYPE c LENGTH 5,  
+         nombre    TYPE c LENGTH 20,  
+         proyectos TYPE ty_tabla_proyectos,  
+       END OF ty_empleado.  
+  
+DATA: gt_empleados TYPE STANDARD TABLE OF ty_empleado,  
+      gs_empleado  TYPE ty_empleado,  
+      gs_proyecto  TYPE ty_proyecto.  
+  
+gs_empleado-id = '1'.  
+gs_empleado-nombre = 'Juan'.  
+  
+CLEAR gs_empleado-proyectos.  
+APPEND VALUE ty_proyecto( nombre_proyecto = 'Desarrollo multiplataforma' ) TO gs_empleado-proyectos.  
+APPEND VALUE ty_proyecto( nombre_proyecto = 'Campaña de marketing' ) TO gs_empleado-proyectos.  
+  
+APPEND gs_empleado TO gt_empleados.  
+  
+gs_empleado-id = '2'.  
+gs_empleado-nombre = 'Pepe'.  
+  
+CLEAR gs_empleado-proyectos.  
+APPEND VALUE ty_proyecto( nombre_proyecto = 'Compra de mercadería' ) TO gs_empleado-proyectos.  
+  
+APPEND gs_empleado TO gt_empleados.  
+  
+LOOP AT gt_empleados INTO gs_empleado.  
+  WRITE:gs_empleado-id, gs_empleado-nombre.  
+  LOOP AT gs_empleado-proyectos INTO gs_proyecto.  
+    WRITE gs_proyecto-nombre_proyecto.  
+  ENDLOOP.  
+ENDLOOP.
+```
 ### Field symbols
 LOOP AT *tabla* ASSIGNING *field-symbols*
 LOOP AT screen: modificar atributos de elementos por pantalla.
