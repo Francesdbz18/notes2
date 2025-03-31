@@ -903,3 +903,6 @@ ENDIF.
 * En el método file_save_dialog, los parámetros obligatorios son: filename, path y fullpath, que reciben una cadena de caracteres cada uno. Muestra un cuadro de diálogo de guardar un archivo.
 * En el método gui_download, son obligatorios los parámetros filelength (i) y data_tab (standard table). Descarga datos al PC cliente.
 * En gui_upload son obligatorios los mismos que en gui_download, con la adición de header (xstring). Recibe datos del PC cliente.
+```
+
+```
