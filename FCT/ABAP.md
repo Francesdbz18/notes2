@@ -1170,4 +1170,86 @@ START-OF-SELECTION.
   dias = temp2->calcular_dias_contrato( ).  
   WRITE: / 'Días de contrato:', dias.
 ```
-5. En el programa ZCLASES_06_XX desarrollar un sistema de gestión de inventario para una tienda en línea. Cuando un cliente realiza una compra, se debe actualizar el inventario del producto disponibles (Clase producto). Sin embargo, si un producto está por debajo de un cierto umbral de stock, se debe enviar una notificación al departamento de compras para reabastecer el producto (evento que recoge la clase tienda).
+6. En el programa ZCLASES_06_XX desarrollar un sistema de gestión de inventario para una tienda en línea. Cuando un cliente realiza una compra, se debe actualizar el inventario del producto disponibles (Clase producto). Sin embargo, si un producto está por debajo de un cierto umbral de stock, se debe enviar una notificación al departamento de compras para reabastecer el producto (evento que recoge la clase tienda).
+
+```
+CLASS lcl_producto DEFINITION.  
+  PUBLIC SECTION.  
+    DATA: codigo      TYPE string,  
+          descripcion TYPE string,  
+          stock       TYPE i,  
+          precio      TYPE p DECIMALS 2,  
+          umbral      TYPE i.  
+  
+    EVENTS stock_bajo EXPORTING VALUE(producto) TYPE string.  
+  
+    METHODS: set_datos IMPORTING  
+                         p_codigo      TYPE string  
+                         p_descripcion TYPE string  
+                         p_stock       TYPE i  
+                         p_precio      TYPE i  
+                         p_umbral      TYPE i,  
+      get_datos RETURNING VALUE(r_datos) TYPE string,  
+      actualizar_stock IMPORTING p_cantidad TYPE i.  
+ENDCLASS.  
+  
+CLASS lcl_producto IMPLEMENTATION.  
+  METHOD set_datos.  
+    codigo = p_codigo.  
+    descripcion = p_descripcion.  
+    stock = p_stock.  
+    precio = p_precio.  
+    umbral = p_umbral.  
+  ENDMETHOD.  
+  
+  METHOD get_datos.  
+    DATA: stock_str  TYPE string,  
+          precio_str TYPE string.  
+    stock_str = CONV string( stock ).  
+    precio_str = CONV string( precio ).  
+    CONCATENATE 'Código:' codigo 'Descripción:' descripcion 'Stock:' stock_str 'Precio:' precio_str INTO r_datos SEPARATED BY space.  
+  ENDMETHOD.  
+  
+  METHOD actualizar_stock.  
+    IF stock >= p_cantidad.  
+      stock = stock - p_cantidad.  
+      IF stock < umbral.  
+        RAISE EVENT stock_bajo EXPORTING producto = descripcion.  
+      ENDIF.  
+    ELSE.  
+      WRITE: / 'Stock insuficiente para la venta.'.  
+    ENDIF.  
+  ENDMETHOD.  
+ENDCLASS.  
+  
+CLASS lcl_tienda DEFINITION.  
+  PUBLIC SECTION.  
+    METHODS manejar_stock_bajo FOR EVENT stock_bajo OF lcl_producto IMPORTING producto.  
+ENDCLASS.  
+  
+CLASS lcl_tienda IMPLEMENTATION.  
+  METHOD manejar_stock_bajo.  
+    WRITE: / 'Reabastecer producto:', producto.  
+  ENDMETHOD.  
+ENDCLASS.  
+  
+START-OF-SELECTION.  
+  DATA: producto1 TYPE REF TO lcl_producto,  
+        tienda    TYPE REF TO lcl_tienda.  
+  
+  CREATE OBJECT producto1.  
+  CREATE OBJECT tienda.  
+  
+  SET HANDLER tienda->manejar_stock_bajo FOR producto1.  
+  
+  producto1->set_datos( p_codigo = 'P001' p_descripcion = 'Laptop' p_stock = 10 p_precio = 500 p_umbral = 3 ).  
+  
+  WRITE: / 'Producto antes de la venta:'.  
+  WRITE: / producto1->get_datos( ).  
+  
+  " Simular una venta de 8 unidades "  
+  producto1->actualizar_stock( p_cantidad = 8 ).  
+  
+  WRITE: / 'Producto después de la venta:'.  
+  WRITE: / producto1->get_datos( ).
+```
