@@ -899,4 +899,7 @@ IF sy-subrc <> 0.
 * Implement suitable error handling here  
 ENDIF.
 ```
-2. 
+* En el método file_open_dialog, los parámetros obligatorios son: file_table, que recibe un tipo filetable, y rc, que recibe un entero.
+* En el método file_save_dialog, los parámetros obligatorios son: filename, path y fullpath, que reciben una cadena de caracteres cada uno.
+* En el método gui_download
+*
