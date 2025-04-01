@@ -1375,5 +1375,111 @@ START-OF-SELECTION.
   WRITE: / producto1->get_datos( ).
 ```
 
-estructura y tabla en bd con nombre apellido direccion y edad
-![[Pasted image 20250401110314.png]]
+### Open SQL
+1. Tablas y estructuras.![[Pasted image 20250401110314.png]]
+```abap
+TABLES: zsql_01_ff.  
+  
+DATA:  
+  ls_persona TYPE zsql_01_ff,  
+  lt_persona TYPE TABLE OF zsql_01_ff.  
+  
+ls_persona-nombre = 'Juanito'.  
+ls_persona-apellido = 'García'.  
+ls_persona-edad = 16.  
+ls_persona-direccion = 'Calle Cristo, 5'.  
+  
+APPEND ls_persona TO lt_persona.  
+  
+ls_persona-nombre = 'Pedro'.  
+ls_persona-apellido = 'Pérez'.  
+ls_persona-edad = 25.  
+ls_persona-direccion = 'Avinguda de '.  
+  
+APPEND ls_persona TO lt_persona.  
+  
+ls_persona-nombre = 'Pepito'.  
+ls_persona-apellido = 'Ermenegildo'.  
+ls_persona-edad = 40.  
+ls_persona-direccion = 'Calle Ayer'.  
+  
+APPEND ls_persona TO lt_persona.  
+  
+modify zsql_01_ff from TABLE lt_persona.  
+  
+LOOP AT lt_persona INTO ls_persona.  
+  WRITE: / ls_persona-nombre, ls_persona-apellido, ls_persona-direccion, ls_persona-edad.  
+ENDLOOP.  
+  
+  
+READ TABLE lt_persona INTO ls_persona INDEX 2.  
+IF sy-subrc = 0.  
+  ls_persona-nombre = 'Amparo'.  
+  ls_persona-edad = 75.  
+  MODIFY lt_persona INDEX 2 FROM ls_persona.  
+  UPDATE zsql_01_ff SET nombre = 'Amparo', edad = 75 WHERE nombre = 'María'.  
+  COMMIT WORK.  
+ENDIF.  
+  
+WRITE: /  'Registros después de traer a Amparito :D:'.  
+LOOP AT lt_persona INTO ls_persona.  
+  WRITE: / ls_persona-nombre, ls_persona-apellido, ls_persona-direccion, ls_persona-edad.  
+ENDLOOP.  
+  
+READ TABLE lt_persona INTO ls_persona WITH KEY edad = 75.  
+IF sy-subrc = 0.  
+  WRITE: / 'Registro con edad 75 encontrado:', ls_persona-nombre, ls_persona-edad.  
+ENDIF.  
+  
+DELETE FROM zsql_01_ff WHERE nombre = 'Amparo'.  
+COMMIT WORK.  
+  
+DELETE lt_persona WHERE nombre = 'Amparo'.  
+  
+WRITE: / 'Registros después de eliminar a Amparito :(:'.  
+LOOP AT lt_persona INTO ls_persona.  
+  WRITE: / ls_persona-nombre, ls_persona-apellido, ls_persona-direccion, ls_persona-edad.  
+ENDLOOP.
+```
+
+2. Consulta básica
+```abap
+DATA: lt_spfli TYPE TABLE OF spfli,  
+      ls_spfli TYPE spfli.  
+  
+SELECT * FROM spfli INTO TABLE @lt_spfli WHERE cityfrom = 'FRANKFURT'.  
+  
+  LOOP AT lt_spfli INTO ls_spfli.  
+    WRITE: / 'CARRID: ', ls_spfli-carrid,  
+           ' CONNID: ', ls_spfli-connid,  
+           ' COUNTRYFR: ', ls_spfli-countryfr,  
+           ' COUNTRYTO: ', ls_spfli-countryto.  
+  ENDLOOP.
+```
+3. Where y order by
+```abap
+DATA: lt_spfli TYPE TABLE OF spfli,  
+      lv_message TYPE string.  
+  
+SELECT *  
+  INTO TABLE @lt_spfli  
+  FROM spfli  
+  WHERE cityto = 'NEW YORK'  
+    AND distance < 4000  
+  ORDER BY distance ASCENDING.  
+  
+IF sy-subrc = 0.  
+  LOOP AT lt_spfli INTO DATA(ls_spfli).  
+    WRITE: / 'CARRID:', ls_spfli-carrid,  
+           'CONNID:', ls_spfli-connid,  
+           'COUNTRYFR:', ls_spfli-countryfr,  
+           'COUNTRYTO:', ls_spfli-countryto,  
+           'DISTANCE:', ls_spfli-distance,  
+           'DISTID:', ls_spfli-distid.  
+  ENDLOOP.  
+ELSE.  
+  lv_message = 'No se encontraron vuelos.'.  
+  WRITE: / lv_message.  
+ENDIF.
+```
+4. 
