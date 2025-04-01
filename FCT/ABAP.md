@@ -1376,3 +1376,4 @@ START-OF-SELECTION.
 ```
 
 estructura y tabla en bd con nombre apellido direccion y edad
+![[Pasted image 20250401110314.png]]
