@@ -8,6 +8,7 @@
 - SE16: BD (deprecated, use SE11 & SE16N)
 - SE16N: BD
 - SE24: Generador clases.
+- SM12: Quitar bloqueos. 
 (Z3ENRAYA, ZSHOP)
 
 ### Atajos y trucos: 
