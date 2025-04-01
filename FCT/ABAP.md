@@ -752,10 +752,6 @@ LOOP AT gt_empleados INTO gs_empleado.
   ENDLOOP.  
 ENDLOOP.
 ```
-### Field symbols
-LOOP AT *tabla* ASSIGNING *field-symbols*
-LOOP AT screen: modificar atributos de elementos por pantalla.
-
 ### Subrutinas
 
 1. Cuadrado de un número.
