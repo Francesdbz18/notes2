@@ -1374,3 +1374,5 @@ START-OF-SELECTION.
   WRITE: / 'Producto después de la venta:'.  
   WRITE: / producto1->get_datos( ).
 ```
+
+estructura y tabla en bd con nombre apellido direccion y edad
