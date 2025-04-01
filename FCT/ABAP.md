@@ -1482,4 +1482,165 @@ ELSE.
   WRITE: / lv_message.  
 ENDIF.
 ```
-4. 
+4. Consultas de agregación y agrupación.
+```abap
+TYPES: BEGIN OF ty_result,  
+         airpto TYPE spfli-airpto,  
+         total  TYPE i,  
+       END OF ty_result.  
+  
+DATA: lt_results TYPE TABLE OF ty_result,  
+      lv_message TYPE string.  
+  
+SELECT s~airpto AS airpto, COUNT( b~bookid ) AS total  
+  FROM spfli AS s  
+  INNER JOIN sbook AS b  
+  ON s~carrid = b~carrid  
+  AND s~connid = b~connid  
+  GROUP BY s~airpto  
+  ORDER BY total DESCENDING  
+  INTO TABLE @lt_results.  
+  
+LOOP AT lt_results INTO DATA(ls_result).  
+  WRITE: / 'Aeropuerto:', ls_result-airpto,  
+         'Total asientos:', ls_result-total.  
+ENDLOOP.
+```
+5. Join
+```abap
+DATA: lt_flights TYPE TABLE OF spfli,  
+      lt_bookings TYPE TABLE OF sbook,  
+      lv_carrier TYPE spfli-carrid,  
+      lv_connid TYPE spfli-connid,  
+      lv_fldate TYPE sbook-fldate,  
+      lv_reservas TYPE i.  
+  
+lv_carrier = 'AZ'.  
+  
+SELECT a~carrid, a~connid, b~fldate, COUNT( b~bookid ) AS reservas  
+  FROM spfli AS a  
+  INNER JOIN sbook AS b  
+    ON a~carrid = b~carrid  
+    AND a~connid = b~connid  
+  WHERE a~carrid = @lv_carrier  
+  GROUP BY a~carrid, a~connid, b~fldate  
+  INTO (@lv_carrier, @lv_connid, @lv_fldate, @lv_reservas).  
+  
+  WRITE: / 'Aerolinea:', lv_carrier,  
+           'Conexion:', lv_connid,  
+           'Fecha de vuelo:', lv_fldate,  
+           'Numero de reservas:', lv_reservas.  
+  
+ENDSELECT.
+```
+6. Consultas con operaciones.
+```abap
+DATA: lt_flights TYPE TABLE OF sflight,  
+      lv_carrid TYPE sflight-carrid,  
+      lv_connid TYPE sflight-connid,  
+      lv_fldat TYPE sflight-fldate,  
+      lv_seatsmax TYPE sflight-seatsmax,  
+      lv_seatsocc TYPE sflight-seatsocc,  
+      lv_seat_diff TYPE i.  
+  
+SELECT carrid, connid, fldate, seatsmax, seatsocc, ( seatsmax - seatsocc ) AS seat_diff  
+  INTO (@lv_carrid, @lv_connid, @lv_fldat, @lv_seatsmax, @lv_seatsocc, @lv_seat_diff)  
+  FROM sflight  
+  WHERE seatsmax IS NOT NULL  
+  AND seatsocc IS NOT NULL.  
+  
+  WRITE: / 'Aerolinea:', lv_carrid,  
+           'Conexion:', lv_connid,  
+           'Fecha de vuelo:', lv_fldat,  
+           'Max. de sitios:', lv_seatsmax,  
+           'Sitios ocupados:', lv_seatsocc,  
+           'Diferencia:', lv_seat_diff.  
+  
+ENDSELECT.
+```
+7. Repaso de consultas.
+```abap
+TYPES: BEGIN OF ty_flight_info,  
+         company    TYPE sflight-carrid,  
+         connection TYPE sflight-connid,  
+         flight_date TYPE sflight-fldate,  
+         price      TYPE sflight-price,  
+         currency   TYPE sflight-currency,  
+         planetype  TYPE sflight-planetype,  
+         seatmax    TYPE sflight-seatsmax,  
+         seatoc     TYPE sflight-seatsocc,  
+       END OF ty_flight_info.  
+  
+DATA: lt_flights TYPE TABLE OF ty_flight_info,  
+      ls_flight  TYPE ty_flight_info,  
+      lv_carrid  TYPE sflight-carrid.  
+  
+PARAMETERS: p_carrid TYPE sflight-carrid OBLIGATORY.  
+  
+lv_carrid = p_carrid.  
+  
+SELECT carrid, connid, fldate, price, currency, planetype, seatsmax, seatsocc  
+  INTO TABLE @lt_flights  
+  FROM sflight  
+  WHERE carrid = @lv_carrid.  
+  
+IF lt_flights IS INITIAL.  
+  WRITE: / 'No se encontraron vuelos para la aerolínea:', lv_carrid.  
+ELSE.  
+  LOOP AT lt_flights INTO ls_flight.  
+    WRITE: / 'Compañía:', ls_flight-company,  
+             'Conexión:', ls_flight-connection,  
+             'Fecha:', ls_flight-flight_date,  
+             'Precio:', ls_flight-price,  
+             'Moneda:', ls_flight-currency,  
+             'Avión:', ls_flight-planetype,  
+             'Asientos Máx.:', ls_flight-seatmax,  
+             'Asientos Ocupados:', ls_flight-seatoc.  
+  ENDLOOP.  
+ENDIF.
+```
+8. COnsulta y modificación.
+```abap
+DATA: ls_persona TYPE zsql_01_ff,  
+      lt_persona TYPE TABLE OF zsql_01_ff.  
+  
+ls_persona-nombre    = 'Juan'.  
+ls_persona-apellido  = 'Ortíz'.  
+ls_persona-direccion = 'Calle del Pez 39'.  
+ls_persona-edad      = 30.  
+INSERT INTO zsql_01_ff VALUES ls_persona.  
+WRITE: / 'Registro insertado:', ls_persona-nombre, ls_persona-apellido.  
+  
+ls_persona-nombre    = 'María'.  
+ls_persona-apellido  = 'López'.  
+ls_persona-direccion = 'Av. de la Libertad'.  
+ls_persona-edad      = 25.  
+INSERT INTO zsql_01_ff VALUES ls_persona.  
+WRITE: / 'Registro insertado:', ls_persona-nombre, ls_persona-apellido.  
+  
+ls_persona-nombre    = 'Carlos'.  
+ls_persona-apellido  = 'Gómez'.  
+ls_persona-direccion = 'Plaza Mayor 55'.  
+ls_persona-edad      = 40.  
+INSERT INTO zsql_01_ff VALUES ls_persona.  
+WRITE: / 'Registro insertado:', ls_persona-nombre, ls_persona-apellido.  
+  
+SELECT SINGLE * FROM zsql_01_ff INTO ls_persona WHERE nombre = 'Juan'.  
+IF sy-subrc = 0.  
+  ls_persona-direccion = 'Carrer de Navas 259'.  
+  MODIFY zsql_01_ff FROM ls_persona.  
+  WRITE: / 'Registro modificado:', ls_persona-nombre, ls_persona-apellido, / 'Nueva dirección:', ls_persona-direccion.  
+ENDIF.  
+  
+CLEAR ls_persona.  
+ls_persona-nombre    = 'Ana'.  
+ls_persona-apellido  = 'Martínez'.  
+ls_persona-direccion = 'Calle de Válgame Dios 55'.  
+ls_persona-edad      = 35.  
+MODIFY zsql_01_ff FROM ls_persona.  
+WRITE: / ls_persona-nombre, ls_persona-apellido.  
+DELETE FROM zsql_01_ff WHERE nombre = 'Carlos'.  
+IF sy-subrc = 0.  
+  WRITE: / 'Registro eliminado.'.  
+ENDIF.
+```
