@@ -1640,3 +1640,7 @@ IF sy-subrc = 0.
   WRITE: / 'Registro eliminado.'.  
 ENDIF.
 ```
+
+Ejercicio 5: 
+Desarrolla un programa en ABAP que permita gestionar un inventario de productos y realizar pedidos. El programa debe permitir que el usuario agregue productos hasta que decida finalizar el pedido, para hacer esta tienes que investigar el uso de botones.
+
