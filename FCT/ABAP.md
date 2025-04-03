@@ -1644,3 +1644,15 @@ ENDIF.
 Ejercicio 5: 
 Desarrolla un programa en ABAP que permita gestionar un inventario de productos y realizar pedidos. El programa debe permitir que el usuario agregue productos hasta que decida finalizar el pedido, para hacer esta tienes que investigar el uso de botones.
 
+```abap
+SELECTION-SCREEN PUSHBUTTON /10(20) boton1 USER-COMMAND add.  
+SELECTION-SCREEN PUSHBUTTON /40(20) boton2 USER-COMMAND end.
+MODULE user_command_100 INPUT.  
+  CASE sy-ucomm.  
+    WHEN 'ADD'.  
+      lo_inventario->agregar_producto( iv_id = p_cod iv_nombre = p_nom iv_precio = p_precio ).  
+    WHEN 'END'.  
+      lo_inventario->finalizar_pedido( ).  
+  ENDCASE.  
+ENDMODULE.
+```
