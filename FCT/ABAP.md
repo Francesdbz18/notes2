@@ -9,6 +9,7 @@
 - SE16N: BD
 - SE24: Generador clases.
 - SM12: Quitar bloqueos. 
+- SE78: Gráficos de formulario
 (Z3ENRAYA, ZSHOP)
 
 ### Atajos y trucos: 
