@@ -1658,3 +1658,5 @@ MODULE user_command_100 INPUT.
 ENDMODULE.
 ```
 Crea un smart form con diferentes estilos (mínimo para el titulo, los títulos de tabla y los campos de tabla) que muestre todos los datos de la tabla SPFLI que coincidan con los parámetros introducidos por el usuario para carrid y connid. Se mostrarán los datos de la consulta en la parte superior, debajo del título y la imagen de la compañía (CARRID, CONNIDy fecha de impresión). En una tabla se deben mostrar los datos seleccionados para COUNTRYFR, COUNTRYTO, DISTANCE, DISTID, LINE_INDEX. En la última página se debe mostrar la suma de las distancias y el usuario que solicitó la impresión.
+
+jobs
