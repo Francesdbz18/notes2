@@ -2594,5 +2594,107 @@ item6 : abap.char(5);
 }
 ```
 ```
+@EndUserText.label : 'Tabla de Pokémon favoritos basada en la tabla ZPOKEMONS.'
 
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+
+@AbapCatalog.tableCategory : #TRANSPARENT
+
+@AbapCatalog.deliveryClass : #A
+
+@AbapCatalog.dataMaintenance : #ALLOWED
+
+define table zpokemons_ff {
+
+  
+
+key mandante : mandt not null;
+
+key id : abap.char(15) not null;
+
+nombre : abap.char(15);
+
+tipo : abap.char(15);
+
+tipo2 : abap.char(15);
+
+habilidad : abap.char(15);
+
+habilidad2 : abap.char(15);
+
+habilidad3 : abap.char(15);
+
+createdat : tzntstmpl;
+
+lastchangedby : abp_lastchange_user;
+
+lastchangedat : abp_lastchange_tstmpl;
+
+locallastchanged : abp_locinst_lastchange_tstmpl;
+
+  
+
+}
+```
+```
+@EndUserText.label : 'Productos con nombre, precio, stock y categoría.'
+
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+
+@AbapCatalog.tableCategory : #TRANSPARENT
+
+@AbapCatalog.deliveryClass : #A
+
+@AbapCatalog.dataMaintenance : #ALLOWED
+
+define table zproductos_ff {
+
+  
+
+key mandante : mandt not null;
+
+key id_producto : abap.int4 not null;
+
+nombre : abap.char(30);
+
+@AbapCatalog.decfloat.outputStyle : #NORMAL
+
+precio : abap.decfloat16;
+
+stock : abap.int4;
+
+id_categoria : abap.int4;
+
+  
+
+}
+```
+```
+@EndUserText.label : 'Tabla de BBDD de personas.'
+
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+
+@AbapCatalog.tableCategory : #TRANSPARENT
+
+@AbapCatalog.deliveryClass : #A
+
+@AbapCatalog.dataMaintenance : #ALLOWED
+
+define table zsql_01_ff {
+
+  
+
+key mandante : mandt not null;
+
+key nombre : abap.char(15) not null;
+
+apellido : abap.char(15);
+
+edad : abap.int1;
+
+direccion : abap.char(20);
+
+  
+
+}
 ```
