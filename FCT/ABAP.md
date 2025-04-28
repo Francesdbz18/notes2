@@ -1660,3 +1660,531 @@ ENDMODULE.
 Crea un smart form con diferentes estilos (mínimo para el titulo, los títulos de tabla y los campos de tabla) que muestre todos los datos de la tabla SPFLI que coincidan con los parámetros introducidos por el usuario para carrid y connid. Se mostrarán los datos de la consulta en la parte superior, debajo del título y la imagen de la compañía (CARRID, CONNIDy fecha de impresión). En una tabla se deben mostrar los datos seleccionados para COUNTRYFR, COUNTRYTO, DISTANCE, DISTID, LINE_INDEX. En la última página se debe mostrar la suma de las distancias y el usuario que solicitó la impresión.
 
 jobs
+
+```
+REPORT zejercicio_final_01_ff.  
+TABLES: zpokemons, zpokemons_ff.  
+  
+DATA: lt_pokemons   TYPE TABLE OF zpokemons,  
+      lt_favorites  TYPE TABLE OF zpokemons_ff,  
+      ls_pokemon    TYPE zpokemons,  
+      ls_fav        TYPE zpokemons_ff,  
+      lv_pokemon_id TYPE zpokemons-id,  
+      lt_listbox    TYPE TABLE OF vrm_value,  
+      ls_listbox    TYPE vrm_value.  
+INITIALIZATION.  
+  
+  SELECT * FROM zpokemons INTO TABLE lt_pokemons.  
+  LOOP AT lt_pokemons INTO ls_pokemon.  
+    ls_listbox-key = ls_pokemon-id.  
+    ls_listbox-text = ls_pokemon-name.  
+    APPEND ls_listbox TO lt_listbox.  
+  ENDLOOP.  
+  
+  
+PARAMETERS: p_pid VISIBLE LENGTH 20 AS LISTBOX LENGTH 20.  
+  
+at SELECTION-SCREEN OUTPUT.  
+  
+  DATA: lr_vrm TYPE REF TO cl_gui_frontend_services.  
+  CALL FUNCTION 'VRM_SET_VALUES'  
+    EXPORTING  
+      id     = 'P_PID'  
+      values = lt_listbox.  
+  
+START-OF-SELECTION.  
+  IF NOT p_pid IS INITIAL.  
+    SELECT SINGLE * FROM zpokemons INTO ls_pokemon WHERE id = p_pid.  
+    IF sy-subrc <> 0.  
+      EXIT.  
+    ENDIF.  
+  
+    ls_fav-id = ls_pokemon-id.  
+    ls_fav-nOMBRE = ls_pokemon-name.  
+    ls_fav-tIPO = ls_pokemon-type.  
+    ls_fav-tIPO2 = ls_pokemon-type2.  
+    ls_fav-habilidad = ls_pokemon-ability.  
+    ls_fav-habilidad2 = ls_pokemon-ability2.  
+    ls_fav-habilidad3 = ls_pokemon-ability3.  
+  
+    INSERT INTO zpokemons_ff VALUES ls_fav.  
+  ENDIF.  
+  DATA: lo_alv       TYPE REF TO cl_gui_alv_grid,  
+        lo_container TYPE REF TO cl_gui_custom_container,  
+        lt_fieldcat  TYPE slis_t_fieldcat_alv,  
+        ls_fieldcat  TYPE slis_fieldcat_alv.  
+  SELECT * FROM zpokemons_Ff INTO TABLE lt_favorites.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'ID'.  
+  ls_fieldcat-seltext_m = 'ID'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'NOMBRE'.  
+  ls_fieldcat-seltext_m = 'Nombre'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'TIPO'.  
+  ls_fieldcat-seltext_m = 'TIPO'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'TIPO2'.  
+  ls_fieldcat-seltext_m = 'TIPO 2'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'HABILIDAD'.  
+  ls_fieldcat-seltext_m = 'Habilidad'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'HABILIDAD2'.  
+  ls_fieldcat-seltext_m = 'Habilidad'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'HABILIDAD2'.  
+  ls_fieldcat-seltext_m = 'Habilidad'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CREATE OBJECT lo_container  
+    EXPORTING  
+      container_name = 'ALV_CONTAINER'.  
+  
+  CREATE OBJECT lo_alv  
+    EXPORTING  
+      i_parent = lo_container.  
+  
+  CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'  
+    EXPORTING  
+      i_callback_program = sy-repid  
+      it_fieldcat        = lt_fieldcat  
+    TABLES  
+      t_outtab           = lt_favorites.
+```
+```
+REPORT zejercicio_final_03_ff.  
+INCLUDE zejercicio_final_03_Ff_top.  
+INCLUDE zejercicio_final_03_ff_sel.  
+INCLUDE zejercicio_final_03_ff_sub.  
+  
+INITIALIZATION.  
+  DATA: lt_poke TYPE STANDARD TABLE OF zpokemons,  
+        lt_hab  TYPE STANDARD TABLE OF zhabilidades,  
+        lt_item TYPE STANDARD TABLE OF zitems.  
+  SELECT * FROM zpokemons INTO TABLE @lt_poke.  
+*  loop at lt_poke into data(lv_poke).  
+*  SELECT id, name FROM zhabilidades INTO TABLE @lt_hab where id = @lv_poke-ability or id = @lv_poke-ability2 or id = @lv_poke-ability3.  
+*    ENDLOOP.  
+  SELECT * FROM zhabilidades INTO TABLE @lt_hab.  
+  SELECT id, name FROM zitems INTO TABLE @lt_item.  
+  gt_lb_poke = VALUE tt_listbox( FOR poke IN lt_poke ( key = poke-id value = poke-name ) ).  
+  gt_lb_hab = VALUE tt_listbox( FOR hab IN lt_hab ( key = hab-id value = hab-name ) ).  
+  gt_lb_item = VALUE tt_listbox(  
+  FOR item IN lt_item ( key = item-id value = item-name ) ).  
+  save_btn = 'Guardar'.  
+  show_btn = 'Mostrar'.  
+  
+  
+AT SELECTION-SCREEN OUTPUT.  
+  
+  PERFORM cargar_listbox USING 'p_pid1' gt_lb_poke.  
+  PERFORM cargar_listbox USING 'p_pid2' gt_lb_poke.  
+  PERFORM cargar_listbox USING 'p_pid3' gt_lb_poke.  
+  PERFORM cargar_listbox USING 'p_pid4' gt_lb_poke.  
+  PERFORM cargar_listbox USING 'p_pid5' gt_lb_poke.  
+  PERFORM cargar_listbox USING 'p_pid6' gt_lb_poke.  
+  
+AT SELECTION-SCREEN ON p_pid1.  
+  PERFORM cargar_listbox_hab USING 'P_HAB1' p_pid1.  
+  
+AT SELECTION-SCREEN ON p_pid2.  
+  PERFORM cargar_listbox_hab USING 'P_HAB2' p_pid2.  
+  
+AT SELECTION-SCREEN ON p_pid3.  
+  PERFORM cargar_listbox_hab USING 'P_HAB3' p_pid3.  
+  
+AT SELECTION-SCREEN ON p_pid4.  
+  PERFORM cargar_listbox_hab USING 'P_HAB4' p_pid4.  
+  
+AT SELECTION-SCREEN ON p_pid5.  
+  PERFORM cargar_listbox_hab USING 'P_HAB5' p_pid5.  
+  
+AT SELECTION-SCREEN ON p_pid6.  
+  PERFORM cargar_listbox_hab USING 'P_HAB6' p_pid6.  
+  
+  PERFORM cargar_listbox USING 'p_item1' gt_lb_item.  
+  PERFORM cargar_listbox USING 'p_item2' gt_lb_item.  
+  PERFORM cargar_listbox USING 'p_item3' gt_lb_item.  
+  PERFORM cargar_listbox USING 'p_item4' gt_lb_item.  
+  PERFORM cargar_listbox USING 'p_item5' gt_lb_item.  
+  PERFORM cargar_listbox USING 'p_item6' gt_lb_item.  
+  
+AT SELECTION-SCREEN.  
+  
+  CASE sy-ucomm.  
+    WHEN 'SAVE'.  
+      PERFORM guardar_equipo.  
+    WHEN 'SHOW'.  
+      PERFORM mostrar_alv.  
+  ENDCASE.
+```
+```
+*&---------------------------------------------------------------------*  
+*& Include          ZEJERCICIO_FINAL_03_FF_TOP  
+*&---------------------------------------------------------------------*  
+TABLES: zpokemons, zhabilidades, zitems, zequipos_ff.  
+  
+TYPES: BEGIN OF ty_nombres,  
+         id_equipo type zequipos_Ff-id_equipo,  
+         nombre1 type zpokemons-name,  
+         habilidad1 type zhabilidades-name,  
+         item1 type zitems-name,  
+         nombre2 type zpokemons-name,  
+         habilidad2 type zhabilidades-name,  
+         item2 type zitems-name,  
+         nombre3 type zpokemons-name,  
+         habilidad3 type zhabilidades-name,  
+         item3 type zitems-name,  
+         nombre4 type zpokemons-name,  
+         habilidad4 type zhabilidades-name,  
+         item4 type zitems-name,  
+         nombre5 type zpokemons-name,  
+         habilidad5 type zhabilidades-name,  
+         item5 type zitems-name,  
+         nombre6 type zpokemons-name,  
+         habilidad6 type zhabilidades-name,  
+         item6 type zitems-name,  
+       END OF ty_nombres.  
+  
+TYPES: BEGIN OF ty_listbox,  
+         key   TYPE c LENGTH 20,  
+         value TYPE c LENGTH 50,  
+       END OF ty_listbox.  
+  
+  
+TYPES: tt_listbox TYPE STANDARD TABLE OF ty_listbox WITH DEFAULT KEY.  
+  
+DATA: gt_lb_poke TYPE tt_listbox,  
+      gt_lb_hab  TYPE tt_listbox,  
+      gt_lb_item TYPE tt_listbox.  
+  
+DATA:  
+      gt_nombres type STANDARD TABLE OF ty_nombres with HEADER LINE.
+```
+```
+*&---------------------------------------------------------------------*  
+*& Include          ZEJERCICIO_FINAL_03_FF_SEL  
+*&---------------------------------------------------------------------*  
+PARAMETERS: P_EQUIPO TYPE ZEQUIPOS_FF-ID_EQUIPO ,  
+            p_pid1  TYPE zpokemons-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND poke1,  
+            p_hab1  TYPE zhabilidades-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND hab1,  
+            p_item1 TYPE zitems-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND item1,  
+  
+            p_pid2  TYPE zpokemons-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND poke2,  
+            p_hab2  TYPE zhabilidades-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND hab2,  
+            p_item2 TYPE zitems-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND item2,  
+  
+            p_pid3  TYPE zpokemons-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND poke3,  
+            p_hab3  TYPE zhabilidades-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND hab3,  
+            p_item3 TYPE zitems-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND item3,  
+  
+            p_pid4  TYPE zpokemons-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND poke4,  
+            p_hab4  TYPE zhabilidades-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND hab4,  
+            p_item4 TYPE zitems-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND item4,  
+  
+            p_pid5  TYPE zpokemons-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND poke5,  
+            p_hab5  TYPE zhabilidades-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND hab5 ,  
+            p_item5 TYPE zitems-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND item5,  
+  
+            p_pid6  TYPE zpokemons-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND poke6,  
+            p_hab6  TYPE zhabilidades-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND hab6 ,  
+            p_item6 TYPE zitems-id AS LISTBOX VISIBLE LENGTH 20 USER-COMMAND item6.  
+  
+SELECTION-SCREEN PUSHBUTTON /1(20) save_btn USER-COMMAND save.  
+SELECTION-SCREEN PUSHBUTTON /21(20) show_btn USER-COMMAND show.
+```
+```
+*&---------------------------------------------------------------------*  
+*& Include          ZEJERCICIO_FINAL_03_FF_SUB  
+*&---------------------------------------------------------------------*  
+FORM cargar_listbox USING p_name TYPE vrm_id  
+                          pt_list TYPE tt_listbox.  
+  
+  DATA: lt_vrm TYPE vrm_values,  
+        ls_vrm TYPE vrm_value.  
+  
+  LOOP AT pt_list INTO DATA(ls_entry).  
+    ls_vrm-key  = ls_entry-key.  
+    ls_vrm-text = ls_entry-value.  
+    APPEND ls_vrm TO lt_vrm.  
+  ENDLOOP.  
+  
+  CALL FUNCTION 'VRM_SET_VALUES'  
+    EXPORTING  
+      id     = p_name  
+      values = lt_vrm.  
+  
+ENDFORM.  
+  
+FORM guardar_equipo.  
+  
+  DATA: ls_equipo TYPE zequipos_ff.  
+  
+  ls_equipo-id_equipo = p_equipo.  
+  
+  ls_equipo-id1 = p_pid1.  
+  ls_equipo-id2 = p_pid2.  
+  ls_equipo-id3 = p_pid3.  
+  ls_equipo-id4 = p_pid4.  
+  ls_equipo-id5 = p_pid5.  
+  ls_equipo-id6 = p_pid6.  
+  
+  ls_equipo-habilidad1 = p_hab1.  
+  ls_equipo-habilidad2 = p_hab2.  
+  ls_equipo-habilidad3 = p_hab3.  
+  ls_equipo-habilidad4 = p_hab4.  
+  ls_equipo-habilidad5 = p_hab5.  
+  ls_equipo-habilidad6 = p_hab6.  
+  
+  ls_equipo-item1 = p_item1.  
+  ls_equipo-item2 = p_item2.  
+  ls_equipo-item3 = p_item3.  
+  ls_equipo-item4 = p_item4.  
+  ls_equipo-item5 = p_item5.  
+  ls_equipo-item6 = p_item6.  
+  
+  INSERT zequipos_ff FROM ls_equipo.  
+  IF sy-subrc = 0.  
+    MESSAGE 'Equipo guardado correctamente' TYPE 'S'.  
+  ELSE.  
+    MESSAGE 'Error al guardar equipo' TYPE 'E'.  
+  ENDIF.  
+  
+ENDFORM.  
+  
+FORM mostrar_alv.  
+  
+  DATA: lt_equipos TYPE STANDARD TABLE OF zequipos_ff.  
+  REFRESH gt_nombres.  
+  SELECT * FROM zequipos_ff INTO TABLE lt_equipos.  
+  
+  DATA: lv_nombres TYPE ty_nombres.  
+  
+  LOOP AT lt_equipos INTO DATA(ls_equipo).  
+    lv_nombres-id_equipo = ls_equipo-id_equipo.  
+    SELECT SINGLE name FROM zpokemons INTO LV_nombres-nombre1 WHERE id = ls_equipo-id1.  
+    SELECT SINGLE name FROM zhabilidades INTO LV_nombres-habilidad1 WHERE id = ls_equipo-habilidad1.  
+    SELECT SINGLE name FROM zitems INTO LV_nombres-item1 WHERE id = ls_equipo-item1.  
+  
+    SELECT SINGLE name FROM zpokemons INTO LV_nombres-nombre2 WHERE id = ls_equipo-id2.  
+    SELECT SINGLE name FROM zhabilidades INTO LV_nombres-habilidad2 WHERE id = ls_equipo-habilidad2.  
+    SELECT SINGLE name FROM zitems INTO LV_nombres-item2 WHERE id = ls_equipo-item2.  
+  
+    SELECT SINGLE name FROM zpokemons INTO LV_nombres-nombre3 WHERE id = ls_equipo-id3.  
+    SELECT SINGLE name FROM zhabilidades INTO LV_nombres-habilidad3 WHERE id = ls_equipo-habilidad3.  
+    SELECT SINGLE name FROM zitems INTO LV_nombres-item3 WHERE id = ls_equipo-item3.  
+  
+    SELECT SINGLE name FROM zpokemons INTO LV_nombres-nombre4 WHERE id = ls_equipo-id4.  
+    SELECT SINGLE name FROM zhabilidades INTO LV_nombres-habilidad4 WHERE id = ls_equipo-habilidad4.  
+    SELECT SINGLE name FROM zitems INTO LV_nombres-item4 WHERE id = ls_equipo-item4.  
+  
+    SELECT SINGLE name FROM zpokemons INTO LV_nombres-nombre5 WHERE id = ls_equipo-id5.  
+    SELECT SINGLE name FROM zhabilidades INTO LV_nombres-habilidad5 WHERE id = ls_equipo-habilidad5.  
+    SELECT SINGLE name FROM zitems INTO LV_nombres-item5 WHERE id = ls_equipo-item5.  
+  
+    SELECT SINGLE name FROM zpokemons INTO LV_nombres-nombre6 WHERE id = ls_equipo-id6.  
+    SELECT SINGLE name FROM zhabilidades INTO LV_nombres-habilidad6 WHERE id = ls_equipo-habilidad6.  
+    SELECT SINGLE name FROM zitems INTO LV_nombres-item6 WHERE id = ls_equipo-item6.  
+  
+    APPEND lv_nombres TO gt_nombres.  
+  ENDLOOP.  
+  DATA: lo_alv       TYPE REF TO cl_gui_alv_grid,  
+        lo_container TYPE REF TO cl_gui_custom_container,  
+        lt_fieldcat  TYPE slis_t_fieldcat_alv,  
+        ls_fieldcat  TYPE slis_fieldcat_alv.  
+  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'ID_EQUIPO'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'NOMBRE1'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'HABILIDAD1'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'ITEM1'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'NOMBRE2'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'HABILIDAD2'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'ITEM2'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'NOMBRE3'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'HABILIDAD3'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'ITEM3'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'NOMBRE4'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'HABILIDAD4'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'ITEM4'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'NOMBRE5'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'HABILIDAD5'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'ITEM5'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'NOMBRE6'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'HABILIDAD6'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  CLEAR ls_fieldcat.  
+  ls_fieldcat-fieldname = 'ITEM6'.  
+  APPEND ls_fieldcat TO lt_fieldcat.  
+  
+  
+  
+  CREATE OBJECT lo_container  
+    EXPORTING  
+      container_name = 'ALV_CONTAINER'.  
+  
+  CREATE OBJECT lo_alv  
+    EXPORTING  
+      i_parent = lo_container.  
+  
+  CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'  
+    EXPORTING  
+      i_callback_program = sy-repid  
+      it_fieldcat        = lt_fieldcat  
+    TABLES  
+      t_outtab           = gt_nombres.  
+  
+ENDFORM.  
+  
+FORM cargar_listbox_hab USING p_name TYPE vrm_id  
+                              p_poke_id TYPE zpokemons-id.  
+  
+  DATA: lt_vrm TYPE vrm_values,  
+        ls_vrm TYPE vrm_value,  
+        ls_poke TYPE zpokemons,  
+        lt_habs TYPE STANDARD TABLE OF zhabilidades,  
+        ls_hab  TYPE zhabilidades.  
+  
+  CLEAR lt_vrm.  
+  
+  " Obtener habilidades del Pokémon  
+  SELECT SINGLE * FROM zpokemons INTO ls_poke WHERE id = p_poke_id.  
+  
+  IF sy-subrc = 0.  
+    " Buscar en ZHABILIDADES las habilidades con los IDs de ability, ability2, ability3  
+    SELECT * FROM zhabilidades INTO TABLE @lt_habs  
+      WHERE id = @ls_poke-ability OR  
+            id = @ls_poke-ability2 OR  
+            id = @ls_poke-ability3.  
+  
+    LOOP AT lt_habs INTO ls_hab.  
+      ls_vrm-key  = ls_hab-id.  
+      ls_vrm-text = ls_hab-name.  
+      APPEND ls_vrm TO lt_vrm.  
+    ENDLOOP.  
+  ENDIF.  
+  
+  CALL FUNCTION 'VRM_SET_VALUES'  
+    EXPORTING  
+      id     = p_name  
+      values = lt_vrm.  
+  
+ENDFORM.
+```
+```
+report zsmart25_ff.  
+  
+DATA: it_spfli TYPE TABLE OF zspflis_ff,  
+      it_outtab TYPE TABLE OF zspflis_ff,  
+      ls_spfli TYPE zspflis_ff,  
+      total TYPE i.  
+  
+PARAMETERS: p_carrid TYPE spfli-carrid,  
+            p_connid TYPE spfli-connid.  
+SELECT * FROM spfli INTO CORRESPONDING FIELDS OF TABLE it_spfli.  
+  LOOP AT it_spfli INTO DATA(r).  
+    MOVE-CORRESPONDING r TO ls_spfli.  
+    ls_spfli-line_index = sy-tabix.  
+    APPEND ls_spfli TO it_outtab.  
+    total = total + r-distance .  
+  ENDLOOP.  
+  
+                   CALL FUNCTION '/1BCDWB/SF00000070'  
+                     EXPORTING  
+*                      ARCHIVE_INDEX              =  
+*                      ARCHIVE_INDEX_TAB          =  
+*                      ARCHIVE_PARAMETERS         =  
+*                      CONTROL_PARAMETERS         =  
+*                      MAIL_APPL_OBJ              =  
+*                      MAIL_RECIPIENT             =  
+*                      MAIL_SENDER                =  
+*                      OUTPUT_OPTIONS             =  
+*                      USER_SETTINGS              = 'X'  
+                       carrid     = p_carrid  
+                       connid     = p_connid  
+                       uname      = sy-uname  
+                       TOTAL      = total  
+*                    IMPORTING  
+*                      DOCUMENT_OUTPUT_INFO       =  
+*                      JOB_OUTPUT_INFO            =  
+*                      JOB_OUTPUT_OPTIONS         =  
+                     TABLES  
+                       itab_spfli = it_outtab  
+*                    EXCEPTIONS  
+*                      FORMATTING_ERROR           = 1  
+*                      INTERNAL_ERROR             = 2  
+*                      SEND_ERROR = 3  
+*                      USER_CANCELED              = 4  
+*                      OTHERS     = 5  
+                     .  
+                   IF sy-subrc <> 0.  
+* Implement suitable error handling here  
+                   ENDIF.
+```
