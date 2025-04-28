@@ -2188,3 +2188,411 @@ SELECT * FROM spfli INTO CORRESPONDING FIELDS OF TABLE it_spfli.
 * Implement suitable error handling here  
                    ENDIF.
 ```
+
+```
+REPORT zejercicio_6_ff.  
+TYPES: BEGIN OF ty_resultado,  
+         id_producto      TYPE int4,  
+         nombre           TYPE string,  
+         precio           TYPE decfloat16,  
+         stock            TYPE int4,  
+         id_categoria     TYPE int4,  
+         categoria_nombre TYPE string,  
+       END OF ty_resultado.  
+  
+DATA: lt_productos    TYPE TABLE OF zproductos_ff,  
+      lt_resultado    TYPE TABLE OF ty_resultado,  
+      ls_resultado    TYPE ty_resultado,  
+      lv_id_producto  TYPE int4,  
+      lv_precio_min   TYPE p DECIMALS 2,  
+      lv_precio_max   TYPE p DECIMALS 2,  
+      lv_stock_min    TYPE int4,  
+      lv_stock_max    TYPE int4,  
+      lv_id_categoria TYPE int4.  
+  
+PARAMETERS: p_idprod TYPE int4,  
+            p_prmin  TYPE p DECIMALS 2,  
+            p_prmax  TYPE p DECIMALS 2,  
+            p_stkmin TYPE int4,  
+            p_stkmax TYPE int4,  
+            p_catid  TYPE int4.  
+  
+DATA: ls_producto   TYPE zproductos_ff,  
+      ls_categoria  TYPE zcategoria_ff,  
+  
+      lt_categorias TYPE TABLE OF zcategoria_ff.  
+  
+ls_categoria-id_categoria = 101.  
+ls_categoria-nombre = 'Electrónica'.  
+APPEND ls_categoria TO lt_categorias.  
+  
+ls_categoria-id_categoria = 102.  
+ls_categoria-nombre = 'Hogar'.  
+APPEND ls_categoria TO lt_categorias.  
+  
+ls_categoria-id_categoria = 103.  
+ls_categoria-nombre = 'Deportes'.  
+APPEND ls_categoria TO lt_categorias.  
+  
+LOOP AT lt_categorias INTO ls_categoria.  
+  INSERT INTO zcategoria_ff  
+    VALUES ls_categoria.  
+ENDLOOP.  
+  
+ls_producto-id_producto = 1.  
+ls_producto-nombre = 'Producto A'.  
+ls_producto-precio = '19.99'.  
+ls_producto-stock = 50.  
+ls_producto-id_categoria = 101.  
+APPEND ls_producto TO lt_productos.  
+  
+ls_producto-id_producto = 2.  
+ls_producto-nombre = 'Producto B'.  
+ls_producto-precio = '49.99'.  
+ls_producto-stock = 30.  
+ls_producto-id_categoria = 102.  
+APPEND ls_producto TO lt_productos.  
+  
+ls_producto-id_producto = 3.  
+ls_producto-nombre = 'Producto C'.  
+ls_producto-precio = '15.75'.  
+ls_producto-stock = 100.  
+ls_producto-id_categoria = 101.  
+APPEND ls_producto TO lt_productos.  
+  
+ls_producto-id_producto = 4.  
+ls_producto-nombre = 'Producto D'.  
+ls_producto-precio = '99.99'.  
+ls_producto-stock = 10.  
+ls_producto-id_categoria = 103.  
+APPEND ls_producto TO lt_productos.  
+  
+ls_producto-id_producto = 5.  
+ls_producto-nombre = 'Producto E'.  
+ls_producto-precio = '29.95'.  
+ls_producto-stock = 25.  
+ls_producto-id_categoria = 102.  
+APPEND ls_producto TO lt_productos.  
+  
+LOOP AT lt_productos INTO ls_producto.  
+  INSERT INTO zproductos_ff  
+    VALUES ls_producto.  
+ENDLOOP.  
+SELECT a~id_producto,  a~nombre, a~precio, a~stock, a~id_categoria,    b~nombre FROM zproductos_ff AS a  
+  INNER JOIN zcategoria_ff AS b ON a~id_categoria = b~id_categoria  
+  WHERE ( ( a~id_producto = @p_idprod ) OR ( @p_idprod IS INITIAL ) )  
+    AND ( ( precio BETWEEN @p_prmin AND @p_prmax ) OR ( @p_prmin IS INITIAL AND @p_prmax IS INITIAL ) )  
+    AND ( ( stock BETWEEN @p_stkmin AND @p_stkmax ) OR ( @p_stkmin IS INITIAL AND @p_stkmax IS INITIAL ) )  
+    AND ( ( b~id_categoria = @p_catid ) OR ( @p_catid IS INITIAL ) )  
+  INTO TABLE @lt_resultado.  
+  
+LOOP AT lt_resultado INTO ls_resultado.  
+  WRITE: / 'ID Producto: ', ls_resultado-id_producto,  
+           'Nombre: ', ls_resultado-nombre,  
+           'Precio: ', ls_resultado-precio,  
+           'Stock: ', ls_resultado-stock,  
+           'Categoría: ', ls_resultado-categoria_NOMBRE.  
+ENDLOOP.
+```
+
+```
+REPORT zejercicio_7_ff.  
+  
+TYPES: BEGIN OF ty_resultado,  
+         id_producto      TYPE int4,  
+         nombre           TYPE string,  
+         precio           TYPE decfloat16,  
+         stock            TYPE int4,  
+         id_categoria     TYPE int4,  
+         categoria_nombre TYPE string,  
+       END OF ty_resultado.  
+  
+DATA: lt_productos    TYPE TABLE OF zproductos_ff,  
+      lt_resultado    TYPE TABLE OF ty_resultado,  
+      lv_id_producto  TYPE int4,  
+      lv_precio_min   TYPE p DECIMALS 2,  
+      lv_precio_max   TYPE p DECIMALS 2,  
+      lv_stock_min    TYPE int4,  
+      lv_stock_max    TYPE int4,  
+      lv_id_categoria TYPE int4.  
+  
+PARAMETERS: p_idprod TYPE int4,  
+            p_prmin  TYPE p DECIMALS 2,  
+            p_prmax  TYPE p DECIMALS 2,  
+            p_stkmin TYPE int4,  
+            p_stkmax TYPE int4,  
+            p_catid  TYPE int4.  
+  
+  
+START-OF-SELECTION.  
+  
+  DATA: ls_producto   TYPE zproductos_ff,  
+        ls_categoria  TYPE zcategoria_ff,  
+  
+        lt_categorias TYPE TABLE OF zcategoria_ff.  
+  
+  " Insertar datos en la tabla de categorías  
+  ls_categoria-id_categoria = 101.  
+  ls_categoria-nombre = 'Electrónica'.  
+  APPEND ls_categoria TO lt_categorias.  
+  
+  ls_categoria-id_categoria = 102.  
+  ls_categoria-nombre = 'Hogar'.  
+  APPEND ls_categoria TO lt_categorias.  
+  
+  ls_categoria-id_categoria = 103.  
+  ls_categoria-nombre = 'Deportes'.  
+  APPEND ls_categoria TO lt_categorias.  
+  
+  LOOP AT lt_categorias INTO ls_categoria.  
+    INSERT INTO zcategoria_ff  
+      VALUES ls_categoria.  
+  ENDLOOP.  
+  
+  ls_producto-id_producto = 1.  
+  ls_producto-nombre = 'Producto A'.  
+  ls_producto-precio = '19.99'.  
+  ls_producto-stock = 50.  
+  ls_producto-id_categoria = 101.  
+  APPEND ls_producto TO lt_productos.  
+  
+  ls_producto-id_producto = 2.  
+  ls_producto-nombre = 'Producto B'.  
+  ls_producto-precio = '49.99'.  
+  ls_producto-stock = 30.  
+  ls_producto-id_categoria = 102.  
+  APPEND ls_producto TO lt_productos.  
+  
+  ls_producto-id_producto = 3.  
+  ls_producto-nombre = 'Producto C'.  
+  ls_producto-precio = '15.75'.  
+  ls_producto-stock = 100.  
+  ls_producto-id_categoria = 101.  
+  APPEND ls_producto TO lt_productos.  
+  
+  ls_producto-id_producto = 4.  
+  ls_producto-nombre = 'Producto D'.  
+  ls_producto-precio = '99.99'.  
+  ls_producto-stock = 10.  
+  ls_producto-id_categoria = 103.  
+  APPEND ls_producto TO lt_productos.  
+  
+  ls_producto-id_producto = 5.  
+  ls_producto-nombre = 'Producto E'.  
+  ls_producto-precio = '29.95'.  
+  ls_producto-stock = 25.  
+  ls_producto-id_categoria = 102.  
+  APPEND ls_producto TO lt_productos.  
+  
+  LOOP AT lt_productos INTO ls_producto.  
+    INSERT INTO zproductos_ff  
+      VALUES ls_producto.  
+  ENDLOOP.  
+  
+  SELECT a~id_categoria, a~nombre, a~precio, a~stock, a~id_producto, b~nombre FROM zproductos_ff AS a  
+    INNER JOIN zcategoria_ff AS b ON a~id_categoria = b~id_categoria  
+    WHERE ( ( id_producto = @p_idprod ) OR ( @p_idprod IS INITIAL ) )  
+      AND ( ( precio BETWEEN @p_prmin AND @p_prmax ) OR ( @p_prmin IS INITIAL AND @p_prmax IS INITIAL ) )  
+      AND ( ( stock BETWEEN @p_stkmin AND @p_stkmax ) OR ( @p_stkmin IS INITIAL AND @p_stkmax IS INITIAL ) )  
+      AND ( ( a~id_categoria = @p_catid ) OR ( @p_catid IS INITIAL ) )  
+    INTO TABLE @lt_resultado.  
+  
+  
+  
+  DATA lo_alv               TYPE REF TO cl_salv_table.  
+  DATA lex_message          TYPE REF TO cx_salv_msg.  
+  DATA lo_columns           TYPE REF TO cl_salv_columns_table.  
+  DATA lo_column            TYPE REF TO cl_salv_column.  
+  DATA lex_not_found        TYPE REF TO cx_salv_not_found.  
+  
+  TRY.  
+      cl_salv_table=>factory(  
+        IMPORTING  
+          r_salv_table = lo_alv  
+        CHANGING  
+          t_table      = lt_resultado ).  
+    CATCH cx_salv_msg INTO lex_message.  
+  ENDTRY.  
+  
+  TRY.  
+  
+      lo_columns = lo_alv->get_columns( ).  
+      lo_columns->set_optimize( ).  
+  
+      lo_column = lo_columns->get_column( 'ID_PRODUCTO' ).  
+      lo_column->set_short_text( 'ID' ).  
+      lo_column->set_medium_text( 'ID Prod.' ).  
+      lo_column->set_long_text( 'ID del producto' ).  
+  
+      lo_column = lo_columns->get_column( 'NOMBRE' ).  
+      lo_column->set_short_text( 'Name' ).  
+      lo_column->set_medium_text( 'Nombre' ).  
+      lo_column->set_long_text( 'Nombre del producto' ).  
+  
+      lo_column = lo_columns->get_column( 'PRECIO' ).  
+      lo_column->set_short_text( '€' ).  
+      lo_column->set_medium_text( 'Precio' ).  
+      lo_column->set_long_text( 'Precio unitario' ).  
+  
+      lo_column = lo_columns->get_column( 'ID_CATEGORIA' ).  
+      lo_column->set_visible( if_salv_c_bool_sap=>false ).  
+  
+      lo_column = lo_columns->get_column( 'CATEGORIA_NOMBRE' ).  
+      lo_column->set_short_text( 'Cat' ).  
+      lo_column->set_medium_text( 'Categoría' ).  
+      lo_column->set_long_text( 'ICategoría del producto' ).  
+  
+      lo_column = lo_columns->get_column( 'STOCK' ).  
+      lo_column->set_short_text( 'Stk' ).  
+      lo_column->set_medium_text( 'Stock' ).  
+      lo_column->set_long_text( 'Stock disponible' ).  
+    CATCH cx_salv_not_found.  
+  ENDTRY.  
+  
+  lo_alv->display( ).
+```
+
+```
+REPORT zedicionpantalla25_ff.  
+INCLUDE zedicionpantalla25_ff_sel               .  
+INCLUDE zedicionpantalla25_ff_sub               .  
+  
+  
+START-OF-SELECTION.  
+  
+AT SELECTION-SCREEN OUTPUT.  
+  LOOP AT SCREEN.  
+    IF rb_view = 'X'.  
+      IF screen-name = 'P_PRODUC'.  
+        screen-input = '0'.  
+      ENDIF.  
+      IF screen-name = 'P_CREATE'.  
+        screen-input = '0'.  
+      ENDIF.  
+      IF screen-name = 'P_NAME'.  
+        screen-input = '0'.  
+      ENDIF.  
+      IF screen-name = 'P_PRICE'.  
+        screen-input = '0'.  
+      ENDIF.  
+    ENDIF.  
+    MODIFY SCREEN.  
+  ENDLOOP.  
+  
+  END-OF-SELECTION.  
+  
+  PERFORM display_product.
+```
+
+```
+*&---------------------------------------------------------------------*  
+*& Include          ZEDICIONPANTALLA25_FF_SEL  
+*&---------------------------------------------------------------------*  
+  
+PARAMETERS: p_create TYPE char1 DEFAULT '',  
+            p_produc TYPE char10 default '',  
+            p_name TYPE char50 default '',  
+            p_price TYPE p DECIMALS 2 default 0.  
+  
+PARAMETERS: rb_edit TYPE char1 RADIOBUTTON GROUP rad1 DEFAULT 'X' USER-COMMAND edit,  
+            rb_view TYPE char1 RADIOBUTTON GROUP rad1.
+```
+
+```
+*&---------------------------------------------------------------------*  
+*& Include          ZEDICIONPANTALLA25_FF_SUB  
+*&---------------------------------------------------------------------*  
+  
+FORM display_product.  
+  WRITE: / 'Producto Creado: ', p_produc,  
+         / 'Nombre: ', p_name,  
+         / 'Precio: ', p_price.  
+ENDFORM.
+```
+
+Tablas de Dictionary:
+```
+@EndUserText.label : 'Categorías de productos.'
+
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+
+@AbapCatalog.tableCategory : #TRANSPARENT
+
+@AbapCatalog.deliveryClass : #A
+
+@AbapCatalog.dataMaintenance : #ALLOWED
+
+define table zcategoria_ff {
+
+  
+
+key mandante : mandt not null;
+
+key id_categoria : abap.int4 not null;
+
+nombre : abap.string(0);
+
+  
+
+}
+```
+```
+@EndUserText.label : 'Equipos Pokémon completos'
+
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+
+@AbapCatalog.tableCategory : #TRANSPARENT
+
+@AbapCatalog.deliveryClass : #A
+
+@AbapCatalog.dataMaintenance : #ALLOWED
+
+define table zequipos_ff {
+
+  
+
+key id_equipo : abap.char(5) not null;
+
+id1 : abap.char(5);
+
+id2 : abap.char(5);
+
+id3 : abap.char(5);
+
+id4 : abap.char(5);
+
+id5 : abap.char(5);
+
+id6 : abap.char(5);
+
+habilidad1 : abap.char(5);
+
+habilidad2 : abap.char(5);
+
+habilidad3 : abap.char(5);
+
+habilidad4 : abap.char(5);
+
+habilidad5 : abap.char(5);
+
+habilidad6 : abap.char(5);
+
+item1 : abap.char(5);
+
+item2 : abap.char(5);
+
+item3 : abap.char(5);
+
+item4 : abap.char(5);
+
+item5 : abap.char(5);
+
+item6 : abap.char(5);
+
+  
+
+}
+```
+```
+
+```
