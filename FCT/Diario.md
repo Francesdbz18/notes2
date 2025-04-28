@@ -16,3 +16,7 @@
 - Lunes 24/03
 	- Introducción e instalación de SAP Logon 
 	- Primeros pasos en SAP S/4HANA
+- ABAP, OpenSQL, Smart Forms, Fiori, RAP, CAP
+- Java 8-11-17, Optionals, Streams
+- Git
+- Spring Boot, Security, JPA
