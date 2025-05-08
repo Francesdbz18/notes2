@@ -1,0 +1,1 @@
+Beans can have aliases
