@@ -245,3 +245,61 @@ public class GameModelToGameDtoConverterTest {
 }
 
 ```
+Issue 8
+```java
+package com.example.yourproject.facade;
+
+import com.example.yourproject.dto.GameDto;
+import com.example.yourproject.model.GameModel;
+import com.example.yourproject.service.GameService;
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Component
+public class GameFacade {
+
+    private final GameService gameService;
+    private final Converter<GameModel, GameDto> modelToDto;
+    private final Converter<GameDto, GameModel> dtoToModel;
+
+    public GameFacade(GameService gameService,
+                      Converter<GameModel, GameDto> modelToDto,
+                      Converter<GameDto, GameModel> dtoToModel) {
+        this.gameService = gameService;
+        this.modelToDto = modelToDto;
+        this.dtoToModel = dtoToModel;
+    }
+
+    public List<GameDto> findAll() {
+        return gameService.findAll().stream()
+                .map(modelToDto::convert)
+                .collect(Collectors.toList());
+    }
+
+    public GameDto findById(Long id) {
+        Optional<GameModel> gameModel = gameService.findById(id);
+        return gameModel.map(modelToDto::convert).orElse(null);
+    }
+
+    public List<GameDto> findByTitle(String title) {
+        return gameService.findByTitle(title).stream()
+                .map(modelToDto::convert)
+                .collect(Collectors.toList());
+    }
+
+    public void delete(Long id) {
+        gameService.delete(id);
+    }
+
+    public GameDto save(GameDto gameDto) {
+        GameModel model = dtoToModel.convert(gameDto);
+        GameModel saved = gameService.save(model);
+        return modelToDto.convert(saved);
+    }
+}
+
+```
