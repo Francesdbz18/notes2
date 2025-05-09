@@ -95,7 +95,7 @@ WRITE: 'Potencia de 2: ', resul1, cl_abap_char_utilities=>cr_lf.
 NEW-LINE.
 ```
 2. Declarar 2 strings, concatenarlas, imprimir substrings de cada una y concatenar los substrings.
-```ABAP
+```abap
 DATA: str1 TYPE string VALUE 'Adiós',  
       str2 TYPE string VALUE 'Hola',  
       concatenacion TYPE string,  
