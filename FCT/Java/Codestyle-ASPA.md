@@ -3,3 +3,7 @@ Orden: const, no const, protected, private, public
 Evitar saltar indents.
 
 testconverters: assert between both objects
+
+ControllerAdvice
+ResponseEntityExceptionHandler
+![[Pasted image 20250509125347.png]]
