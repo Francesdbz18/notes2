@@ -1,76 +1,8 @@
-Issue 3
-```java
-package net.aspanc.bootcamp.springmvc.service;  
-  
-import net.aspanc.bootcamp.springmvc.model.GameModel;  
-  
-import java.util.List;  
-import java.util.Optional;  
-  
-public interface GameService {  
-  
-    List<GameModel> findAll();  
-  
-    Optional<GameModel> findById(Long id);  
-  
-    List<GameModel> findByTitle(String title);  
-  
-    void delete(Long id);  
-  
-    GameModel save(GameModel game);  
-}
+### Issue 3
 
-```
+`findByTitle()` must be case insensitive and must search for strings containing the given name.
 
-```java
-package net.aspanc.bootcamp.springmvc.service;  
-  
-import net.aspanc.bootcamp.springmvc.model.GameModel;  
-import net.aspanc.bootcamp.springmvc.repository.GameRepository;  
-import org.springframework.beans.factory.annotation.Autowired;  
-import org.springframework.stereotype.Service;  
-  
-import java.util.List;  
-import java.util.Optional;  
-  
-@Service  
-public class GameServiceImpl implements GameService {  
-  
-    private final GameRepository gameRepository;  
-  
-    @Autowired  
-    public GameServiceImpl(GameRepository gameRepository) {  
-        this.gameRepository = gameRepository;  
-    }  
-  
-    @Override  
-    public List<GameModel> findAll() {  
-        return gameRepository.findAll();  
-    }  
-  
-    @Override  
-    public Optional<GameModel> findById(Long id) {  
-        return gameRepository.findById(id);  
-    }  
-  
-    @Override  
-    public List<GameModel> findByTitle(String title) {  
-        return gameRepository.findByTitle(title);  
-    }  
-  
-    @Override  
-    public void delete(Long id) {  
-        gameRepository.deleteById(id);  
-    }  
-  
-    @Override  
-    public GameModel save(GameModel game) {  
-        return gameRepository.save(game);  
-    }  
-}
-```
-
-Issue 4
+### Issue 4
 ```java
 package net.aspanc.bootcamp.springmvc.service.impl;
 
@@ -142,7 +74,7 @@ public class GameServiceImplIntegrationTest {
     }
 }
 ```
-Issue 5
+### Issue 5
 ```java
 package com.example.yourproject.dto;
 
@@ -186,7 +118,7 @@ public class GameModelToGameDtoConverter implements Converter<GameModel, GameDto
 
 
 ```
-Issue 6
+### Issue 6
 ```JAVA
 package com.example.yourproject.converter;
 
@@ -245,7 +177,7 @@ public class GameModelToGameDtoConverterTest {
 }
 
 ```
-Issue 8
+### Issue 8
 ```java
 package com.example.yourproject.facade;
 

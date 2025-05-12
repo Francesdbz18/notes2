@@ -6,4 +6,4 @@ testconverters: assert between both objects
 
 ControllerAdvice
 ResponseEntityExceptionHandler
-![[Pasted image 20250509125347.png]]
+![[Pasted image 20250509125347.png]]https://www.wappalyzer.com/
