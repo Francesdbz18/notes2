@@ -10,3 +10,5 @@ Por ahora, permite:
 - Acceder al detalle de cada piloto, con su información y estadísticas de vueltas (gráfico incluido)
     
 - Ver imágenes y colores del equipo, además de otros datos relevantes
+
+Al ser una aplicación web con React y TypeScript, el frontend se encuentra organizado en componentes y con archivos TypeScript JSX, mientras que el backend usa 
