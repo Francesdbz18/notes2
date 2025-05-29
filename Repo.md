@@ -1,0 +1,12 @@
+https://github.com/Francesdbz18
+
+Este es el repositorio con el código de la aplicación. Incluye instrucciones para poder ejecutarla en local.
+
+Por ahora, permite: 
+-  Seleccionar un año y una sesión específica (carrera, clasificación, etc.)
+    
+- Ver la lista de pilotos participantes
+    
+- Acceder al detalle de cada piloto, con su información y estadísticas de vueltas (gráfico incluido)
+    
+- Ver imágenes y colores del equipo, además de otros datos relevantes
