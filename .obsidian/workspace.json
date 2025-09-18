@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ciberseguridad/Bastionado de redes/Introducción.md",
+                "file": "Ciberseguridad/Hacking ético/Conocer nuestro entorno de trabajo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Introducción"
+              "title": "Conocer nuestro entorno de trabajo"
             }
           }
         ]
@@ -166,15 +166,18 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "a47202d9ecdbff40",
   "lastOpenFiles": [
+    "Ciberseguridad/Bastionado de redes/Introducción.md",
+    "Ciberseguridad/Hacking ético/Conocer nuestro entorno de trabajo.md",
+    "Ciberseguridad/Hacking ético",
     "Ciberseguridad/README.md",
     "2DAM/Sistemas de Gestión Empresarial/clientes2 - clientes2.csv",
     "2DAM/Sistemas de Gestión Empresarial/clientes2 - clientes.csv",
-    "Ciberseguridad/Bastionado de redes/Introducción.md",
     "README.md",
     "Linux.md",
     "FCT/SAP/ABAP.md",
