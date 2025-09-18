@@ -1,0 +1,198 @@
+{
+  "main": {
+    "id": "64b99d46ab197a88",
+    "type": "split",
+    "children": [
+      {
+        "id": "481a1b57ef1d9dcb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a47202d9ecdbff40",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ciberseguridad/README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "79235f92b25fa0cf",
+    "type": "split",
+    "children": [
+      {
+        "id": "f7df46e2b6538656",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "26ad6a99b0c9f3d7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a7dec9efa174cf56",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "61f23192ad3bddbc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 229.5
+  },
+  "right": {
+    "id": "7daadb2b5a518a51",
+    "type": "split",
+    "children": [
+      {
+        "id": "36e7225d4f16f8cc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0c38972303c86049",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Proyecto/Tareas Proyecto.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Tareas Proyecto"
+            }
+          },
+          {
+            "id": "694caff60c9e0b70",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Proyecto/Tareas Proyecto.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Tareas Proyecto"
+            }
+          },
+          {
+            "id": "2ad41c9f567451d5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b31afe851d37077c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Proyecto/Tareas Proyecto.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Tareas Proyecto"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "a47202d9ecdbff40",
+  "lastOpenFiles": [
+    "Ciberseguridad/Bastionado de redes/Introducción.md",
+    "README.md",
+    "Linux.md",
+    "FCT/SAP/ABAP.md",
+    "Ciberseguridad/README.md",
+    "Proyecto/Tareas Proyecto.md",
+    "Proyecto/Repo.md",
+    "Proyecto/refactor.md",
+    "Proyecto/Ideas Proyecto.md",
+    "FCT/Diario.md",
+    "FCT/Java/AI.md",
+    "Homelab.md",
+    "Ciber/Untitled.canvas",
+    "Ciberseguridad/Bastionado de redes",
+    "Ciberseguridad",
+    "2DAM",
+    "Untitled.md",
+    "FCT/Pasted image 20250509125347.png",
+    "FCT/Pasted image 20250401110314.png",
+    "FCT/Pasted image 20250218094137.png",
+    "FCT/Pasted image 20250324105634.png",
+    "Proyecto"
+  ]
+}
