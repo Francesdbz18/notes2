@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ciberseguridad/README.md",
+                "file": "Ciberseguridad/Bastionado de redes/Introducción.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Introducción"
             }
           }
         ]
@@ -170,15 +170,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "26ad6a99b0c9f3d7",
+  "active": "a47202d9ecdbff40",
   "lastOpenFiles": [
+    "Ciberseguridad/README.md",
     "2DAM/Sistemas de Gestión Empresarial/clientes2 - clientes2.csv",
     "2DAM/Sistemas de Gestión Empresarial/clientes2 - clientes.csv",
     "Ciberseguridad/Bastionado de redes/Introducción.md",
     "README.md",
     "Linux.md",
     "FCT/SAP/ABAP.md",
-    "Ciberseguridad/README.md",
     "Proyecto/Tareas Proyecto.md",
     "Proyecto/Repo.md",
     "Proyecto/refactor.md",
