@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Seguridad en el arranque.md",
+                "file": "Ciberseguridad/Hacking ético/Ejercicio 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Seguridad en el arranque"
+              "title": "Ejercicio 2"
             }
           }
         ],
@@ -187,10 +187,12 @@
   },
   "active": "fb5be62b8f833898",
   "lastOpenFiles": [
-    "Ciberseguridad/Bastionado de redes/Introducción.md",
-    "Seguridad en el arranque.md",
-    "Ciberseguridad/Hacking ético/Reto 1 - test.zip.md",
     "Ciberseguridad/Hacking ético/Conocer nuestro entorno de trabajo.md",
+    "Ciberseguridad/Hacking ético/Ejercicio 2.md",
+    "Seguridad en el arranque.md",
+    "Untitled.md",
+    "Ciberseguridad/Bastionado de redes/Introducción.md",
+    "Ciberseguridad/Hacking ético/Reto 1 - test.zip.md",
     "Ciberseguridad/Hacking ético",
     "Ciberseguridad/README.md",
     "2DAM/Sistemas de Gestión Empresarial/clientes2 - clientes2.csv",
