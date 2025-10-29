@@ -41,16 +41,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ciberseguridad/Resumen RA1 Incidentes.md",
+                "file": "Ciberseguridad/Incidentes/RA1 1. Resumen Incidentes.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Resumen RA1 Incidentes"
+              "title": "RA1 1. Resumen Incidentes"
+            }
+          },
+          {
+            "id": "182a9a4ae0adf774",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Ciberseguridad/Incidentes/RA1 Comandos Incidentes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "RA1 Comandos Incidentes"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -199,13 +213,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "ad38563c3560e834",
+  "active": "182a9a4ae0adf774",
   "lastOpenFiles": [
-    "Ciberseguridad/Resumen RA1 Incidentes.md",
+    "Ciberseguridad/Incidentes/RA1 1. Resumen Incidentes.md",
+    "Ciberseguridad/Incidentes/RA1 Comandos Incidentes.md",
+    "Ciberseguridad/Incidentes",
     "Ciberseguridad/Hacking ético/Conocer nuestro entorno de trabajo.md",
     "Ciberseguridad/Hacking ético/Ejercicio 2.md",
     "Seguridad en el arranque.md",
-    "Untitled.md",
     "Ciberseguridad/Bastionado de redes/Introducción.md",
     "Ciberseguridad/Hacking ético/Reto 1 - test.zip.md",
     "Ciberseguridad/Hacking ético",
