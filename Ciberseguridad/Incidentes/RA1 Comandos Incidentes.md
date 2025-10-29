@@ -4,7 +4,7 @@ GPG o Gnu Privacy Guard es una herramienta para cifrado y firmas digitales que u
 - -a: añadiendo la opción **-a (--armor)** se guarda el documento cifrado con caracteres ASCII, en formato .asc. _**gpg -c -a fichero**_
 - -d: esta es la orden para descifrar **(--decrypt)** el archivo cifrado.
 - Por defecto, la herramienta utiliza CAST5 como algoritmo de cifrado simétrico. Si se quiere usar un determinado algoritmo de cifrado, se usa la opción **--cipher-algo**. Para ver los algoritmos disponibles ejecuta **gpg --version**.
-- Existen 2 opciones  para la generación de un par de claves: **--gen-key**  y **--full-generate-key**. En la primera de ellas básicamente solicita la identificación del propietario de las claves, con la segunda recoge otros datos antes de la creación de las claves.
+- Existen 2 opciones para la generación de un par de claves: **--gen-key**  y **--full-generate-key**. En la primera de ellas básicamente solicita la identificación del propietario de las claves, con la segunda recoge otros datos antes de la creación de las claves.
 - **gpg --list-keys**   o   **gpg -k**     para ver las claves públicas.
 - **gpg --list-secret-keys**   o   **gpg -K**    para ver las claves privadas.
 - Para publicar una clave pública en un servidor:   _gpg --send-keys --keyserver nombreServidor ClaveID_
@@ -24,8 +24,8 @@ GPG o Gnu Privacy Guard es una herramienta para cifrado y firmas digitales que u
 - Para borrar claves públicas:  **_gpg --delete-key ClaveID_**
 - _gpg --output documentocifrado.gpg --encrypt --recipient ClaveID documentosincifrar_
 - _gpg --output documentodescifrado --decrypt documentocifrado.gpg_
-Los parámetros de _gpg_ para obtener la firma digital de documentos y realizar verificaciones son los siguientes:
 
+Los parámetros de _gpg_ para obtener la firma digital de documentos y realizar verificaciones son los siguientes:
 - **--clear-sign**: se une la firma digital al contenido del archivo, el cual no se cifra (documento en claro). El resultado es un archivo ASCII.
 - **-s (--sign)**: se une la firma digital al contenido del archivo, el cual se comprime y se cifra antes de ser firmado.
 - **-b (--detach-sign)**: la firma se incluye en un archivo separado.El resultado es un archivo binario .sig.
