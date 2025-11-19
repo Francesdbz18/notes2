@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ciberseguridad/Incidentes/RA1 1. Resumen Incidentes.md",
+                "file": "Homelab.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RA1 1. Resumen Incidentes"
+              "title": "Homelab"
             }
           }
         ],
@@ -209,13 +209,14 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "182a9a4ae0adf774",
   "lastOpenFiles": [
-    "Ciberseguridad/Incidentes/RA1 Comandos Incidentes.md",
     "Ciberseguridad/Incidentes/RA1 1. Resumen Incidentes.md",
+    "Ciberseguridad/Incidentes/RA1 Comandos Incidentes.md",
     "Ciberseguridad/Incidentes",
     "Ciberseguridad/Hacking ético/Conocer nuestro entorno de trabajo.md",
     "Ciberseguridad/Hacking ético/Ejercicio 2.md",
