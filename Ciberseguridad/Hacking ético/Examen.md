@@ -4,11 +4,11 @@
 
 ### Definición de Hacking Ético
 
-El **hacking ético** es el uso de habilidades y técnicas avanzadas para sobrepasar los límites de un sistema informático en cuanto a confidencialidad, integridad y disponibilidad, con la finalidad de encontrar debilidades para mitigarlas [1]. El término proviene de la palabra "hack", que significa una solución rápida e ingeniosa para un problema [1]. Es importante destacar que el hacking ético siempre se realiza con autorización expresa y dentro del marco legal [1].
+El **hacking ético** es el uso de habilidades y técnicas avanzadas para sobrepasar los límites de un sistema informático en cuanto a confidencialidad, integridad y disponibilidad, con la finalidad de encontrar debilidades para mitigarlas. El término proviene de la palabra "hack", que significa una solución rápida e ingeniosa para un problema [1]. Es importante destacar que el hacking ético siempre se realiza con autorización expresa y dentro del marco legal [1].
 
 ### Principios de la Seguridad Informática (CIA+)
 
-Los cinco principios fundamentales de la seguridad son [1]:
+Los cinco principios fundamentales de la seguridad son:
 
 | Principio | Descripción |
 |-----------|-------------|
@@ -22,7 +22,7 @@ Los cinco principios fundamentales de la seguridad son [1]:
 
 ### Tipos según sus Intenciones
 
-Los hackers se clasifican según sus motivaciones y métodos [1]:
+Los hackers se clasifican según sus motivaciones y métodos:
 
 | Tipo | Descripción | Características |
 |------|-------------|-----------------|
@@ -33,7 +33,7 @@ Los hackers se clasifican según sus motivaciones y métodos [1]:
 
 ### Tipos de Intrusos según Motivaciones
 
-Clasificación adicional de intrusos por sus objetivos [1]:
+Clasificación adicional de intrusos por sus objetivos:
 
 - **Cracker**: Buscan hacer daño y obtener beneficio económico
 - **Phreaker**: Buscan conexión a Internet sin pagar (actualmente en desuso)
@@ -47,19 +47,19 @@ Clasificación adicional de intrusos por sus objetivos [1]:
 
 ### Código Penal
 
-El **Código Penal español** establece penas específicas para delitos informáticos [1]:
+El **Código Penal español** establece penas específicas para delitos informáticos:
 
-**Artículo 197bis.1**: Prisión de 6 meses a 2 años por acceder sin autorización a sistemas de información vulnerando medidas de seguridad [1].
+**Artículo 197bis.1**: Prisión de 6 meses a 2 años por acceder sin autorización a sistemas de información vulnerando medidas de seguridad.
 
-**Artículo 197bis.2**: Prisión de 3 meses a 2 años o multa de 3 a 12 meses por interceptar transmisiones no públicas de datos sin autorización [1].
+**Artículo 197bis.2**: Prisión de 3 meses a 2 años o multa de 3 a 12 meses por interceptar transmisiones no públicas de datos sin autorización.
 
-**Artículo 197ter**: Prisión de 6 meses a 2 años o multa de 3 a 18 meses por producir, adquirir o facilitar programas informáticos o contraseñas para cometer delitos informáticos [1].
+**Artículo 197ter**: Prisión de 6 meses a 2 años o multa de 3 a 18 meses por producir, adquirir o facilitar programas informáticos o contraseñas para cometer delitos informáticos.
 
 ## Malware y Amenazas
 
 ### Tipos de Malware
 
-Clasificación según su comportamiento [1]:
+Clasificación según su comportamiento:
 
 | Tipo | Función |
 |------|---------|
@@ -78,7 +78,7 @@ Clasificación según su comportamiento [1]:
 
 ### Ejemplos Históricos de Malware
 
-Casos relevantes que marcaron la historia [1]:
+Casos relevantes que marcaron la historia:
 
 - **Melissa (1999)**: Infectó 4 millones de equipos en 3 días mediante correo electrónico
 - **I Love You (2000)**: Infectó 40 millones de equipos en 6 horas usando Visual Basic
@@ -89,7 +89,7 @@ Casos relevantes que marcaron la historia [1]:
 
 ### Definición y Tipos
 
-Una **vulnerabilidad** es un fallo de diseño, configuración o programación que altera el comportamiento normal del sistema y permite accesos o acciones no previstas [1].
+Una **vulnerabilidad** es un fallo de diseño, configuración o programación que altera el comportamiento normal del sistema y permite accesos o acciones no previstas.
 
 ### Causas Principales
 
@@ -102,7 +102,7 @@ Una **vulnerabilidad** es un fallo de diseño, configuración o programación qu
 
 ### Sistema de Codificación CVE
 
-El sistema **CVE** (Common Vulnerabilities and Exposures) utiliza el formato [1]:
+El sistema **CVE** (Common Vulnerabilities and Exposures) utiliza el formato:
 
 $$
 \text{CVE-yyyy-XXXXX}
@@ -114,7 +114,7 @@ Donde:
 
 ### Métrica CVSS
 
-El sistema **CVSS** (Common Vulnerability Scoring System) clasifica la gravedad [1]:
+El sistema **CVSS** (Common Vulnerability Scoring System) clasifica la gravedad:
 
 | Rango | Gravedad |
 |-------|----------|
@@ -123,11 +123,11 @@ El sistema **CVSS** (Common Vulnerability Scoring System) clasifica la gravedad 
 | 7.0 - 8.9 | Alta |
 | 9.0 - 10.0 | Crítica |
 
-Existen además **métricas temporales** (gravedad según el momento) y **métricas de entorno** (dependen del sistema) que ajustan la puntuación base [1].
+Existen además **métricas temporales** (gravedad según el momento) y **métricas de entorno** (dependen del sistema) que ajustan la puntuación base.
 
 ### Catálogos Relacionados
 
-MITRE mantiene catálogos complementarios [1]:
+MITRE mantiene catálogos complementarios:
 
 - **CWE** (Common Weakness Enumeration): Clasificación de tipos de vulnerabilidades con lista de las 25 más comunes
 - **CAPEC** (Common Attack Pattern Enumerations and Classifications): Recopilación de métodos y patrones de ataque más empleados
@@ -136,11 +136,11 @@ MITRE mantiene catálogos complementarios [1]:
 
 ### Definición
 
-Un **pentest** es una acción intrusiva autorizada contra un sistema para mejorar su seguridad, siempre con el permiso explícito de la organización y generalmente con cláusula de confidencialidad [1].
+Un **pentest** es una acción intrusiva autorizada contra un sistema para mejorar su seguridad, siempre con el permiso explícito de la organización y generalmente con cláusula de confidencialidad.
 
 ### Tipos de Auditorías
 
-**Según el conocimiento** [1]:
+**Según el conocimiento**:
 
 | Tipo | Descripción |
 |------|-------------|
@@ -148,13 +148,13 @@ Un **pentest** es una acción intrusiva autorizada contra un sistema para mejora
 | **Caja Blanca** | Conocimiento total, incluye revisión de código fuente |
 | **Caja Gris** | Conocimiento parcial con algunos permisos limitados |
 
-**Según la posición** [1]:
+**Según la posición**:
 
 - **Perimetral**: Sin vía de entrada, hay que encontrarla
 - **Interna**: Acceso como empleado con escasos privilegios
 - **Interna con privilegios**: Acceso a configuraciones, código y políticas de seguridad
 
-**Según el alcance** [1]:
+**Según el alcance**:
 
 - Auditorías web
 - Auditorías de aplicaciones móviles
@@ -173,7 +173,7 @@ Antes de iniciar un pentest se debe establecer un contrato que incluya [1]:
 
 ### Fases del Pentest
 
-El proceso de pentesting consta de cinco fases [1]:
+El proceso de pentesting consta de cinco fases:
 
 1. **Footprinting (Reconocimiento Pasivo)**: Fase no intrusiva, se recaba información de fuentes públicas usando técnicas OSINT
 2. **Fingerprinting (Reconocimiento Activo)**: Se interactúa directamente con el objetivo mediante análisis de puertos y detección de vulnerabilidades
@@ -194,7 +194,7 @@ El proceso de pentesting consta de cinco fases [1]:
 
 ### Informes Finales
 
-Se generan dos tipos de informes [1]:
+Se generan dos tipos de informes:
 
 **Informe Técnico**:
 - Dirigido a personal de programación o sistemas
@@ -211,7 +211,7 @@ Se generan dos tipos de informes [1]:
 
 ## Equipos de Seguridad
 
-Las organizaciones dividen sus equipos de seguridad por colores [1]:
+Las organizaciones dividen sus equipos de seguridad por colores:
 
 | Equipo | Función |
 |--------|---------|
@@ -244,7 +244,7 @@ Los CTF son ejercicios de entrenamiento donde se busca obtener una "flag" (códi
 
 ### Recursos de Aprendizaje
 
-**Canales y cursos destacados** [1]:
+**Canales y cursos destacados**:
 - **The Cyber Mentor**: Canal YouTube, TCM Academy y certificación PNPT
 - **S4vitar**: Academia Hack4u con curso de introducción al hacking
 - **C1b3rwall**: Proyecto de Policía Nacional con formación gratuita
@@ -270,7 +270,7 @@ Principales certificaciones del sector [1]:
 
 ### Plataformas Bug Bounty
 
-Programas de recompensas por reporte de vulnerabilidades [1]:
+Programas de recompensas por reporte de vulnerabilidades:
 
 - **Bugcrowd**: Programas de principales empresas
 - **HackerOne**: Una de las plataformas más importantes
@@ -279,7 +279,7 @@ Programas de recompensas por reporte de vulnerabilidades [1]:
 
 ### Conferencias y Eventos
 
-Eventos principales del sector [1]:
+Eventos principales del sector:
 
 **Internacionales**:
 - **BlackHat**: Referente mundial, eventos en varios continentes
@@ -297,7 +297,7 @@ Eventos principales del sector [1]:
 
 ### Sitios de Noticias
 
-Fuentes de información actualizada [1]:
+Fuentes de información actualizada:
 
 - **Una al Día** (Hispasec): Noticia diaria desde hace más de 24 años
 - **El Lado del Mal**: Blog de Chema Alonso con eventos y publicaciones
@@ -312,9 +312,9 @@ Fuentes de información actualizada [1]:
 
 ### Distribuciones para Hacking
 
-**Kali Linux**: La principal distribución, ofrece múltiples formatos (VM, ISO, ARM, Cloud) [1].
+**Kali Linux**: La principal distribución, ofrece múltiples formatos (VM, ISO, ARM, Cloud).
 
-**Alternativas** [1]:
+**Alternativas**:
 - **ParrotOS**: Distribución completa alternativa
 - **BlackArch**: Basada en Arch Linux
 - **CommandoVM**: Convierte Windows en distribución de seguridad ofensiva
