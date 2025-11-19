@@ -4,7 +4,7 @@
 
 ### Definición de Hacking Ético
 
-El **hacking ético** es el uso de habilidades y técnicas avanzadas para sobrepasar los límites de un sistema informático en cuanto a confidencialidad, integridad y disponibilidad, con la finalidad de encontrar debilidades para mitigarlas. El término proviene de la palabra "hack", que significa una solución rápida e ingeniosa para un problema [1]. Es importante destacar que el hacking ético siempre se realiza con autorización expresa y dentro del marco legal [1].
+El **hacking ético** es el uso de habilidades y técnicas avanzadas para sobrepasar los límites de un sistema informático en cuanto a confidencialidad, integridad y disponibilidad, con la finalidad de encontrar debilidades para mitigarlas. El término proviene de la palabra "hack", que significa una solución rápida e ingeniosa para un problema. Es importante destacar que el hacking ético siempre se realiza con autorización expresa y dentro del marco legal.
 
 ### Principios de la Seguridad Informática (CIA+)
 
