@@ -18,7 +18,7 @@ Los cinco principios fundamentales de la seguridad son:
 | **Autenticación**    | Garantizar la identidad del creador de un contenido mediante factores de autenticación    |
 | **No repudio**       | El emisor no puede negar el envío de información, ni el receptor negar su recepción       |
 
-## Clasificación de Hackers
+## Clasificación de hackers
 
 ### Tipos según sus Intenciones
 
@@ -31,7 +31,7 @@ Los hackers se clasifican según sus motivaciones y métodos:
 | **Grey Hat** (Sombrero Gris)    | Entre los dos anteriores             | Incluye hacktivistas como Anonymous, no siempre cumplen la ley                                                            |
 | **Script Kiddies/Newbies**      | Personas sin conocimientos avanzados | Usan herramientas de otros, pueden causar daños importantes sin comprenderlos                                             |
 
-### Tipos de Intrusos según Motivaciones
+### Tipos de Intrusos según motivaciones
 
 Clasificación adicional de intrusos por sus objetivos:
 
@@ -45,9 +45,9 @@ Clasificación adicional de intrusos por sus objetivos:
 
 ## Marco Legal Español
 
-### Código Penal
+### Código penal
 
-El **Código Penal español** establece penas específicas para delitos informáticos:
+El **Código penal español** establece penas específicas para delitos informáticos:
 
 **Artículo 197bis.1**: Prisión de 6 meses a 2 años por acceder sin autorización a sistemas de información vulnerando medidas de seguridad.
 
@@ -55,9 +55,9 @@ El **Código Penal español** establece penas específicas para delitos informá
 
 **Artículo 197ter**: Prisión de 6 meses a 2 años o multa de 3 a 18 meses por producir, adquirir o facilitar programas informáticos o contraseñas para cometer delitos informáticos.
 
-## Malware y Amenazas
+## Malware y amenazas
 
-### Tipos de Malware
+### Tipos de malware
 
 Clasificación según su comportamiento:
 
@@ -76,7 +76,7 @@ Clasificación según su comportamiento:
 | **Bomba lógica** | Permanece oculta hasta que se dispara bajo ciertas condiciones |
 | **Cryptojacking** | Usa CPU del sistema para minar criptomonedas |
 
-### Ejemplos Históricos de Malware
+### Ejemplos históricos de Malware
 
 Casos relevantes que marcaron la historia:
 
@@ -87,11 +87,11 @@ Casos relevantes que marcaron la historia:
 
 ## Vulnerabilidades
 
-### Definición y Tipos
+### Definición y tipos
 
 Una **vulnerabilidad** es un fallo de diseño, configuración o programación que altera el comportamiento normal del sistema y permite accesos o acciones no previstas.
 
-### Causas Principales
+### Causas principales
 
 - **Errores de programación**: Pueden ser no intencionados o backdoors deliberados
 - **Librerías de terceros vulnerables**: Ejemplo: Log4Shell (CVE-2021-44228) en log4j
@@ -100,7 +100,7 @@ Una **vulnerabilidad** es un fallo de diseño, configuración o programación qu
 - **Mal uso de criptografía**: Ejemplo: Zerologon (CVE-2020-1472)
 - **Vulnerabilidades hardware**: Aprovechan ejecución especulativa o fallos en memoria DDR DRAM
 
-### Sistema de Codificación CVE
+### Sistema de codificación CVE
 
 El sistema **CVE** (Common Vulnerabilities and Exposures) utiliza el formato:
 
@@ -116,16 +116,16 @@ Donde:
 
 El sistema **CVSS** (Common Vulnerability Scoring System) clasifica la gravedad:
 
-| Rango | Gravedad |
-|-------|----------|
-| 1.0 - 3.9 | Baja |
-| 4.0 - 6.9 | Media |
-| 7.0 - 8.9 | Alta |
-| 9.0 - 10.0 | Crítica |
+| Rango      | Gravedad |
+| ---------- | -------- |
+| 1.0 - 3.9  | Baja     |
+| 4.0 - 6.9  | Media    |
+| 7.0 - 8.9  | Alta     |
+| 9.0 - 10.0 | Crítica  |
 
 Existen además **métricas temporales** (gravedad según el momento) y **métricas de entorno** (dependen del sistema) que ajustan la puntuación base.
 
-### Catálogos Relacionados
+### Catálogos relacionados
 
 MITRE mantiene catálogos complementarios:
 
@@ -138,15 +138,15 @@ MITRE mantiene catálogos complementarios:
 
 Un **pentest** es una <mark style="background: #FFB8EBA6;">acción intrusiva autorizada</mark> contra un sistema para mejorar su seguridad, siempre con el permiso explícito de la organización y generalmente con cláusula de confidencialidad.
 
-### Tipos de Auditorías
+### Tipos de auditorías
 
 **Según el conocimiento**:
 
 | Tipo            | Descripción                                           |
 | --------------- | ----------------------------------------------------- |
-| **Caja Negra**  | Conocimiento similar al de un atacante externo        |
-| **Caja Blanca** | Conocimiento total, incluye revisión de código fuente |
-| **Caja Gris**   | Conocimiento parcial con algunos permisos limitados   |
+| **Caja negra**  | Conocimiento similar al de un atacante externo        |
+| **Caja blanca** | Conocimiento total, incluye revisión de código fuente |
+| **Caja gris**   | Conocimiento parcial con algunos permisos limitados   |
 
 **Según la posición**:
 
@@ -161,7 +161,7 @@ Un **pentest** es una <mark style="background: #FFB8EBA6;">acción intrusiva aut
 - Auditorías wireless y VoIP
 - Pruebas de stress DoS/DDoS
 
-### Contrato Previo
+### Contrato previo
 
 Antes de iniciar un pentest se debe establecer un contrato que incluya [1]:
 
@@ -175,13 +175,13 @@ Antes de iniciar un pentest se debe establecer un contrato que incluya [1]:
 
 El proceso de pentesting consta de cinco fases:
 
-1. **Footprinting (Reconocimiento Pasivo)**: Fase no intrusiva, se recaba información de fuentes públicas usando técnicas OSINT
-2. **Fingerprinting (Reconocimiento Activo)**: Se interactúa directamente con el objetivo mediante análisis de puertos y detección de vulnerabilidades
+1. **Footprinting (reconocimiento pasivo)**: Fase no intrusiva, se recaba información de fuentes públicas usando técnicas OSINT
+2. **Fingerprinting (reconocimiento activo)**: Se interactúa directamente con el objetivo mediante análisis de puertos y detección de vulnerabilidades
 3. **Explotación**: Se diseña y aplica un vector de ataque usando exploits para comprometer el objetivo
 4. **Postexplotación**: Se consolida el compromiso, se escalan privilegios y se realiza pivoting hacia otras máquinas
 5. **Documentación**: Se elaboran informes técnicos y ejecutivos con los resultados
 
-### Metodologías Principales
+### Metodologías principales
 
 **PTES** (Penetration Testing Execution Standard): Establece 7 fases e incluye guía técnica con herramientas útiles [1].
 
@@ -192,34 +192,34 @@ El proceso de pentesting consta de cinco fases:
 - MASTG: Para aplicaciones móviles
 - FSTM: Para firmware IoT
 
-### Informes Finales
+### Informes finales
 
 Se generan dos tipos de informes:
 
-**Informe Técnico**:
+**Informe técnico**:
 - Dirigido a personal de programación o sistemas
 - Incluye metodología, herramientas y estándares utilizados
 - Soluciones genéricas a problemas detectados
 - Vulnerabilidades ordenadas por riesgo o naturaleza
 - Indicación de posibles falsos positivos
 
-**Informe Ejecutivo**:
+**Informe ejecutivo**:
 - Resumen sin detalles técnicos
 - Estado de seguridad de los sistemas
 - Resultados obtenidos
 - Formato PowerPoint para presentación al cliente
 
-## Equipos de Seguridad
+## Equipos de seguridad
 
 Las organizaciones dividen sus equipos de seguridad por colores:
 
-| Equipo | Función |
-|--------|---------|
-| **Red Team** | Seguridad ofensiva, hacking ético |
-| **Blue Team** | Seguridad defensiva, respuesta ante incidentes, análisis forense, bastionado |
-| **Yellow Team** | Desarrollo seguro de aplicaciones |
+| Equipo          | Función                                                                      |
+| --------------- | ---------------------------------------------------------------------------- |
+| **Red team**    | Seguridad ofensiva, hacking ético                                            |
+| **Blue team**   | Seguridad defensiva, respuesta ante incidentes, análisis forense, bastionado |
+| **Yellow team** | Desarrollo seguro de aplicaciones                                            |
 
-## Recursos de Formación
+## Recursos de formación
 
 ### Plataformas CTF (Capture The Flag)
 
@@ -242,31 +242,19 @@ Los CTF son ejercicios de entrenamiento donde se busca obtener una "flag" (códi
 - **HackMyVM**: Repositorio de máquinas vulnerables
 - **Proving Grounds** (OffSec): Versión gratuita (Play) y de pago (Practice)
 
-### Recursos de Aprendizaje
-
-**Canales y cursos destacados**:
-- **The Cyber Mentor**: Canal YouTube, TCM Academy y certificación PNPT
-- **S4vitar**: Academia Hack4u con curso de introducción al hacking
-- **C1b3rwall**: Proyecto de Policía Nacional con formación gratuita
-- **HackTricks**: Libro online gratuito por Carlos Polop
-- **IppSec**: Resolución de máquinas HackTheBox retiradas
-- **John Hammond**: Retos, análisis de malware
-- **LiveOverFlow**: Contenido pedagógico y academia Hextree
-- **HackerSploit**: Manejo de Linux y técnicas Red Team
-
 ### Certificaciones Profesionales
 
 Principales certificaciones del sector [1]:
 
-| Certificación | Organización | Nivel | Características |
-|---------------|-------------|-------|-----------------|
-| **CEH** | EC-Council | Básico-Intermedio | Bajo contenido práctico, mejorado en v12 |
-| **Pentest+** | CompTIA | Intermedio | Cubre todas las fases |
-| **eJPT** | eLearnSecurity | Básico | Para principiantes |
-| **eCPPT** | eLearnSecurity | Avanzado | Nivel profesional |
-| **HTB CPTS** | Hack The Box | Intermedio | Especialista en pentesting |
-| **PNPT** | TCM Security | Intermedio | Creada por The Cyber Mentor |
-| **OSCP** | Offensive Security | Avanzado | La más prestigiosa y compleja |
+| Certificación | Organización       | Nivel             | Características                          |
+| ------------- | ------------------ | ----------------- | ---------------------------------------- |
+| **CEH**       | EC-Council         | Básico-Intermedio | Bajo contenido práctico, mejorado en v12 |
+| **Pentest+**  | CompTIA            | Intermedio        | Cubre todas las fases                    |
+| **eJPT**      | eLearnSecurity     | Básico            | Para principiantes                       |
+| **eCPPT**     | eLearnSecurity     | Avanzado          | Nivel profesional                        |
+| **HTB CPTS**  | Hack The Box       | Intermedio        | Especialista en pentesting               |
+| **PNPT**      | TCM Security       | Intermedio        | Creada por The Cyber Mentor              |
+| **OSCP**      | Offensive Security | Avanzado          | La más prestigiosa y compleja            |
 
 ### Plataformas Bug Bounty
 
@@ -277,40 +265,9 @@ Programas de recompensas por reporte de vulnerabilidades:
 - **Intigriti**: Plataforma de ámbito europeo
 - **Immunefi**: Especializada en protección de activos digitales y criptomonedas
 
-### Conferencias y Eventos
-
-Eventos principales del sector:
-
-**Internacionales**:
-- **BlackHat**: Referente mundial, eventos en varios continentes
-- **DEFCON**: Las Vegas, uno de los principales eventos mundiales
-
-**España**:
-- **RootedCON**: La más importante, desde 2010
-- **Navaja Negra**: En Albacete desde 2012
-- **No cON Name**: El más antiguo, desde 1999
-- **Congreso C1b3rwall**: Anual en Ávila (Escuela Nacional de Policía)
-- **Jornadas STIC CCN-CERT**: Desde 2007, con materiales disponibles
-
-**Latinoamérica**:
-- **DragonJar**: Colombia, con acceso online gratuito
-
-### Sitios de Noticias
-
-Fuentes de información actualizada:
-
-- **Una al Día** (Hispasec): Noticia diaria desde hace más de 24 años
-- **El Lado del Mal**: Blog de Chema Alonso con eventos y publicaciones
-- **Flu Project**: Noticias de autores españoles
-- **Hackplayers**: Gran cantidad de colaboradores
-- **The Hacker Way**: Formación y artículos gratuitos
-- **Hacking Articles**: Publicaciones técnicas en inglés
-- **Google Project Zero**: Blog del equipo de búsqueda de vulnerabilidades zero-day
-- **Ars Technica**: Sección de tecnología con noticias relevantes
-
 ## Herramientas
 
-### Distribuciones para Hacking
+### Distros para hacking
 
 **Kali Linux**: La principal distribución, ofrece múltiples formatos (VM, ISO, ARM, Cloud).
 
@@ -318,6 +275,8 @@ Fuentes de información actualizada:
 - **ParrotOS**: Distribución completa alternativa
 - **BlackArch**: Basada en Arch Linux
 - **CommandoVM**: Convierte Windows en distribución de seguridad ofensiva
+
+---
 
 ## Preguntas de Repaso
 
@@ -342,6 +301,8 @@ Fuentes de información actualizada:
 19. ¿Qué diferencia hay entre footprinting y fingerprinting?
 20. ¿Qué es pivoting en la fase de postexplotación?
 
+---
+
 ## Glosario de Términos Clave
 
 - **CVE**: Common Vulnerabilities and Exposures
@@ -364,16 +325,6 @@ Fuentes de información actualizada:
 - **Ransomware**: Malware que encripta datos y exige rescate
 - **Phishing**: Suplantación de identidad por correo electrónico
 
-***
-
-**Consejos para el Examen**:
-- Memoriza los cinco principios de seguridad (CIA + Autenticación + No repudio)
-- Conoce los artículos del Código Penal (197bis.1, 197bis.2, 197ter) y sus penas
-- Domina el formato CVE y los rangos CVSS
-- Distingue claramente las cinco fases del pentest
-- Comprende las diferencias entre tipos de auditorías y equipos de seguridad
-- Conoce los ejemplos históricos de malware y sus características
-- Familiarízate con las plataformas CTF y certificaciones principales
 
 Referencias:
 [1] HackingEtico_Tema1.docx
