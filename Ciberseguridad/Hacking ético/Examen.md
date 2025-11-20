@@ -24,18 +24,18 @@ Los cinco principios fundamentales de la seguridad son:
 
 Los hackers se clasifican según sus motivaciones y métodos:
 
-| Tipo | Descripción | Características |
-|------|-------------|-----------------|
-| **White Hat** (Sombrero Blanco) | Hackers éticos profesionales | Actúan con permisos legales, mejoran la seguridad, notifican vulnerabilidades |
-| **Black Hat** (Sombrero Negro) | Ciberdelincuentes | Cometen delitos, realizan fraudes, extorsiones y robos para beneficio propio |
-| **Grey Hat** (Sombrero Gris) | Entre los dos anteriores | Incluye hacktivistas como Anonymous, no siempre cumplen la ley |
-| **Script Kiddies/Newbies** | Personas sin conocimientos avanzados | Usan herramientas de otros, pueden causar daños importantes sin comprenderlos |
+| Tipo                            | Descripción                          | Características                                                                                                           |
+| ------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| **White Hat** (Sombrero Blanco) | Hackers éticos profesionales         | Actúan con <mark style="background: #FFB8EBA6;">permisos legales</mark>, mejoran la seguridad, notifican vulnerabilidades |
+| **Black Hat** (Sombrero Negro)  | Ciberdelincuentes                    | Cometen delitos, realizan fraudes, extorsiones y robos para beneficio propio                                              |
+| **Grey Hat** (Sombrero Gris)    | Entre los dos anteriores             | Incluye hacktivistas como Anonymous, no siempre cumplen la ley                                                            |
+| **Script Kiddies/Newbies**      | Personas sin conocimientos avanzados | Usan herramientas de otros, pueden causar daños importantes sin comprenderlos                                             |
 
 ### Tipos de Intrusos según Motivaciones
 
 Clasificación adicional de intrusos por sus objetivos:
 
-- **Cracker**: Buscan hacer daño y obtener beneficio económico
+- **Cracker**: Buscan <mark style="background: #FFB8EBA6;">hacer daño</mark> y obtener beneficio económico
 - **Phreaker**: Buscan conexión a Internet sin pagar (actualmente en desuso)
 - **Spammer**: Generadores de correo basura
 - **Lammer**: Script kiddie que actúa sin conocimientos
@@ -109,8 +109,8 @@ $$
 $$
 
 Donde:
-- **yyyy**: Año de descubrimiento
-- **XXXXX**: Número asignado
+- <mark style="background: #D2B3FFA6;">**yyyy**: Año de descubrimiento</mark>
+- <mark style="background: #BBFABBA6;">**XXXXX**: Número asignado</mark>
 
 ### Métrica CVSS
 
@@ -129,24 +129,24 @@ Existen además **métricas temporales** (gravedad según el momento) y **métri
 
 MITRE mantiene catálogos complementarios:
 
-- **CWE** (Common Weakness Enumeration): Clasificación de tipos de vulnerabilidades con lista de las 25 más comunes
-- **CAPEC** (Common Attack Pattern Enumerations and Classifications): Recopilación de métodos y patrones de ataque más empleados
+- **<mark style="background: #FFB8EBA6;">CWE</mark>** (Common Weakness Enumeration): Clasificación de tipos de vulnerabilidades con lista de las 25 más comunes
+- **<mark style="background: #FFB8EBA6;">CAPEC</mark>** (Common Attack Pattern Enumerations and Classifications): Recopilación de métodos y patrones de ataque más empleados
 
 ## Pentesting (Test de Intrusión)
 
 ### Definición
 
-Un **pentest** es una acción intrusiva autorizada contra un sistema para mejorar su seguridad, siempre con el permiso explícito de la organización y generalmente con cláusula de confidencialidad.
+Un **pentest** es una <mark style="background: #FFB8EBA6;">acción intrusiva autorizada</mark> contra un sistema para mejorar su seguridad, siempre con el permiso explícito de la organización y generalmente con cláusula de confidencialidad.
 
 ### Tipos de Auditorías
 
 **Según el conocimiento**:
 
-| Tipo | Descripción |
-|------|-------------|
-| **Caja Negra** | Conocimiento similar al de un atacante externo |
+| Tipo            | Descripción                                           |
+| --------------- | ----------------------------------------------------- |
+| **Caja Negra**  | Conocimiento similar al de un atacante externo        |
 | **Caja Blanca** | Conocimiento total, incluye revisión de código fuente |
-| **Caja Gris** | Conocimiento parcial con algunos permisos limitados |
+| **Caja Gris**   | Conocimiento parcial con algunos permisos limitados   |
 
 **Según la posición**:
 
