@@ -4,19 +4,19 @@
 
 ### Definición de Hacking Ético
 
-El **hacking ético** es el uso de habilidades y técnicas avanzadas para sobrepasar los límites de un sistema informático en cuanto a confidencialidad, integridad y disponibilidad, con la finalidad de encontrar debilidades para mitigarlas. El término proviene de la palabra "hack", que significa una solución rápida e ingeniosa para un problema. Es importante destacar que el hacking ético siempre se realiza con autorización expresa y dentro del marco legal.
+El **hacking ético** es el uso de habilidades y técnicas avanzadas para sobrepasar los límites de un sistema informático en cuanto a confidencialidad, integridad y disponibilidad, con la finalidad de encontrar debilidades para mitigarlas. El término proviene de la palabra "hack", que significa una solución rápida e ingeniosa para un problema. Es importante destacar que <mark style="background: #FFB8EBA6;">el hacking ético siempre se realiza con autorización expresa y dentro del marco legal.</mark>
 
 ### Principios de la Seguridad Informática (CIA+)
 
 Los cinco principios fundamentales de la seguridad son:
 
-| Principio | Descripción |
-|-----------|-------------|
-| **Confidencialidad** | Garantizar que la información es accesible únicamente a personas autorizadas |
-| **Integridad** | Asegurar la veracidad de los datos previniendo cambios no autorizados |
-| **Disponibilidad** | Garantizar que los sistemas son accesibles cuando son requeridos por usuarios autorizados |
-| **Autenticación** | Garantizar la identidad del creador de un contenido mediante factores de autenticación |
-| **No repudio** | El emisor no puede negar el envío de información, ni el receptor negar su recepción |
+| Principio            | Descripción                                                                               |
+| -------------------- | ----------------------------------------------------------------------------------------- |
+| **Confidencialidad** | Garantizar que la información es accesible únicamente a personas autorizadas              |
+| **Integridad**       | Asegurar la veracidad de los datos previniendo cambios no autorizados                     |
+| **Disponibilidad**   | Garantizar que los sistemas son accesibles cuando son requeridos por usuarios autorizados |
+| **Autenticación**    | Garantizar la identidad del creador de un contenido mediante factores de autenticación    |
+| **No repudio**       | El emisor no puede negar el envío de información, ni el receptor negar su recepción       |
 
 ## Clasificación de Hackers
 

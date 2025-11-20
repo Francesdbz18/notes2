@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ciberseguridad/Incidentes/RA1 1. Resumen Incidentes.md",
+                "file": "Ciberseguridad/Hacking ético/Examen.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RA1 1. Resumen Incidentes"
+              "title": "Examen"
             }
           }
         ]
@@ -172,16 +172,21 @@
   },
   "active": "182a9a4ae0adf774",
   "lastOpenFiles": [
-    "Homelab.md",
+    "Ciberseguridad/Hacking ético/Conocer nuestro entorno de trabajo.md",
+    "Ciberseguridad/Hacking ético/Reto 1 - test.zip.md",
+    "Ciberseguridad/Hacking ético/Ejercicio 2.md",
     "Ciberseguridad/Hacking ético/Examen.md",
+    "FCT/Diario.md",
+    "FCT/Pasted image 20250218094137.png",
+    "FCT/Pasted image 20250324105634.png",
+    "FCT/Pasted image 20250401110314.png",
+    "FCT/Pasted image 20250509125347.png",
     "Ciberseguridad/Incidentes/RA1 1. Resumen Incidentes.md",
+    "Homelab.md",
     "Ciberseguridad/Incidentes/RA1 Comandos Incidentes.md",
     "Ciberseguridad/Incidentes",
-    "Ciberseguridad/Hacking ético/Conocer nuestro entorno de trabajo.md",
-    "Ciberseguridad/Hacking ético/Ejercicio 2.md",
     "Seguridad en el arranque.md",
     "Ciberseguridad/Bastionado de redes/Introducción.md",
-    "Ciberseguridad/Hacking ético/Reto 1 - test.zip.md",
     "Ciberseguridad/Hacking ético",
     "Ciberseguridad/README.md",
     "2DAM/Sistemas de Gestión Empresarial/clientes2 - clientes2.csv",
@@ -193,16 +198,11 @@
     "Proyecto/Repo.md",
     "Proyecto/refactor.md",
     "Proyecto/Ideas Proyecto.md",
-    "FCT/Diario.md",
     "FCT/Java/AI.md",
     "Ciber/Untitled.canvas",
     "Ciberseguridad/Bastionado de redes",
     "Ciberseguridad",
     "2DAM",
-    "FCT/Pasted image 20250509125347.png",
-    "FCT/Pasted image 20250401110314.png",
-    "FCT/Pasted image 20250218094137.png",
-    "FCT/Pasted image 20250324105634.png",
     "Proyecto"
   ]
 }
