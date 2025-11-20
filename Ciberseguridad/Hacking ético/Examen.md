@@ -276,6 +276,10 @@ Programas de recompensas por reporte de vulnerabilidades:
 - **BlackArch**: Basada en Arch Linux
 - **CommandoVM**: Convierte Windows en distribución de seguridad ofensiva
 
+## Red Tor
+
+dffdf
+
 ---
 
 ## Preguntas de Repaso
