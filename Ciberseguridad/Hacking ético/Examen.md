@@ -1,6 +1,6 @@
 # Guía de Estudio: Hacking Ético - Tema 1
 
-## Conceptos Fundamentales
+## Conceptos fundamentales
 
 ### Definición de Hacking Ético
 
