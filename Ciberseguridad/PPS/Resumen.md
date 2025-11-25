@@ -141,10 +141,6 @@ Proxmox en la práctica:
 - Proxmox VE: plataforma de virtualización (KVM + LXC) con HA, snapshots, backups.
 - Cloud-init: inicializa instancias (IP, usuario, clave SSH) al arranque, usado en plantillas Ubuntu cloud-image.
 - Provider Proxmox (telmate/proxmox) en Terraform:  
-  - provider "proxmox" { pm_api_url, pm_api_token_id, pm_api_token_secret, pm_tls_insecure }  
+  - provider "proxmox" { pm_api_url, pm_api_token_id, pm_api_token_secret, pm_tls_insecure} 
   - resource "proxmox_vm_qemu" para crear VMs con plantilla cloud-init, ipconfig0, cores, sockets, disks, bridge vmbr0, sshkeys.
 - Flujo típico: crear plantilla Ubuntu cloud-init en Proxmox, configurar token usuario, luego usar terraform init/plan/apply para levantar VMs desde main.tf.
-
-(https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/104354983/1bded292-6e72-4d08-84d1-2cefbe10cfc2/Actividad_Docker_3.doc)
-(https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/104354983/610baf0d-cb0a-47c0-922e-690c4bda12bd/Actividad_Docker_2.doc)
-(https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/104354983/60a9fcac-ce1c-4d73-9a43-a0cec512b156/Actividad_Docker_4.doc)
