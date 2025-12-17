@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ciberseguridad/PPS/Resumen.md",
+                "file": "Big Data/BDNR/Ppty.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Resumen"
+              "title": "Ppty"
             }
           }
         ]
@@ -172,8 +172,12 @@
   },
   "active": "182a9a4ae0adf774",
   "lastOpenFiles": [
-    "Ciberseguridad/Hacking ético/Examen.md",
+    "Big Data/BDNR/MongoDB sharding.md",
+    "Big Data/BDNR/Ppty.md",
     "Ciberseguridad/PPS/Resumen.md",
+    "Big Data/BDNR",
+    "Big Data",
+    "Ciberseguridad/Hacking ético/Examen.md",
     "Ciberseguridad/PPS",
     "Ciberseguridad/Hacking ético/Conocer nuestro entorno de trabajo.md",
     "Ciberseguridad/Hacking ético/Reto 1 - test.zip.md",
@@ -204,7 +208,6 @@
     "Ciber/Untitled.canvas",
     "Ciberseguridad/Bastionado de redes",
     "Ciberseguridad",
-    "2DAM",
-    "Proyecto"
+    "2DAM"
   ]
 }
