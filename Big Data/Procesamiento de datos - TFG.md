@@ -1,6 +1,7 @@
 F1-webapp: beber datos de la API 
 API -> Nifi -> Kafka -> Nifi -> Python (Flask)
 ¿Qué datos voy a procesar? ¿Cómo?
+
 1. API
 ¿Datos de pilotos?
 Algo que pueda dividirse en 2.
@@ -16,3 +17,4 @@ Procesar los datos para unificar su formato. Almacenar como JSON.
 
 5. Python (Flask)
 Aplicación web simple que muestre los datos. 
+JSON -> Python (Pandas DataFrame) -> Matplotlib
