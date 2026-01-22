@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "60fa5076083bc0e0",
+        "id": "d45a6e8735b57b2c",
         "type": "tabs",
         "children": [
           {
-            "id": "bc39220b44672c2f",
+            "id": "76a2f82c77ec15c2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Big Data/Procesamiento de datos - TFG.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Procesamiento de datos - TFG"
             }
           }
         ]
@@ -165,12 +169,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "bc39220b44672c2f",
+  "active": "76a2f82c77ec15c2",
   "lastOpenFiles": [
-    "Big Data/BDNR/Ppty.md",
     "Big Data/BDNR/MongoDB sharding.md",
-    "conflict-files-obsidian-git.md",
+    "Big Data/BDNR/Ppty.md",
     "Ciberseguridad/Hacking ético/Reto 1 - test.zip.md",
+    "Ciberseguridad/Hacking ético/Examen.md",
+    "Ciberseguridad/Hacking ético/Ejercicio 2.md",
+    "Ciberseguridad/Hacking ético/Conocer nuestro entorno de trabajo.md",
+    "Ciberseguridad/Bastionado de redes/Introducción.md",
+    "README.md",
+    "Seguridad en el arranque.md",
+    "Linux.md",
+    "Homelab.md",
+    "Big Data/Procesamiento de datos - TFG.md",
+    "conflict-files-obsidian-git.md",
     "Ciberseguridad/PPS/Resumen.md",
     "Ciberseguridad/PPS",
     "Big Data/BDNR",
@@ -179,18 +192,10 @@
     "Proyecto/refactor.md",
     "Proyecto/Repo.md",
     "Proyecto/Tareas Proyecto.md",
-    "Homelab.md",
-    "README.md",
-    "Seguridad en el arranque.md",
-    "Linux.md",
-    "Ciberseguridad/Hacking ético/Examen.md",
     "Ciberseguridad/README.md",
-    "Ciberseguridad/Bastionado de redes/Introducción.md",
     "Ciberseguridad/Incidentes/RA1 Comandos Incidentes.md",
     "Ciberseguridad/Incidentes/RA1 1. Resumen Incidentes.md",
     "Ciberseguridad/Incidentes",
-    "Ciberseguridad/Hacking ético/Ejercicio 2.md",
-    "Ciberseguridad/Hacking ético/Conocer nuestro entorno de trabajo.md",
     "Ciberseguridad/Hacking ético",
     "2DAM/Sistemas de Gestión Empresarial/clientes2 - clientes2.csv",
     "2DAM/Sistemas de Gestión Empresarial/clientes2 - clientes.csv",
