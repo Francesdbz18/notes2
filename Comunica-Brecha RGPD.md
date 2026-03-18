@@ -1,0 +1,16 @@
+- Vigilancia masiva
+- Intencionado
+- Interno - encargado del tratamiento
+- Ciberincidente - sí.
+- Consecuencias: acceso no autorizado y cifrado.
+- Datos afectados - cifrados - no.
+- Datos afectados - recuperados - todavía no.
+- Grado de las consecuencias - importantes - daño limitado
+	- Daños materializados - no.
+	- Probabilidad de materializarse - alta.
+- Datos básicos, imagen, credenciales, perfiles, contacto.
+- Menores - sí.
+- Colectivos vulnerables - desconocido.
+- Número - 200.
+- Detección - 24/02
+- Inicio - 20/02
