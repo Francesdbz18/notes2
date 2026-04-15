@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Comunica-Brecha RGPD.md",
+                "file": "Ciberseguridad/PPS/GitHub.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Comunica-Brecha RGPD"
+              "title": "GitHub"
             }
           }
         ],
@@ -87,7 +87,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de archivos"
             }
           },
           {
@@ -202,27 +202,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5b0870b4db5c5881",
+  "active": "26ad6a99b0c9f3d7",
   "lastOpenFiles": [
+    "Ciberseguridad/PPS/Resumen.md",
     "Ciberseguridad/PPS/GitHub.md",
+    "README.md",
+    "Linux.md",
+    "Homelab.md",
     "Comunica-Brecha RGPD.md",
     "Ciberseguridad/Normativa",
     "Ciberseguridad/README.md",
-    "Ciberseguridad/PPS/Resumen.md",
     "Ciberseguridad/Incidentes/RA1 Comandos Incidentes.md",
     "Ciberseguridad/Incidentes/RA1 1. Resumen Incidentes.md",
     "Ciberseguridad/Incidentes/Incidentes.md",
-    "Linux.md",
     "Ciberseguridad/Hacking ético/Examen 2.md",
     "Big Data/Procesamiento de datos - TFG.md",
     "Big Data/BDNR/MongoDB sharding.md",
@@ -232,9 +234,7 @@
     "Ciberseguridad/Hacking ético/Ejercicio 2.md",
     "Ciberseguridad/Hacking ético/Conocer nuestro entorno de trabajo.md",
     "Ciberseguridad/Bastionado de redes/Introducción.md",
-    "README.md",
     "Seguridad en el arranque.md",
-    "Homelab.md",
     "conflict-files-obsidian-git.md",
     "Ciberseguridad/PPS",
     "Big Data/BDNR",
