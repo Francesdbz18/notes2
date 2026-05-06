@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ciberseguridad/PPS/Tema 3 - DevSecOps.md",
+                "file": "Comunica-Brecha RGPD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tema 3 - DevSecOps"
+              "title": "Comunica-Brecha RGPD"
             }
           }
         ],
@@ -214,8 +214,8 @@
   },
   "active": "5b0870b4db5c5881",
   "lastOpenFiles": [
-    "Ciberseguridad/PPS/GitHub.md",
     "Ciberseguridad/PPS/Tema 3 - DevSecOps.md",
+    "Ciberseguridad/PPS/GitHub.md",
     "Ciberseguridad/PPS/Resumen.md",
     "README.md",
     "Linux.md",
