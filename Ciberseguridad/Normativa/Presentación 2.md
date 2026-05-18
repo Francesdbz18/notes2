@@ -1,4 +1,6 @@
 CCN-STIC-804
+
+índice (al ser 4-5 diapositivas, cada apartado podría ser una diapositiva, aunque son demasiado largos...)
 - NIVELES DE MADUREZ
 	- L0: inexistente
 	- L1: inicial
@@ -28,6 +30,21 @@ CCN-STIC-804
 		- Mecanismo de autenticación
 		- Acceso local (local logon)
 		- Acceso remoto (remote login)
-		- 
+		- ...
 - [MP] MEDIDAS DE PROTECCIÓN
-- CORRESPONDENCIA CON OTRAS NORMAS DE SEGURIDAD
+	- Protección de las instalaciones e infraestructuras
+		- ...
+	- Gestión del personal
+		- ...
+	- Protección de los equipos
+		- ...
+	- Protección de las comunicaciones
+		- ...
+	- Protección de los soportes de información
+		- ...
+	- Protección de las aplicaciones informáticas
+		- ...
+	- Protección de la información
+		- ...
+	- Protección de los servicios
+		- ...
