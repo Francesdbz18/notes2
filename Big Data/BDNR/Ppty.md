@@ -1,6 +1,4 @@
-Aquí tienes un ejemplo **completo y pequeño**: 1 config server, 2 shards (cada uno con un solo nodo) y 1 `mongos`. Es perfecto para la práctica y se basa en la lógica de tu compose de réplica (misma imagen, red, etc.).[^1][^2]
 
-## docker-compose.yml completo
 
 ```yaml
 version: "3.8"
