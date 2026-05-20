@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Big Data/Procesamiento de datos - TFG.md",
+                "file": "Ciberseguridad/Hacking ético/Tema 3.1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Procesamiento de datos - TFG"
+              "title": "Tema 3.1"
             }
           },
           {
@@ -212,8 +212,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "26ad6a99b0c9f3d7",
+  "active": "dad4e76315a1a919",
   "lastOpenFiles": [
+    "Ciberseguridad/Hacking ético/Tema 3.2.md",
+    "Ciberseguridad/Hacking ético/Tema 3.1.md",
+    "Ciberseguridad/Hacking ético/Tema 5.md",
+    "Big Data/Procesamiento de datos - TFG.md",
     "Big Data/BDNR/Ppty.md",
     "Big Data/BDNR/MongoDB sharding.md",
     "Pasted image 20260506110626.png",
@@ -241,12 +245,8 @@
     "FCT/Java/Codestyle-ASPA.md",
     "FCT/Java/AI.md",
     "FCT/SAP/BTP.md",
-    "FCT/SAP/ABAP.md",
-    "FCT/SAP/Eclipse.md",
-    "FCT/SAP/Ejercicio 3.5.md",
     "FCT/SAP/Ejercicios.pdf",
     "FCT/SAP/slides.pdf",
-    "FCT/SAP/Tablas - Ejercicio 12 (ta mal).md",
     "Ciberseguridad/Normativa",
     "Ciberseguridad/Normativa",
     "Ciberseguridad/PPS",
